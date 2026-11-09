@@ -1,0 +1,18 @@
+---
+title: "Chương 16 · Lý thuyết toán tử đơn điệu"
+subtitle: "Hành trình của kẻ khờ · Giải tích hàm"
+format: html
+---
+
+
+
+[← Danh sách chương](../index.qmd) · [▶ Trình chiếu chương này](../slides/ch16.qmd#/sec-ch16-01)
+
+## Các section
+
+- [16.1 Toán tử đơn điệu](../slides/ch16.qmd#/sec-ch16-01)
+- [16.2 Toán tử đơn điệu cực đại](../slides/ch16.qmd#/sec-ch16-02)
+- [16.3 Toán tử giải thức](../slides/ch16.qmd#/sec-ch16-03)
+- [16.4 Định lý Minty](../slides/ch16.qmd#/sec-ch16-04)
+- [16.5 Phương trình tiến hóa với toán tử đơn điệu](../slides/ch16.qmd#/sec-ch16-05)
+- [16.6 Ứng dụng vào phương trình đạo hàm riêng phi tuyến](../slides/ch16.qmd#/sec-ch16-06)

@@ -1,0 +1,18 @@
+---
+title: "Chương 9 · Phổ của toán tử bị chặn"
+subtitle: "Hành trình của kẻ khờ · Giải tích hàm"
+format: html
+---
+
+
+
+[← Danh sách chương](../index.qmd) · [▶ Trình chiếu chương này](../slides/ch09.qmd#/sec-ch09-01)
+
+## Các section
+
+- [9.1 Phổ và tập giải thức](../slides/ch09.qmd#/sec-ch09-01)
+- [9.2 Phổ điểm, phổ liên tục và phổ dư](../slides/ch09.qmd#/sec-ch09-02)
+- [9.3 Bán kính phổ](../slides/ch09.qmd#/sec-ch09-03)
+- [9.4 Toán tử giải thức](../slides/ch09.qmd#/sec-ch09-04)
+- [9.5 Tính chất phổ của toán tử bị chặn](../slides/ch09.qmd#/sec-ch09-05)
+- [9.6 Định lý ánh xạ phổ](../slides/ch09.qmd#/sec-ch09-06)

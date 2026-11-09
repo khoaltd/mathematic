@@ -1,0 +1,67 @@
+---
+title: "Chương 12 · Toán tử tuyến tính không bị chặn"
+subtitle: "Hành trình của kẻ khờ · Giải tích hàm"
+author: "Dylan Lee"
+format: revealjs
+---
+
+## 12.1 Động cơ và ví dụ {#sec-ch12-01}
+
+Trên $L^2(0,2\pi)$, xét $u_n(x)=\sin(nx)$. Ta có
+$\|u_n\|_2=\sqrt{\pi}$ nhưng $\|u_n'\|_2=n\sqrt{\pi}$. Vì vậy phép đạo hàm
+không bị chặn theo chuẩn $L^2$.
+
+## 12.2 Miền xác định của toán tử {#sec-ch12-02}
+
+::: {#def-ch12-01 .def-}
+Toán tử tuyến tính không bị chặn thường được cho bởi
+$A:D(A)\subset X\to Y$, trong đó miền $D(A)$ là không gian con tuyến tính và
+có thể là miền thực sự của $X$.
+:::
+
+Miền không phải chi tiết phụ: cùng một quy tắc vi phân nhưng các điều kiện
+biên khác nhau tạo ra toán tử khác nhau.
+
+## 12.3 Toán tử xác định trù mật {#sec-ch12-03}
+
+::: {#def-ch12-02 .def-}
+$A$ xác định trù mật nếu $\overline{D(A)}=X$.
+:::
+
+Tính trù mật cho phép định nghĩa toán tử liên hợp hữu ích trên Hilbert. Nhiều
+định lý phổ cho toán tử không bị chặn yêu cầu giả thiết này.
+
+## 12.4 Toán tử đóng và có thể đóng {#sec-ch12-04}
+
+::: {#def-ch12-03 .def-}
+$A$ đóng nếu $x_n\to x$ và $Ax_n\to y$ với $x_n\in D(A)$
+kéo theo $x\in D(A)$ và $Ax=y$. Toán tử có thể đóng nếu đồ thị của nó có bao
+đóng vẫn là đồ thị của một toán tử.
+:::
+
+## 12.5 Đồ thị của toán tử tuyến tính {#sec-ch12-05}
+
+::: {#def-ch12-04 .def-}
+Đồ thị $G(A)=\{(x,Ax):x\in D(A)\}\subset X\times Y$.
+Toán tử đóng khi và chỉ khi đồ thị đóng.
+:::
+
+Định lý đồ thị đóng áp dụng cho toán tử xác định trên toàn không gian Banach;
+với toán tử không bị chặn, miền thực sự phải được xử lý riêng.
+
+## 12.6 Toán tử liên hợp của toán tử không bị chặn {#sec-ch12-06}
+
+Với $A$ xác định trù mật trên Hilbert, $y\in D(A^*)$ nếu ánh xạ
+$x\mapsto\langle Ax,y\rangle$ bị chặn theo chuẩn của $x$ trên $D(A)$. Khi
+đó $A^*y$ là vectơ biểu diễn phiếm hàm này.
+
+## 12.7 Toán tử đối xứng và tự liên hợp {#sec-ch12-07}
+
+::: {#def-ch12-05 .def-}
+$A$ đối xứng nếu
+$\langle Ax,y\rangle=\langle x,Ay\rangle$ với $x,y\in D(A)$. $A$ tự liên
+hợp nếu $A=A^*$, bao gồm cả $D(A)=D(A^*)$.
+:::
+
+Tự liên hợp là điều kiện quan trọng để có định lý phổ và diễn giải ổn định
+cho toán tử vi phân.

@@ -1,0 +1,19 @@
+---
+title: "Chương 11 · Toán tử tự liên hợp"
+subtitle: "Hành trình của kẻ khờ · Giải tích hàm"
+format: html
+---
+
+
+
+[← Danh sách chương](../index.qmd) · [▶ Trình chiếu chương này](../slides/ch11.qmd#/sec-ch11-01)
+
+## Các section
+
+- [11.1 Toán tử liên hợp](../slides/ch11.qmd#/sec-ch11-01)
+- [11.2 Toán tử tự liên hợp](../slides/ch11.qmd#/sec-ch11-02)
+- [11.3 Toán tử dương](../slides/ch11.qmd#/sec-ch11-03)
+- [11.4 Tính chất phổ của toán tử tự liên hợp](../slides/ch11.qmd#/sec-ch11-04)
+- [11.5 Định lý phổ cho toán tử compact tự liên hợp](../slides/ch11.qmd#/sec-ch11-05)
+- [11.6 Phân tích phổ](../slides/ch11.qmd#/sec-ch11-06)
+- [11.7 Ứng dụng vào phương trình tích phân](../slides/ch11.qmd#/sec-ch11-07)

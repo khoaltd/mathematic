@@ -1,0 +1,63 @@
+---
+title: "Chương 11 · Toán tử tự liên hợp"
+subtitle: "Hành trình của kẻ khờ · Giải tích hàm"
+author: "Dylan Lee"
+format: revealjs
+---
+
+## 11.1 Toán tử liên hợp {#sec-ch11-01}
+
+Với $T:X\to Y$ bị chặn, toán tử liên hợp Banach $T':Y^*\to X^*$ được xác
+định bởi $T'f=f\circ T$. Trên Hilbert, ký hiệu $T^*$ thường dành cho liên
+hợp xác định qua tích vô hướng.
+
+## 11.2 Toán tử tự liên hợp {#sec-ch11-02}
+
+::: {#def-ch11-01 .def-}
+Toán tử $T$ trên Hilbert tự liên hợp nếu $T=T^*$. Với toán
+tử không bị chặn, điều này đòi hỏi cả sự trùng nhau của miền xác định
+$D(T)=D(T^*)$.
+:::
+
+Toán tử đối xứng chỉ đòi hỏi đẳng thức tích vô hướng trên miền xác định; với
+toán tử không bị chặn, đối xứng chưa đủ để suy ra tự liên hợp.
+
+## 11.3 Toán tử dương {#sec-ch11-03}
+
+::: {#def-ch11-02 .def-}
+Toán tử tự liên hợp $T$ dương nếu
+$\langle Tx,x\rangle\ge0$ với mọi $x$ trong miền xác định.
+:::
+
+Tính dương đưa ra chặn dưới cho phổ và thường là nguồn của các ước lượng năng
+lượng.
+
+## 11.4 Tính chất phổ của toán tử tự liên hợp {#sec-ch11-04}
+
+::: {#thm-ch11-01 .thm-}
+Phổ của toán tử tự liên hợp nằm trên trục thực. Nếu $T$ dương
+thì phổ nằm trong $[0,\infty)$.
+:::
+
+## 11.5 Định lý phổ cho toán tử compact tự liên hợp {#sec-ch11-05}
+
+::: {#thm-ch11-02 .thm- name="Phổ compact"}
+Với toán tử compact tự liên hợp trên Hilbert, có
+một hệ vectơ riêng trực chuẩn sinh ra phần bù trực giao của hạt nhân. Các
+trị riêng khác không có bội hữu hạn và chỉ tích tụ tại $0$.
+:::
+
+## 11.6 Phân tích phổ {#sec-ch11-06}
+
+Phân tích phổ viết toán tử qua các trị riêng và phép chiếu tương ứng trong
+trường hợp compact. Với toán tử tự liên hợp tổng quát, định lý phổ dùng độ đo
+phổ và các phép chiếu trực giao.
+
+## 11.7 Ứng dụng vào phương trình tích phân {#sec-ch11-07}
+
+Phương trình tích phân tuyến tính thường có dạng
+$$
+u-Ku=f,
+$$
+trong đó $K$ là toán tử tích phân. Nếu $K$ compact, phương án Fredholm giúp
+xác định điều kiện tồn tại và duy nhất nghiệm.

@@ -1,0 +1,79 @@
+---
+title: "Chương 4 · Không gian Hilbert"
+subtitle: "Hành trình của kẻ khờ · Giải tích hàm"
+author: "Dylan Lee"
+format: revealjs
+---
+
+## 4.1 Không gian tích vô hướng {#sec-ch04-01}
+
+Tích vô hướng khái quát tích vô hướng Euclid, mang thông tin về độ dài và góc.
+Trong trường phức, nó có đối xứng liên hợp.
+
+::: {#def-ch04-01 .def-}
+Tích vô hướng $\langle x,y\rangle$ là tuyến tính theo một
+biến, liên hợp đối xứng và xác định dương:
+$\langle x,x\rangle>0$ khi $x\ne0$.
+:::
+
+## 4.2 Chuẩn cảm sinh bởi tích vô hướng {#sec-ch04-02}
+
+Tích vô hướng sinh chuẩn $\|x\|=\sqrt{\langle x,x\rangle}$ và metric
+$d(x,y)=\|x-y\|$.
+
+::: {#thm-ch04-01 .thm- name="Bất đẳng thức Cauchy–Schwarz"}
+$|\langle x,y\rangle|\le\|x\|\|y\|$. Đặc biệt, bất đẳng thức này bảo đảm chuẩn
+cảm sinh thỏa bất đẳng thức tam giác.
+:::
+
+Hilbert là không gian tích vô hướng đầy đủ theo chuẩn cảm sinh.
+
+## 4.3 Trực giao {#sec-ch04-03}
+
+Vectơ $x,y$ trực giao nếu $\langle x,y\rangle=0$. Khi đó
+$\|x+y\|^2=\|x\|^2+\|y\|^2$ — định lý Pythagoras trong Hilbert.
+
+## 4.4 Hệ trực chuẩn {#sec-ch04-04}
+
+Hệ $(e_j)$ trực chuẩn nếu $\langle e_i,e_j\rangle=\delta_{ij}$. Hệ số
+$\langle x,e_j\rangle$ là thành phần của $x$ theo hướng $e_j$.
+
+::: {#thm-ch04-02 .thm- name="Bất đẳng thức Bessel"}
+Với mọi hệ trực chuẩn,
+$\sum_j|\langle x,e_j\rangle|^2\le\|x\|^2$.
+:::
+
+## 4.5 Cơ sở trực chuẩn {#sec-ch04-05}
+
+Hệ trực chuẩn là đầy đủ nếu bao đóng của không gian sinh tuyến tính bằng $H$.
+Khi đó mỗi $x\in H$ có khai triển Fourier theo hệ.
+
+::: {#thm-ch04-03 .thm- name="Đẳng thức Parseval"}
+Với cơ sở trực chuẩn $(e_j)$,
+$\|x\|^2=\sum_j|\langle x,e_j\rangle|^2$.
+:::
+
+## 4.6 Định lý phép chiếu {#sec-ch04-06}
+
+Phép chiếu tìm điểm trong không gian con gần một vectơ cho trước nhất.
+
+::: {#thm-ch04-04 .thm- name="Phép chiếu"}
+Với không gian con đóng $M$ của Hilbert $H$, mỗi
+$x\in H$ có duy nhất $m_0\in M$ sao cho
+$\|x-m_0\|=\inf_{m\in M}\|x-m\|$. Sai số $x-m_0$ vuông góc với $M$.
+:::
+
+## 4.7 Định lý biểu diễn Riesz {#sec-ch04-07}
+
+::: {#thm-ch04-05 .thm- name="Biểu diễn Riesz"}
+Mọi phiếm hàm tuyến tính liên tục $f$ trên Hilbert
+được biểu diễn duy nhất bởi một vectơ $y_f$ qua tích vô hướng; chuẩn
+$\|f\|=\|y_f\|$.
+:::
+
+## 4.8 Toán tử liên hợp trên Hilbert {#sec-ch04-08}
+
+Với toán tử bị chặn $T:H\to H$, toán tử liên hợp $T^*$ được đặc trưng bởi
+$\langle Tx,y\rangle=\langle x,T^*y\rangle$ (theo quy ước tích vô hướng tuyến
+tính ở biến thứ nhất). Liên hợp giúp định nghĩa toán tử tự liên hợp và nghiên
+cứu phổ.

@@ -2,42 +2,29 @@
 $body-bg: #f7f5f0;
 $body-color: #202b3c;
 $link-color: #087e83;
-$presentation-heading-color: #153b50;
-$presentation-heading-font: "Aptos Display", "Segoe UI", sans-serif;
-$presentation-font: "Aptos", "Segoe UI", sans-serif;
+$font-family-sans-serif: "Aptos", "Segoe UI", sans-serif;
 
 /*-- scss:rules --*/
-.reveal {
-  font-size: 30px;
+body {
+  line-height: 1.7;
 }
 
-.reveal h1,
-.reveal h2,
-.reveal h3 {
-  letter-spacing: -0.035em;
-  font-weight: 700;
+h1,
+h2,
+h3,
+h4 {
+  color: #153b50;
+  letter-spacing: -0.02em;
 }
 
-.reveal h1 {
-  font-size: 2.15em;
+.navbar {
+  box-shadow: 0 2px 12px rgb(21 59 80 / 8%);
 }
 
-.reveal h2 {
-  font-size: 1.45em;
+main.content {
+  max-width: 900px;
 }
 
-.reveal strong {
-  color: #087e83;
-}
-
-.reveal table {
-  font-size: 0.8em;
-}
-
-.reveal .callout {
-  font-size: 0.82em;
-}
-
-.reveal .slide-number {
-  color: #526579;
+a {
+  text-underline-offset: 0.18em;
 }

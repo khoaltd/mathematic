@@ -1,0 +1,51 @@
+---
+title: "Chương 7 · Định lý phạm trù Baire"
+subtitle: "Hành trình của kẻ khờ · Giải tích hàm"
+author: "Dylan Lee"
+format: revealjs
+---
+
+## 7.1 Tập không đâu trù mật {#sec-ch07-01}
+
+Tập không đâu trù mật là tập mà bao đóng không chứa tập mở khác rỗng. Tập có
+thể lớn về số điểm nhưng vẫn không đâu trù mật.
+
+::: {#def-ch07-01 .def-}
+$A$ không đâu trù mật nếu phần trong của $\overline A$ rỗng.
+:::
+
+## 7.2 Tập loại một và tập dư {#sec-ch07-02}
+
+Tập loại một (meagre) là hợp đếm được các tập không đâu trù mật. Tập dư có
+phần bù là tập loại một.
+
+## 7.3 Định lý phạm trù Baire {#sec-ch07-03}
+
+::: {#thm-ch07-01 .thm- name="Baire"}
+Trong không gian metric đầy đủ, giao đếm được của các tập
+mở trù mật là trù mật. Kết quả cũng đúng cho không gian Hausdorff địa phương
+compact.
+:::
+
+Tương đương, không gian đầy đủ không thể là hợp đếm được các tập đóng có phần
+trong rỗng.
+
+## 7.4 Ứng dụng vào không gian đầy đủ {#sec-ch07-04}
+
+Baire là một công cụ tồn tại gián tiếp: nó cho biết một tập các điểm “tốt”
+vẫn trù mật khi giao vô hạn điều kiện mở trù mật.
+
+::: {.example-}
+Trong không gian Banach, định lý Baire dẫn tới nguyên lý bị chặn đều, định lý
+ánh xạ mở và định lý đồ thị đóng.
+:::
+
+## 7.5 Định lý ánh xạ mở {#sec-ch07-05}
+
+::: {#thm-ch07-02 .thm- name="Ánh xạ mở"}
+Nếu $T:X\to Y$ là toán tử tuyến tính liên tục, toàn
+ánh giữa hai không gian Banach thì $T$ gửi tập mở thành tập mở.
+:::
+
+Hệ quả là toán tử tuyến tính liên tục song ánh giữa hai Banach có nghịch đảo
+liên tục.

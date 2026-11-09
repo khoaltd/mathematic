@@ -1,0 +1,66 @@
+/*-- scss:defaults --*/
+$body-bg: #f7f5f0;
+$body-color: #202b3c;
+$link-color: #087e83;
+$presentation-heading-color: #153b50;
+$presentation-heading-font: "Aptos", "Segoe UI", sans-serif;
+$presentation-font-size-root: 32px;
+
+/*-- scss:rules --*/
+.reveal .slides section {
+  text-align: left;
+}
+
+.reveal .slides section h2 {
+  font-size: 1.15em;
+}
+
+.reveal .slides section h3 {
+  font-size: 0.9em;
+}
+
+.reveal .slides section p,
+.reveal .slides section li {
+  font-size: 0.78em;
+  line-height: 1.35;
+}
+
+.reveal .slides section ul,
+.reveal .slides section ol {
+  margin-top: 0.25em;
+}
+
+.def-,
+.thm-,
+.example- {
+  margin: 0.6em 0;
+  padding: 0.45em 0.75em;
+  border-left: 4px solid;
+  border-radius: 0.2em;
+  font-size: 0.88em;
+}
+
+.def- {
+  border-color: #087e83;
+  background: #e8efeb;
+}
+
+.thm- {
+  border-color: #c17a31;
+  background: #f4ede2;
+}
+
+.example- {
+  border-color: #6684a0;
+  background: #eaf0f5;
+}
+
+.def- p:last-child,
+.thm- p:last-child,
+.example- p:last-child {
+  margin-bottom: 0;
+}
+
+.reveal .slide-number {
+  color: #526579;
+}

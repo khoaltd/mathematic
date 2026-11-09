@@ -1,0 +1,20 @@
+---
+title: "Chương 4 · Không gian Hilbert"
+subtitle: "Hành trình của kẻ khờ · Giải tích hàm"
+format: html
+---
+
+
+
+[← Danh sách chương](../index.qmd) · [▶ Trình chiếu chương này](../slides/ch04.qmd#/sec-ch04-01)
+
+## Các section
+
+- [4.1 Không gian tích vô hướng](../slides/ch04.qmd#/sec-ch04-01)
+- [4.2 Chuẩn cảm sinh bởi tích vô hướng](../slides/ch04.qmd#/sec-ch04-02)
+- [4.3 Trực giao](../slides/ch04.qmd#/sec-ch04-03)
+- [4.4 Hệ trực chuẩn](../slides/ch04.qmd#/sec-ch04-04)
+- [4.5 Cơ sở trực chuẩn](../slides/ch04.qmd#/sec-ch04-05)
+- [4.6 Định lý phép chiếu](../slides/ch04.qmd#/sec-ch04-06)
+- [4.7 Định lý biểu diễn Riesz](../slides/ch04.qmd#/sec-ch04-07)
+- [4.8 Toán tử liên hợp trên Hilbert](../slides/ch04.qmd#/sec-ch04-08)

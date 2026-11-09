@@ -1,0 +1,52 @@
+---
+title: "Chương 15 · Phương trình tiến hóa"
+subtitle: "Hành trình của kẻ khờ · Giải tích hàm"
+author: "Dylan Lee"
+format: revealjs
+---
+
+## 15.1 Bài toán Cauchy trừu tượng {#sec-ch15-01}
+
+::: {#def-ch15-01 .def- name="Bài toán Cauchy"}
+Tìm $u:[0,\infty)\to X$ sao cho
+$u'(t)=Au(t)$ và $u(0)=u_0$. Dạng không thuần nhất thêm lực ngoài $f(t)$.
+:::
+
+## 15.2 Tồn tại và duy nhất nghiệm {#sec-ch15-02}
+
+Nếu $A$ sinh bán nhóm $C_0$, nghiệm thuần nhất được cho bởi
+$u(t)=T(t)u_0$ và duy nhất trong lớp nghiệm thích hợp. Với lực ngoài liên
+tục, công thức Duhamel là
+$$
+u(t)=T(t)u_0+\int_0^t T(t-s)f(s)\,ds.
+$$
+
+## 15.3 Nghiệm tích phân và nghiệm cổ điển {#sec-ch15-03}
+
+Nghiệm cổ điển khả vi và thỏa phương trình theo nghĩa điểm; thường cần
+$u_0\in D(A)$. Nghiệm tích phân (mild) thỏa công thức bán nhóm và có thể tồn
+tại với dữ liệu ban đầu ít trơn hơn.
+
+## 15.4 Tính chính quy của nghiệm {#sec-ch15-04}
+
+Tính chính quy hỏi khi nào $u(t)$ khả vi, thuộc $D(A)$ hoặc các miền
+$D(A^k)$. Ước lượng của bán nhóm và tính giải tích của nó giúp chứng minh
+nghiệm được làm trơn theo thời gian.
+
+## 15.5 Phương trình nhiệt {#sec-ch15-05}
+
+Phương trình nhiệt $u_t=\Delta u$ mô tả khuếch tán. Với điều kiện biên thích
+hợp, toán tử Laplace là bộ sinh của một bán nhóm co; các dao động cao tần bị
+suy giảm nhanh.
+
+## 15.6 Phương trình sóng {#sec-ch15-06}
+
+Phương trình sóng $u_{tt}=c^2\Delta u$ có thể viết thành hệ bậc nhất cho cặp
+$(u,u_t)$. Biểu diễn trên không gian tích đưa bài toán về một bán nhóm, thường
+liên quan bảo toàn năng lượng thay vì làm trơn.
+
+## 15.7 Ứng dụng vào phương trình đạo hàm riêng tiến hóa {#sec-ch15-07}
+
+Để áp dụng lý thuyết, chọn không gian trạng thái, xác định toán tử và miền,
+rồi kiểm tra điều kiện sinh bán nhóm. Khung này cho kết quả về tồn tại, duy
+nhất và phụ thuộc liên tục của nghiệm.

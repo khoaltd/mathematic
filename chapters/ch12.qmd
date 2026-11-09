@@ -1,0 +1,19 @@
+---
+title: "Chương 12 · Toán tử tuyến tính không bị chặn"
+subtitle: "Hành trình của kẻ khờ · Giải tích hàm"
+format: html
+---
+
+
+
+[← Danh sách chương](../index.qmd) · [▶ Trình chiếu chương này](../slides/ch12.qmd#/sec-ch12-01)
+
+## Các section
+
+- [12.1 Động cơ và ví dụ](../slides/ch12.qmd#/sec-ch12-01)
+- [12.2 Miền xác định của toán tử](../slides/ch12.qmd#/sec-ch12-02)
+- [12.3 Toán tử xác định trù mật](../slides/ch12.qmd#/sec-ch12-03)
+- [12.4 Toán tử đóng và có thể đóng](../slides/ch12.qmd#/sec-ch12-04)
+- [12.5 Đồ thị của toán tử tuyến tính](../slides/ch12.qmd#/sec-ch12-05)
+- [12.6 Toán tử liên hợp của toán tử không bị chặn](../slides/ch12.qmd#/sec-ch12-06)
+- [12.7 Toán tử đối xứng và tự liên hợp](../slides/ch12.qmd#/sec-ch12-07)

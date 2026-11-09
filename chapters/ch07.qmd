@@ -1,0 +1,17 @@
+---
+title: "Chương 7 · Định lý phạm trù Baire"
+subtitle: "Hành trình của kẻ khờ · Giải tích hàm"
+format: html
+---
+
+
+
+[← Danh sách chương](../index.qmd) · [▶ Trình chiếu chương này](../slides/ch07.qmd#/sec-ch07-01)
+
+## Các section
+
+- [7.1 Tập không đâu trù mật](../slides/ch07.qmd#/sec-ch07-01)
+- [7.2 Tập loại một và tập dư](../slides/ch07.qmd#/sec-ch07-02)
+- [7.3 Định lý phạm trù Baire](../slides/ch07.qmd#/sec-ch07-03)
+- [7.4 Ứng dụng vào không gian đầy đủ](../slides/ch07.qmd#/sec-ch07-04)
+- [7.5 Định lý ánh xạ mở](../slides/ch07.qmd#/sec-ch07-05)

@@ -1,0 +1,18 @@
+---
+title: "Chương 10 · Toán tử tuyến tính compact"
+subtitle: "Hành trình của kẻ khờ · Giải tích hàm"
+format: html
+---
+
+
+
+[← Danh sách chương](../index.qmd) · [▶ Trình chiếu chương này](../slides/ch10.qmd#/sec-ch10-01)
+
+## Các section
+
+- [10.1 Toán tử compact](../slides/ch10.qmd#/sec-ch10-01)
+- [10.2 Tính chất của toán tử compact](../slides/ch10.qmd#/sec-ch10-02)
+- [10.3 Toán tử hạng hữu hạn](../slides/ch10.qmd#/sec-ch10-03)
+- [10.4 Phổ của toán tử compact](../slides/ch10.qmd#/sec-ch10-04)
+- [10.5 Lý thuyết Riesz–Schauder](../slides/ch10.qmd#/sec-ch10-05)
+- [10.6 Phương án Fredholm](../slides/ch10.qmd#/sec-ch10-06)

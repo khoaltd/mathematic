@@ -1,0 +1,18 @@
+---
+title: "Chương 13 · Phổ của toán tử không bị chặn"
+subtitle: "Hành trình của kẻ khờ · Giải tích hàm"
+format: html
+---
+
+
+
+[← Danh sách chương](../index.qmd) · [▶ Trình chiếu chương này](../slides/ch13.qmd#/sec-ch13-01)
+
+## Các section
+
+- [13.1 Tập giải thức và phổ](../slides/ch13.qmd#/sec-ch13-01)
+- [13.2 Tập giải thức](../slides/ch13.qmd#/sec-ch13-02)
+- [13.3 Phổ của toán tử tự liên hợp](../slides/ch13.qmd#/sec-ch13-03)
+- [13.4 Định lý phổ cho toán tử tự liên hợp](../slides/ch13.qmd#/sec-ch13-04)
+- [13.5 Giải tích hàm](../slides/ch13.qmd#/sec-ch13-05)
+- [13.6 Ứng dụng vào toán tử vi phân](../slides/ch13.qmd#/sec-ch13-06)

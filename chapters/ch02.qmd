@@ -1,0 +1,20 @@
+---
+title: "Chương 2 · Không gian tuyến tính định chuẩn"
+subtitle: "Hành trình của kẻ khờ · Giải tích hàm"
+format: html
+---
+
+
+
+[← Danh sách chương](../index.qmd) · [▶ Trình chiếu chương này](../slides/ch02.qmd#/sec-ch02-01)
+
+## Các section
+
+- [2.1 Không gian vectơ và không gian con tuyến tính](../slides/ch02.qmd#/sec-ch02-01)
+- [2.2 Chuẩn và bán chuẩn](../slides/ch02.qmd#/sec-ch02-02)
+- [2.3 Không gian tuyến tính định chuẩn](../slides/ch02.qmd#/sec-ch02-03)
+- [2.4 Các chuẩn tương đương](../slides/ch02.qmd#/sec-ch02-04)
+- [2.5 Không gian Banach](../slides/ch02.qmd#/sec-ch02-05)
+- [2.6 Các ví dụ về không gian Banach](../slides/ch02.qmd#/sec-ch02-06)
+- [2.7 Không gian con của không gian định chuẩn](../slides/ch02.qmd#/sec-ch02-07)
+- [2.8 Không gian thương](../slides/ch02.qmd#/sec-ch02-08)

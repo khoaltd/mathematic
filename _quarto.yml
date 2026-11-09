@@ -1,21 +1,40 @@
 project:
-  type: default
+  type: website
   output-dir: _site
-  render:
-    - index.qmd
+
+website:
+  title: "Hành trình của kẻ khờ"
+  description: "Bài thuyết trình Reveal.js về giải tích hàm."
+  navbar:
+    left:
+      - text: "Các chương"
+        href: index.qmd
 
 format:
+  html:
+    theme: [cosmo, styles.scss]
+    html-math-method: mathjax
+    smooth-scroll: true
   revealjs:
-    theme: [default, styles.scss]
+    theme: [default, reveal.scss]
+    slide-level: 2
     slide-number: c/t
     controls: true
     progress: true
-    center: false
+    hash: true
+    history: true
+    menu: true
+    navigation-mode: linear
     transition: slide
     background-transition: fade
+    center: false
     width: 1280
     height: 720
+    margin: 0.06
+    number-sections: false
     code-copy: true
-    code-overflow: wrap
 
 lang: vi
+language:
+  crossref-def-title: "Định nghĩa"
+  crossref-thm-title: "Định lý"

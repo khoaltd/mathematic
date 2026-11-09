@@ -1,0 +1,70 @@
+---
+title: "Chương 14 · Lý thuyết bán nhóm"
+subtitle: "Hành trình của kẻ khờ · Giải tích hàm"
+author: "Dylan Lee"
+format: revealjs
+---
+
+## 14.1 Bán nhóm một tham số {#sec-ch14-01}
+
+::: {#def-ch14-01 .def-}
+Họ $(T(t))_{t\ge0}$ các toán tử tuyến tính bị chặn là bán
+nhóm nếu $T(0)=I$ và $T(t+s)=T(t)T(s)$.
+:::
+
+Luật bán nhóm diễn tả nhất quán việc tiến hóa trong hai khoảng thời gian liên
+tiếp.
+
+## 14.2 Bán nhóm liên tục mạnh {#sec-ch14-02}
+
+::: {#def-ch14-02 .def-}
+Bán nhóm là $C_0$ nếu
+$\lim_{t\downarrow0}T(t)x=x$ với mọi $x\in X$.
+:::
+
+Điều kiện tại thời điểm không, kết hợp luật bán nhóm, cho quỹ đạo
+$t\mapsto T(t)x$ liên tục với mọi $t\ge0$.
+
+## 14.3 Bộ sinh vô cùng bé {#sec-ch14-03}
+
+::: {#def-ch14-03 .def-}
+Bộ sinh $A$ của $T(t)$ được xác định bởi
+$$
+Ax=\lim_{t\downarrow0}\frac{T(t)x-x}{t}
+$$
+trên tập $x$ mà giới hạn tồn tại.
+:::
+
+Bộ sinh thường không bị chặn, xác định trù mật và quyết định duy nhất bán
+nhóm $C_0$.
+
+## 14.4 Tính chất của bán nhóm $C_0$ {#sec-ch14-04}
+
+Mọi bán nhóm $C_0$ bị chặn địa phương theo thời gian và có ước lượng mũ
+$\|T(t)\|\le Me^{\omega t}$ với một số $M\ge1$ và $\omega\in\mathbb R$.
+Tốc độ tăng và tính trơn liên hệ chặt với bộ sinh.
+
+## 14.5 Định lý Hille–Yosida {#sec-ch14-05}
+
+::: {#thm-ch14-01 .thm- name="Hille–Yosida (phát biểu nhận diện)"}
+Một toán tử $A$ đóng, xác
+định trù mật trên Banach sinh bán nhóm $C_0$ khi và chỉ khi toán tử giải
+thức của nó thỏa các điều kiện tồn tại và ước lượng lũy thừa thích hợp. Với
+bán nhóm co, một tiêu chuẩn tương đương là
+$\|(\lambda I-A)^{-n}\|\le\lambda^{-n}$ với mọi $\lambda>0$, $n\ge1$.
+:::
+
+## 14.6 Bán nhóm co {#sec-ch14-06}
+
+::: {#def-ch14-04 .def-}
+Bán nhóm co thỏa $\|T(t)\|\le1$ với mọi $t\ge0$.
+:::
+
+Trên Hilbert, các bộ sinh tự liên hợp âm tạo ra bán nhóm co thông qua phép
+tính hàm phổ. Tính co cung cấp ổn định theo thời gian.
+
+## 14.7 Bán nhóm giải tích {#sec-ch14-07}
+
+Bán nhóm giải tích có thể kéo dài thành hàm toán tử giải tích trong một miền
+góc phức. Tính giải tích thường đem lại tính trơn tức thời cho nghiệm với
+thời gian dương, ngay cả khi dữ liệu ban đầu chưa trơn.

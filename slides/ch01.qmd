@@ -1,0 +1,135 @@
+---
+title: "Chương 1 · Không gian metric"
+subtitle: "Hành trình của kẻ khờ · Giải tích hàm"
+author: "Dylan Lee"
+format: revealjs
+---
+
+## 1.1 Không gian metric và các định nghĩa cơ bản {#sec-ch01-01}
+
+Một metric là cách đo khoảng cách trừu tượng. Nó không cần được định nghĩa bằng
+độ dài hình học, miễn thỏa các tiên đề về không âm, phân biệt điểm, đối xứng
+và bất đẳng thức tam giác.
+
+::: {#def-ch01-01 .def- name="Không gian metric"}
+Một cặp $(X,d)$ là không gian metric nếu
+$d:X\times X\to[0,\infty)$ thỏa, với mọi $x,y,z\in X$:
+$$
+d(x,y)=0\iff x=y,\qquad d(x,y)=d(y,x),\qquad
+d(x,z)\le d(x,y)+d(y,z).
+$$
+:::
+
+Ví dụ gồm $\mathbb R$ với $d(x,y)=|x-y|$, $\mathbb R^n$ với khoảng cách
+Euclid, và khoảng cách rời rạc $d(x,y)=1$ khi $x\ne y$. Trên $\mathbb R^n$,
+khoảng cách taxi là $\sum_i|x_i-y_i|$, khác với khoảng cách Euclid.
+
+## 1.2 Hình cầu mở và lân cận {#sec-ch01-02}
+
+Hình cầu mô tả các điểm cách tâm ít hơn một bán kính. Các hình cầu là viên
+gạch cơ bản để định nghĩa tập mở, hội tụ và tính liên tục.
+
+::: {#def-ch01-02 .def- name="Hình cầu"}
+Với $x_0\in X$ và $r>0$,
+$$
+B(x_0,r)=\{x:d(x,x_0)<r\},\quad
+\overline B(x_0,r)=\{x:d(x,x_0)\le r\},\quad
+S(x_0,r)=\{x:d(x,x_0)=r\}.
+$$
+Một tập $N$ là lân cận của $x_0$ nếu chứa một hình cầu mở tâm $x_0$.
+:::
+
+Trong metric rời rạc, hình cầu bán kính nhỏ hơn hoặc bằng $1$ chỉ chứa tâm.
+Điều này cho thấy “hình dạng” của lân cận phụ thuộc vào metric.
+
+## 1.3 Tập mở và tập đóng {#sec-ch01-03}
+
+Tập mở không có “biên” nằm bên trong theo nghĩa mỗi điểm của nó có một vùng
+lân cận vẫn thuộc tập. Tập đóng chứa mọi giới hạn của các dãy trong tập.
+
+::: {#def-ch01-03 .def- name="Tập mở và tập đóng"}
+$U\subseteq X$ mở nếu với mỗi $x\in U$
+tồn tại $r>0$ sao cho $B(x,r)\subseteq U$. Tập $F$ đóng nếu $X\setminus F$
+mở.
+:::
+
+::: {#thm-ch01-01 .thm-}
+Hợp tùy ý các tập mở là mở; giao hữu hạn các tập mở là mở. Giao
+tùy ý các tập đóng là đóng; hợp hữu hạn các tập đóng là đóng.
+:::
+
+Bao đóng $\overline A$ là tập đóng nhỏ nhất chứa $A$. Tập $A$ trù mật nếu
+$\overline A=X$; chẳng hạn $\mathbb Q$ trù mật trong $\mathbb R$.
+
+## 1.4 Sự hội tụ của dãy {#sec-ch01-04}
+
+Hội tụ trong metric nghĩa là khoảng cách đến một điểm cố định tiến về không.
+Giới hạn, nếu tồn tại, là duy nhất.
+
+::: {#def-ch01-04 .def- name="Hội tụ"}
+Dãy $(x_n)$ hội tụ đến $x\in X$ nếu với mọi
+$\varepsilon>0$ tồn tại $N$ sao cho $n\ge N$ kéo theo
+$d(x_n,x)<\varepsilon$. Ký hiệu $x_n\to x$.
+:::
+
+::: {#thm-ch01-02 .thm- name="Tính duy nhất của giới hạn"}
+Trong không gian metric, một dãy
+không thể hội tụ đến hai điểm khác nhau.
+:::
+
+## 1.5 Dãy Cauchy và không gian metric đầy đủ {#sec-ch01-05}
+
+Dãy Cauchy tự tiến lại gần nhau mà không cần biết trước giới hạn. Tính đầy đủ
+bảo đảm giới hạn đó nằm trong không gian.
+
+::: {#def-ch01-05 .def-}
+$(x_n)$ là Cauchy nếu với mọi $\varepsilon>0$ tồn tại $N$ sao
+cho $m,n\ge N$ thì $d(x_m,x_n)<\varepsilon$. Không gian metric đầy đủ nếu mọi
+dãy Cauchy đều hội tụ trong không gian.
+:::
+
+::: {.example-}
+Các số hữu tỉ với metric thông thường không đầy đủ: có dãy hữu tỉ Cauchy tiến
+đến $\sqrt 2$, nhưng $\sqrt2\notin\mathbb Q$. Không gian thực là phần hoàn
+thiện của không gian hữu tỉ.
+:::
+
+## 1.6 Tính liên tục của ánh xạ {#sec-ch01-06}
+
+Tính liên tục địa phương được diễn tả bằng $\varepsilon$–$\delta$: đầu vào đủ
+gần nhau thì đầu ra cũng đủ gần nhau.
+
+::: {#def-ch01-06 .def-}
+$T:X\to Y$ liên tục tại $x_0$ nếu với mọi $\varepsilon>0$
+tồn tại $\delta>0$ sao cho $d_X(x,x_0)<\delta$ kéo theo
+$d_Y(Tx,Tx_0)<\varepsilon$.
+:::
+
+::: {#thm-ch01-03 .thm-}
+Ánh xạ giữa hai không gian metric liên tục khi và chỉ khi ảnh
+ngược của mọi tập mở là tập mở.
+:::
+
+## 1.7 Đồng phôi và đẳng cự {#sec-ch01-07}
+
+Hai khái niệm này phân biệt bảo toàn hình dạng tôpô với bảo toàn chính xác
+khoảng cách.
+
+::: {#def-ch01-07 .def-}
+Đồng phôi là song ánh liên tục có ánh xạ ngược liên tục.
+Đẳng cự $T$ thỏa $d_Y(Tx,Ty)=d_X(x,y)$ với mọi $x,y$.
+:::
+
+Đẳng cự là đồng phôi, nhưng đồng phôi không nhất thiết bảo toàn độ dài hay
+khoảng cách.
+
+## 1.8 Phép hoàn thiện không gian metric {#sec-ch01-08}
+
+Ta có thể bổ sung các giới hạn còn thiếu mà không đổi khoảng cách giữa những
+điểm cũ.
+
+::: {#thm-ch01-04 .thm- name="Hoàn thiện"}
+Mọi không gian metric có một phần hoàn thiện đầy đủ
+mà không gian ban đầu nhúng đẳng cự như một tập con trù mật. Phần hoàn thiện
+là duy nhất sai khác một đẳng cự bảo toàn các điểm ban đầu.
+:::

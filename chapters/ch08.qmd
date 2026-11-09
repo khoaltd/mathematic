@@ -1,0 +1,18 @@
+---
+title: "Chương 8 · Các nguyên lý cơ bản"
+subtitle: "Hành trình của kẻ khờ · Giải tích hàm"
+format: html
+---
+
+
+
+[← Danh sách chương](../index.qmd) · [▶ Trình chiếu chương này](../slides/ch08.qmd#/sec-ch08-01)
+
+## Các section
+
+- [8.1 Nguyên lý bị chặn đều](../slides/ch08.qmd#/sec-ch08-01)
+- [8.2 Định lý Banach–Steinhaus](../slides/ch08.qmd#/sec-ch08-02)
+- [8.3 Định lý đồ thị đóng](../slides/ch08.qmd#/sec-ch08-03)
+- [8.4 Định lý ánh xạ ngược](../slides/ch08.qmd#/sec-ch08-04)
+- [8.5 Ứng dụng vào toán tử tuyến tính](../slides/ch08.qmd#/sec-ch08-05)
+- [8.6 Không gian con bù và phép chiếu](../slides/ch08.qmd#/sec-ch08-06)

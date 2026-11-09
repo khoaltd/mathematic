@@ -1,0 +1,78 @@
+---
+title: "Chương 5 · Tôpô yếu và tính phản xạ"
+subtitle: "Hành trình của kẻ khờ · Giải tích hàm"
+author: "Dylan Lee"
+format: revealjs
+---
+
+## 5.1 Hội tụ yếu {#sec-ch05-01}
+
+Hội tụ yếu kiểm tra một dãy qua mọi phiếm hàm liên tục thay vì đo khoảng cách
+chuẩn trực tiếp.
+
+::: {#def-ch05-01 .def-}
+$x_n\rightharpoonup x$ trong $X$ nếu
+$f(x_n)\to f(x)$ với mọi $f\in X^*$.
+:::
+
+Hội tụ theo chuẩn kéo theo hội tụ yếu; chiều ngược lại nói chung không đúng.
+
+## 5.2 Hội tụ yếu-* {#sec-ch05-02}
+
+Yếu-* là hội tụ trên đối ngẫu $X^*$ khi các phiếm hàm được xem như phần tử của
+$X^{**}$.
+
+::: {#def-ch05-02 .def-}
+$f_\alpha\overset{*}{\rightharpoonup}f$ trong $X^*$ nếu
+$f_\alpha(x)\to f(x)$ với mọi $x\in X$.
+:::
+
+## 5.3 Tôpô yếu và yếu-* {#sec-ch05-03}
+
+Tôpô yếu là tôpô yếu nhất khiến mọi $f\in X^*$ liên tục. Tôpô yếu-* là tôpô
+yếu nhất khiến mọi phép đánh giá $f\mapsto f(x)$ liên tục.
+
+::: {#thm-ch05-01 .thm- name="Banach–Alaoglu"}
+Quả cầu đơn vị đóng của $X^*$ compact theo tôpô
+yếu-*.
+:::
+
+## 5.4 Không gian Banach phản xạ {#sec-ch05-04}
+
+Phản xạ nghĩa là mọi phiếm hàm trên $X^*$ đều đến từ một điểm của $X$. Phản
+xạ biến compact yếu và compact yếu-* thành công cụ tìm nghiệm.
+
+::: {#thm-ch05-02 .thm-}
+Trong không gian Banach phản xạ, mọi dãy bị chặn có một dãy con
+hội tụ yếu.
+:::
+
+## 5.5 Tính khả ly {#sec-ch05-05}
+
+Không gian khả ly có một tập con đếm được trù mật. Tính khả ly giúp thay các
+điều kiện trên mọi phần tử bằng một tập kiểm tra đếm được trong nhiều lập
+luận.
+
+## 5.6 Tính lồi đều {#sec-ch05-06}
+
+Không gian định chuẩn lồi đều nếu các vectơ đơn vị cách nhau một lượng cố định
+thì trung điểm của chúng nằm sâu bên trong quả cầu đơn vị.
+
+::: {#def-ch05-03 .def-}
+Với mỗi $\varepsilon>0$ tồn tại $\delta>0$ sao cho
+$\|x\|,\|y\|\le1$ và $\|x-y\|\ge\varepsilon$ kéo theo
+$\|(x+y)/2\|\le1-\delta$.
+:::
+
+$L^p$ và $\ell^p$ lồi đều khi $1<p<\infty$; tính chất này kéo theo phản xạ
+đối với không gian Banach.
+
+## 5.7 Tính compact yếu {#sec-ch05-07}
+
+Compact yếu cho phép trích dãy con hội tụ yếu từ các tập thích hợp, dù quả cầu
+đơn vị thường không compact theo chuẩn trong không gian vô hạn chiều.
+
+::: {#thm-ch05-03 .thm-}
+Một không gian Banach phản xạ khi và chỉ khi quả cầu đơn vị đóng
+của nó compact theo tôpô yếu.
+:::
