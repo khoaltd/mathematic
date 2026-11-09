@@ -1,0 +1,167 @@
+---
+title: "Toán học quanh ta"
+subtitle: "Từ những quy luật nhỏ đến các quyết định lớn"
+author: "Một hành trình khám phá"
+date: today
+---
+
+## Toán học không chỉ ở trong lớp học
+
+::: {.columns}
+
+::: {.column width="58%"}
+
+Ta dùng toán khi:
+
+- Ước lượng thời gian đến trường
+- Chia một món ăn cho cả nhóm
+- So sánh giá khi mua sắm
+- Nhận ra một xu hướng từ dữ liệu
+
+**Toán học là công cụ để nhìn thấy cấu trúc của thế giới.**
+
+:::
+
+::: {.column width="42%"}
+
+> Đằng sau một lựa chọn tốt thường là một phép tính vừa đủ.
+
+:::
+
+:::
+
+## Một ngày có bao nhiêu quyết định toán học?
+
+::: {.incremental}
+
+- Chọn đường đi: so sánh khoảng cách và thời gian.
+- Chọn món hàng: so sánh giá trên mỗi đơn vị.
+- Lập kế hoạch: phân bổ thời gian và nguồn lực.
+- Đọc tin tức: kiểm tra con số có ý nghĩa gì.
+
+:::
+
+## Ví dụ 1 · Chọn đường đi
+
+Một tuyến đường dài hơn chưa chắc mất nhiều thời gian hơn.
+
+$$
+\text{thời gian} = \frac{\text{quãng đường}}{\text{tốc độ trung bình}}
+$$
+
+| Tuyến | Quãng đường | Tốc độ trung bình | Thời gian ước tính |
+|---|---:|---:|---:|
+| A | 6 km | 20 km/h | 18 phút |
+| B | 8 km | 32 km/h | 15 phút |
+
+**Tuyến B xa hơn nhưng nhanh hơn** — nếu điều kiện giao thông đúng như giả
+định.
+
+## Đọc con số một cách cẩn thận
+
+Tốc độ trung bình chỉ là một mô hình đơn giản. Đèn đỏ, thời tiết và giờ cao
+điểm đều có thể làm kết quả thay đổi.
+
+::: {.callout-note}
+Mô hình giúp ta suy nghĩ có hệ thống; nó không thay thế việc kiểm tra thực tế.
+:::
+
+## Ví dụ 2 · Mua sắm thông minh
+
+Hai gói ngũ cốc có giá khác nhau:
+
+- Gói A: 450 g với giá 54.000 đồng
+- Gói B: 700 g với giá 77.000 đồng
+
+So sánh **đơn giá**, thay vì chỉ nhìn giá niêm yết:
+
+$$
+\text{đơn giá} = \frac{\text{giá tiền}}{\text{khối lượng}}
+$$
+
+Gói A: **120 đồng/g** · Gói B: **110 đồng/g**
+
+Với cùng ngân sách, đơn giá giúp ta so sánh công bằng hơn.
+
+## Ví dụ 3 · Lãi kép theo thời gian
+
+Nếu khoản tiền ban đầu là $P$, lãi suất mỗi kỳ là $r$, và lãi được nhập vào
+vốn sau mỗi kỳ:
+
+$$
+A = P(1+r)^n
+$$
+
+- $P$: số tiền ban đầu
+- $r$: lãi suất mỗi kỳ (dạng thập phân)
+- $n$: số kỳ
+
+::: {.callout-warning}
+Đây là mô hình minh họa, chưa tính phí, thuế hay biến động lãi suất.
+:::
+
+## Dữ liệu kể chuyện như thế nào?
+
+Giả sử số lượt mượn sách của một thư viện tăng qua từng tháng.
+
+::: {.incremental}
+
+1. **Quan sát:** lượt mượn tăng.
+2. **Đặt câu hỏi:** tăng so với tháng trước hay cùng kỳ năm ngoái?
+3. **Kiểm tra:** thư viện có đổi giờ mở cửa hoặc cách ghi nhận không?
+4. **Kết luận:** mô tả điều dữ liệu cho thấy, không khẳng định quá mức.
+
+:::
+
+::: {.callout-tip}
+Biểu đồ đẹp chưa chắc là biểu đồ trung thực: hãy để ý đơn vị và điểm bắt đầu
+của trục.
+:::
+
+## Xác suất: dự đoán không phải lời hứa
+
+Một dự báo mưa **70%** không có nghĩa là trời sẽ mưa đúng 70% thời gian trong
+ngày.
+
+Nó diễn tả mức độ tin cậy của dự báo theo một cách định nghĩa cụ thể. Xác suất
+hữu ích để cân nhắc rủi ro — nhưng không thể nói chắc một sự kiện riêng lẻ sẽ
+xảy ra.
+
+## Thử sức trong 30 giây
+
+Một cửa hàng giảm giá **20%**, sau đó giảm tiếp **10%** trên giá đã giảm.
+
+::: {.fragment}
+
+Giá cuối cùng bằng bao nhiêu phần trăm giá ban đầu?
+
+:::
+
+::: {.fragment}
+
+**Còn 72% giá ban đầu.** Vì $0{,}8 \times 0{,}9 = 0{,}72$ — tổng mức giảm là
+28%, không phải 30%.
+
+:::
+
+## Ba câu hỏi mang theo
+
+::: {.incremental}
+
+- Con số này đang đo điều gì?
+- Những giả định nào đứng sau phép tính?
+- Có thông tin nào còn thiếu trước khi kết luận?
+
+:::
+
+## Toán học là cách đặt câu hỏi
+
+Từ đường đi, mua sắm đến dữ liệu, toán học giúp ta **định lượng, so sánh và
+kiểm tra giả định**.
+
+Không cần công thức phức tạp để bắt đầu — chỉ cần tò mò về những con số quanh
+mình.
+
+### Cảm ơn!
+
+**Hãy thử tìm một quyết định hôm nay mà bạn có thể nhìn rõ hơn nhờ toán học.**
