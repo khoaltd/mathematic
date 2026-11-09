@@ -1,0 +1,18 @@
+---
+title: "Lời nói đầu"
+subtitle: "Hành trình của kẻ khờ"
+format: html
+---
+
+[← Danh sách chương](index.qmd)
+
+**Gửi những cô gái mà anh từng yêu trước đó,**
+
+*Anh bắt đầu hành trình này với một điều rất đơn giản: ANH KHÔNG BIẾT.*
+
+Không biết đủ nhiều, không hiểu đủ sâu, và đôi khi thậm chí không biết mình
+đang không hiểu điều gì. Nhưng có lẽ đó cũng là điểm khởi đầu đẹp nhất khi
+bắt đầu một điều mà anh nghĩ là hạnh phúc; đến giờ, anh nhận ra nhiều điều và
+mỉm cười vì chúng.
+
+— **Dylan Lee**

@@ -4,8 +4,6 @@ subtitle: "Hành trình của kẻ khờ · Giải tích hàm"
 format: html
 ---
 
-
-
 [← Danh sách chương](../index.qmd) · [▶ Trình chiếu chương này](../slides/ch14.qmd#/sec-ch14-01)
 
 ## Các section
@@ -13,7 +11,7 @@ format: html
 - [14.1 Bán nhóm một tham số](../slides/ch14.qmd#/sec-ch14-01)
 - [14.2 Bán nhóm liên tục mạnh](../slides/ch14.qmd#/sec-ch14-02)
 - [14.3 Bộ sinh vô cùng bé](../slides/ch14.qmd#/sec-ch14-03)
-- [14.4 Tính chất của bán nhóm $C_0$](../slides/ch14.qmd#/sec-ch14-04)
+- [14.4 Các tính chất của bán nhóm $C_0$](../slides/ch14.qmd#/sec-ch14-04)
 - [14.5 Định lý Hille–Yosida](../slides/ch14.qmd#/sec-ch14-05)
 - [14.6 Bán nhóm co](../slides/ch14.qmd#/sec-ch14-06)
 - [14.7 Bán nhóm giải tích](../slides/ch14.qmd#/sec-ch14-07)

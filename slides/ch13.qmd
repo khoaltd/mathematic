@@ -1,5 +1,5 @@
 ---
-title: "Chương 13 · Phổ của toán tử không bị chặn"
+title: "Chương 13 · Lý thuyết phổ của toán tử không bị chặn"
 subtitle: "Hành trình của kẻ khờ · Giải tích hàm"
 author: "Dylan Lee"
 format: revealjs
@@ -7,46 +7,45 @@ format: revealjs
 
 ## 13.1 Tập giải thức và phổ {#sec-ch13-01}
 
+Với toán tử không bị chặn $A$, số phức $\lambda$ thuộc tập giải thức nếu $\lambda I-A$ song ánh và nghịch đảo của nó là toán tử bị chặn trên toàn không gian. Phổ là phần bù của tập giải thức trong mặt phẳng phức.
+
 ::: {#def-ch13-01 .def-}
 $\lambda\in\rho(A)$ nếu $\lambda I-A:D(A)\to X$ song ánh và
 nghịch đảo là toán tử bị chặn trên toàn $X$. Phổ là
 $\sigma(A)=\mathbb C\setminus\rho(A)$.
-:::
 
-Khác trường hợp bị chặn, miền $D(A)$ là một phần của điều kiện khả nghịch.
+:::
 
 ## 13.2 Tập giải thức {#sec-ch13-02}
 
-Toán tử giải thức $R(\lambda,A)=(\lambda I-A)^{-1}$ đưa phương trình
-$(\lambda I-A)x=y$ về ước lượng đầu ra theo dữ liệu. Tập giải thức mở và
-$R(\lambda,A)$ phụ thuộc giải tích theo $\lambda$ trên miền đó.
+Tập giải thức $\rho(A)$ gồm các giá trị $\lambda$ mà $\lambda I-A$ có nghịch đảo bị chặn. Toán tử giải thức $R(\lambda,A)=(\lambda I-A)^{-1}$ biến phương trình toán tử thành bài toán ước lượng một toán tử bị chặn.
 
 ## 13.3 Phổ của toán tử tự liên hợp {#sec-ch13-03}
+
+Nếu $A$ tự liên hợp thì phổ của $A$ nằm trên trục thực. Các ước lượng cho $R(\lambda,A)$ khi $\lambda$ không thực thể hiện trực tiếp ảnh hưởng của tính tự liên hợp.
 
 ::: {#thm-ch13-01 .thm-}
 Nếu $A$ tự liên hợp trên không gian Hilbert phức thì phổ của
 $A$ nằm trên trục thực. Với $z\notin\mathbb R$,
 $\|(A-zI)^{-1}\|\le1/|\operatorname{Im}z|$.
+
 :::
 
 ## 13.4 Định lý phổ cho toán tử tự liên hợp {#sec-ch13-04}
 
-Định lý phổ biểu diễn toán tử tự liên hợp qua một họ tăng các phép chiếu trực
-giao $E(\lambda)$; trực giác là chéo hóa tổng quát, có thể có phổ liên tục.
+Định lý phổ biểu diễn toán tử tự liên hợp qua một độ đo phổ gồm các phép chiếu trực giao. Nhờ đó, các hàm của toán tử có thể được xây dựng bằng cách áp dụng hàm tương ứng lên biến phổ.
 
 ::: {#thm-ch13-02 .thm- name="Phổ (dạng diễn giải)"}
 Toán tử tự liên hợp có một phân tích theo
 phép đo phổ, cho phép viết $A$ như tích phân của biến phổ theo các phép
 chiếu trực giao.
+
 :::
 
 ## 13.5 Giải tích hàm {#sec-ch13-05}
 
-Với hàm đo được thích hợp $g$, phép tính hàm phổ định nghĩa $g(A)$. Miền của
-$g(A)$ phụ thuộc tính khả tích của $|g|^2$ theo độ đo phổ của từng vectơ.
-Các ví dụ gồm căn bậc hai và bán nhóm $e^{-tA}$ khi điều kiện phổ cho phép.
+Giải tích hàm cho phép định nghĩa $f(A)$ khi $f$ là hàm thích hợp trên phổ của $A$. Với toán tử tự liên hợp, phép tính này được thiết lập từ biểu diễn phổ và bao gồm các đối tượng như căn bậc hai hoặc hàm mũ của toán tử.
 
 ## 13.6 Ứng dụng vào toán tử vi phân {#sec-ch13-06}
 
-Đạo hàm và Laplace được xét cùng miền Sobolev và điều kiện biên. Thay đổi
-điều kiện biên có thể đổi tính tự liên hợp, phổ và do đó đổi hành vi nghiệm.
+Các toán tử đạo hàm và Laplace trên không gian hàm thường không bị chặn, nhưng có thể được nghiên cứu qua miền xác định và phổ. Điều kiện biên ảnh hưởng đến tính tự liên hợp, phổ và nghiệm của phương trình vi phân.

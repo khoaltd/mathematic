@@ -7,57 +7,61 @@ format: revealjs
 
 ## 11.1 Toán tử liên hợp {#sec-ch11-01}
 
-Với $T:X\to Y$ bị chặn, toán tử liên hợp Banach $T':Y^*\to X^*$ được xác
-định bởi $T'f=f\circ T$. Trên Hilbert, ký hiệu $T^*$ thường dành cho liên
-hợp xác định qua tích vô hướng.
+Với toán tử bị chặn $T:X\to Y$, toán tử liên hợp $T':Y^*\to X^*$ được định nghĩa bởi $T'f=f\circ T$. Toán tử này chuyển bài toán trên không gian ban đầu thành bài toán trên các phiếm hàm.
 
 ## 11.2 Toán tử tự liên hợp {#sec-ch11-02}
+
+Toán tử $T$ trên không gian Hilbert là tự liên hợp nếu $T=T^*$, bao gồm cả sự trùng nhau của miền xác định khi $T$ không bị chặn. Trị phổ của toán tử tự liên hợp là thực, một tính chất then chốt của lý thuyết phổ.
 
 ::: {#def-ch11-01 .def-}
 Toán tử $T$ trên Hilbert tự liên hợp nếu $T=T^*$. Với toán
 tử không bị chặn, điều này đòi hỏi cả sự trùng nhau của miền xác định
 $D(T)=D(T^*)$.
+
 :::
 
-Toán tử đối xứng chỉ đòi hỏi đẳng thức tích vô hướng trên miền xác định; với
-toán tử không bị chặn, đối xứng chưa đủ để suy ra tự liên hợp.
-
 ## 11.3 Toán tử dương {#sec-ch11-03}
+
+Toán tử tự liên hợp $T$ được gọi là dương nếu $\langle Tx,x\rangle\geq0$ với mọi $x$ trong miền xác định. Tính dương thường bảo đảm các ước lượng năng lượng và giới hạn dưới cho phổ.
 
 ::: {#def-ch11-02 .def-}
 Toán tử tự liên hợp $T$ dương nếu
 $\langle Tx,x\rangle\ge0$ với mọi $x$ trong miền xác định.
+
 :::
 
-Tính dương đưa ra chặn dưới cho phổ và thường là nguồn của các ước lượng năng
-lượng.
+## 11.4 Các tính chất phổ của toán tử tự liên hợp {#sec-ch11-04}
 
-## 11.4 Tính chất phổ của toán tử tự liên hợp {#sec-ch11-04}
+Phổ của toán tử tự liên hợp nằm trên trục thực; với toán tử dương, phổ còn nằm trong nửa trục không âm. Các tính chất này giúp diễn giải toán tử như một phép nhân theo các giá trị phổ.
 
 ::: {#thm-ch11-01 .thm-}
 Phổ của toán tử tự liên hợp nằm trên trục thực. Nếu $T$ dương
 thì phổ nằm trong $[0,\infty)$.
+
 :::
 
-## 11.5 Định lý phổ cho toán tử compact tự liên hợp {#sec-ch11-05}
+## 11.5 Định lý phổ cho toán tử tự liên hợp compact {#sec-ch11-05}
+
+Toán tử tự liên hợp compact có hệ vectơ riêng trực chuẩn sinh ra phần bù trực giao của hạt nhân. Mọi vectơ có thể khai triển theo các vectơ riêng này, còn các trị riêng khác không chỉ tích tụ tại $0$.
 
 ::: {#thm-ch11-02 .thm- name="Phổ compact"}
 Với toán tử compact tự liên hợp trên Hilbert, có
 một hệ vectơ riêng trực chuẩn sinh ra phần bù trực giao của hạt nhân. Các
 trị riêng khác không có bội hữu hạn và chỉ tích tụ tại $0$.
+
 :::
 
-## 11.6 Phân tích phổ {#sec-ch11-06}
+## 11.6 Khai triển phổ {#sec-ch11-06}
 
-Phân tích phổ viết toán tử qua các trị riêng và phép chiếu tương ứng trong
-trường hợp compact. Với toán tử tự liên hợp tổng quát, định lý phổ dùng độ đo
-phổ và các phép chiếu trực giao.
+Khai triển phổ biểu diễn toán tử qua các phép chiếu phổ hoặc qua các vectơ riêng trong trường hợp compact. Nó chuyển việc nghiên cứu toán tử thành việc phân tích các thành phần phổ và hệ số tương ứng.
 
 ## 11.7 Ứng dụng vào phương trình tích phân {#sec-ch11-07}
 
-Phương trình tích phân tuyến tính thường có dạng
-$$
-u-Ku=f,
-$$
-trong đó $K$ là toán tử tích phân. Nếu $K$ compact, phương án Fredholm giúp
-xác định điều kiện tồn tại và duy nhất nghiệm.
+Nhiều phương trình tích phân tuyến tính có thể viết dưới dạng $(I-K)x=f$, trong đó $K$ là toán tử tích phân compact. Khi đó lý thuyết phổ và phương án Fredholm cung cấp điều kiện tồn tại, duy nhất và mô tả nghiệm.
+
+# Toán tử không bị chặn và lý thuyết bán nhóm
+
+::: center
+Mở rộng lý thuyết toán tử sang các bài toán vi phân và phương trình tiến hóa.
+
+:::

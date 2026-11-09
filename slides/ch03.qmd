@@ -7,36 +7,37 @@ format: revealjs
 
 ## 3.1 Toán tử tuyến tính {#sec-ch03-01}
 
-Toán tử là ánh xạ giữa các không gian vectơ; tính tuyến tính cho phép chuyển
-phép cộng và nhân vô hướng qua ánh xạ.
+Cho hai không gian vectơ $X,Y$. Ánh xạ $T:X\to Y$ là tuyến tính nếu $T(x+y)=Tx+Ty$ và $T(\lambda x)=\lambda Tx$; hai tính chất này gộp thành $T(\alpha x+\beta y)=\alpha Tx+\beta Ty$. Toán tử tuyến tính là cấu trúc cơ bản để mô tả phép biến đổi giữa các không gian.
 
 ::: {#def-ch03-01 .def-}
 $T:X\to Y$ tuyến tính nếu
 $T(\alpha x+\beta y)=\alpha Tx+\beta Ty$.
+
 :::
 
 ## 3.2 Toán tử tuyến tính bị chặn {#sec-ch03-02}
 
-Bị chặn nghĩa là toán tử không khuếch đại độ lớn tùy ý so với đầu vào.
+Toán tử tuyến tính $T:X\to Y$ bị chặn nếu tồn tại $C\geq0$ sao cho $\|Tx\|_Y\leq C\|x\|_X$ với mọi $x\in X$. Điều kiện này kiểm soát mức độ khuếch đại của toán tử và bảo đảm các dãy hội tụ được ánh xạ thành dãy hội tụ.
 
 ::: {#def-ch03-02 .def-}
 $T:X\to Y$ bị chặn nếu tồn tại $C\ge0$ sao cho
 $\|Tx\|_Y\le C\|x\|_X$ với mọi $x\in X$.
+
 :::
 
 ## 3.3 Tính liên tục và tính bị chặn {#sec-ch03-03}
 
-Với ánh xạ tổng quát, liên tục không đồng nghĩa với bị chặn trên toàn miền.
-Tính tuyến tính làm nên tương đương quan trọng sau.
+Đối với toán tử tuyến tính giữa các không gian định chuẩn, tính liên tục tại một điểm tương đương với tính liên tục tại mọi điểm và tương đương với tính bị chặn. Vì thế, chỉ cần kiểm tra tính liên tục tại vectơ không.
 
 ::: {#thm-ch03-01 .thm-}
 Toán tử tuyến tính giữa các không gian định chuẩn liên tục khi
 và chỉ khi bị chặn; tương đương, liên tục tại một điểm thì liên tục mọi nơi.
+
 :::
 
 ## 3.4 Chuẩn toán tử {#sec-ch03-04}
 
-Chuẩn toán tử đo mức khuếch đại lớn nhất trên quả cầu đơn vị.
+Chuẩn toán tử của $T$ được định nghĩa bởi $\|T\|=\sup_{\|x\|\leq1}\|Tx\|=\sup_{x\ne0}\frac{\|Tx\|}{\|x\|}$. Đây là hằng số nhỏ nhất $C$ thỏa mãn $\|Tx\|\leq C\|x\|$; các toán tử bị chặn tạo thành một không gian định chuẩn.
 
 ::: {#def-ch03-03 .def-}
 Với $T$ bị chặn,
@@ -45,36 +46,33 @@ $$
 =\sup_{x\ne0}\frac{\|Tx\|}{\|x\|}.
 $$
 Đây là hằng số nhỏ nhất trong bất đẳng thức bị chặn.
+
 :::
 
 ## 3.5 Phiếm hàm tuyến tính {#sec-ch03-05}
 
-Phiếm hàm là toán tử có miền là một không gian vectơ và đích là trường vô
-hướng $\mathbb K$. Phiếm hàm liên tục cung cấp phép đo vô hướng trên không
-gian.
+Phiếm hàm tuyến tính là toán tử tuyến tính $f:X\to\mathbb{K}$ nhận giá trị trong trường vô hướng. Phiếm hàm liên tục đo một đặc trưng vô hướng của vectơ mà vẫn tương thích với cấu trúc tuyến tính.
 
 ## 3.6 Không gian đối ngẫu {#sec-ch03-06}
 
-Đối ngẫu liên tục $X^*$ gồm mọi phiếm hàm tuyến tính liên tục, với chuẩn
-$\|f\|=\sup_{\|x\|\le1}|f(x)|$.
+Đối ngẫu liên tục $X^*$ là không gian gồm tất cả các phiếm hàm tuyến tính liên tục trên $X$, với chuẩn $\|f\|=\sup_{\|x\|\leq1}|f(x)|$. Với mọi không gian định chuẩn $X$, không gian $X^*$ là Banach.
 
 ::: {#thm-ch03-02 .thm-}
 Với mọi không gian định chuẩn $X$, đối ngẫu liên tục $X^*$ là
 không gian Banach.
+
 :::
 
-## 3.7 Đối ngẫu thứ hai và không gian song đối ngẫu {#sec-ch03-07}
+## 3.7 Không gian đối ngẫu thứ hai và không gian song đối ngẫu {#sec-ch03-07}
 
-Đối ngẫu thứ hai là $X^{**}=(X^*)^*$. Mỗi điểm $x\in X$ tạo ra phiếm hàm trên
-$X^*$ bằng cách đánh giá $f$ tại $x$.
+Đối ngẫu thứ hai là $X^{**}=(X^*)^*$. Ánh xạ chính tắc $J:X\to X^{**}$, xác định bởi $J(x)(f)=f(x)$, là một phép nhúng đẳng cự; $X$ được gọi là phản xạ nếu $J$ là toàn ánh.
 
 ::: {#def-ch03-04 .def-}
 Ánh xạ chính tắc $J:X\to X^{**}$ được xác định bởi
 $J(x)(f)=f(x)$. Không gian Banach phản xạ nếu $J$ toàn ánh.
+
 :::
 
-## 3.8 Ví dụ về toán tử trên không gian hàm {#sec-ch03-08}
+## 3.8 Ví dụ về toán tử trên các không gian hàm {#sec-ch03-08}
 
-Trên $C([a,b])$, ánh xạ $Tf=\int_a^b f(t)\,dt$ là tuyến tính và bị chặn vì
-$|Tf|\le(b-a)\|f\|_\infty$. Ngược lại, phép đạo hàm không bị chặn trên
-$C^1([a,b])$ nếu chỉ dùng chuẩn supremum của hàm và đầu ra.
+Các phép lấy tích phân, nhân với một hàm cố định và đạo hàm là những mô hình toán tử thường gặp trên không gian hàm. Tính tuyến tính có thể đơn giản, nhưng tính bị chặn phụ thuộc vào chuẩn, miền xác định và điều kiện chính quy của hàm.

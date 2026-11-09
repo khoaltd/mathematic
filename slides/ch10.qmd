@@ -7,48 +7,51 @@ format: revealjs
 
 ## 10.1 Toán tử compact {#sec-ch10-01}
 
+Toán tử tuyến tính $T:X\to Y$ là compact nếu ảnh của mọi tập bị chặn có bao đóng compact. Tương đương, ảnh của mọi dãy bị chặn có một dãy con hội tụ; toán tử hạng hữu hạn là những ví dụ cơ bản.
+
 ::: {#def-ch10-01 .def-}
 $T:X\to Y$ compact nếu ảnh của mọi tập bị chặn có bao đóng
 compact. Tương đương, ảnh của mọi dãy bị chặn có một dãy con hội tụ.
+
 :::
 
-Compact không có nghĩa là ảnh của quả cầu đóng luôn đóng; yêu cầu là bao đóng
-của ảnh compact.
+## 10.2 Các tính chất của toán tử compact {#sec-ch10-02}
 
-## 10.2 Tính chất của toán tử compact {#sec-ch10-02}
-
-Tổng toán tử compact và hợp của toán tử compact với toán tử bị chặn vẫn
-compact. Giới hạn theo chuẩn của dãy toán tử compact cũng compact.
+Tổng của hai toán tử compact và hợp của toán tử compact với toán tử bị chặn vẫn compact. Trong nhiều không gian hàm, toán tử compact mô tả các biến đổi làm mất bớt dao động hoặc tạo tính trơn.
 
 ## 10.3 Toán tử hạng hữu hạn {#sec-ch10-03}
+
+Toán tử có ảnh nằm trong một không gian con hữu hạn chiều được gọi là toán tử hạng hữu hạn. Các toán tử này compact và thường dùng để xấp xỉ toán tử compact trong các không gian Banach thích hợp.
 
 ::: {#def-ch10-02 .def-}
 Toán tử có ảnh nằm trong một không gian con hữu hạn chiều là
 toán tử hạng hữu hạn.
+
 :::
 
-Mọi toán tử hạng hữu hạn đều compact. Trong các không gian thích hợp, toán tử
-compact có thể được xấp xỉ bởi các toán tử hạng hữu hạn.
-
 ## 10.4 Phổ của toán tử compact {#sec-ch10-04}
+
+Trên không gian Banach phức vô hạn chiều, mọi phần tử phổ khác không của toán tử compact là trị riêng có không gian riêng hữu hạn chiều. Các trị riêng khác không chỉ có thể tích tụ tại $0$.
 
 ::: {#thm-ch10-01 .thm-}
 Trên không gian Banach phức vô hạn chiều, mọi phần tử phổ khác
 không của toán tử compact là trị riêng có không gian riêng hữu hạn chiều.
 Các trị riêng khác không chỉ có thể tích tụ tại $0$.
+
 :::
 
 ## 10.5 Lý thuyết Riesz–Schauder {#sec-ch10-05}
 
-Với $K$ compact, hạt nhân của $I-K$ hữu hạn chiều. Dãy các hạt nhân
-$\ker(I-K)^n$ ổn định sau hữu hạn bước; cấu trúc này giúp kiểm soát nghiệm
-của phương trình compact.
+Lý thuyết Riesz–Schauder mô tả cấu trúc phổ của toán tử compact và tính chất của toán tử $I-K$. Một hệ quả là hạt nhân của $I-K$ hữu hạn chiều và các câu hỏi về khả nghịch gắn với phương trình đồng nhất tương ứng.
 
 ## 10.6 Phương án Fredholm {#sec-ch10-06}
+
+Với toán tử compact $K$ trên không gian Banach, phương án Fredholm liên hệ tính giải được của $(I-K)x=y$ với phương trình thuần nhất và bài toán đối ngẫu. Trong trường hợp hạt nhân của $I-K$ bằng không, toán tử $I-K$ là khả nghịch.
 
 ::: {#thm-ch10-02 .thm- name="Phương án Fredholm (dạng cơ bản)"}
 Với $K$ compact trên Banach, tính khả
 giải của $(I-K)x=y$ liên hệ với nghiệm của phương trình thuần nhất và bài
 toán đối ngẫu. Đặc biệt, nếu $\ker(I-K)=\{0\}$ thì $I-K$ khả nghịch và
 nghịch đảo bị chặn.
+
 :::

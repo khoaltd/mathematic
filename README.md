@@ -6,9 +6,11 @@ trên GitHub Pages.
 
 ## Luồng xem
 
-1. Trang chủ liệt kê 16 chương.
+1. Trang chủ liệt kê 16 chương và liên kết tới phần tra cứu.
 2. Chọn một chương để xem danh sách các section.
 3. Chọn một section để mở bài trình chiếu riêng của chương tại đúng slide đó.
+4. Phụ lục cung cấp bảng tổng kết định lý và chỉ mục thuật ngữ có liên kết
+   quay về nội dung.
 
 Mỗi chương là một deck Reveal.js độc lập. Trong khi trình chiếu, nhấn `F` để
 bật toàn màn hình, dùng phím mũi tên để chuyển slide, hoặc nhấn `M` để mở menu
@@ -39,10 +41,12 @@ quarto render
 ## Cấu trúc nội dung
 
 - `index.qmd`: trang chủ chỉ liệt kê các chương.
+- `foreword.qmd`: lời nói đầu từ bản thảo.
 - `chapters/ch01.qmd` … `chapters/ch16.qmd`: trang mục lục section của từng
   chương.
 - `slides/ch01.qmd` … `slides/ch16.qmd`: bài trình chiếu Reveal.js riêng cho
   từng chương.
+- `appendices.qmd`: bảng tổng kết định lý và chỉ mục thuật ngữ.
 - `_quarto.yml`: cấu hình website và Reveal.js.
 - `reveal.scss`: giao diện slide và các khối định nghĩa/định lý.
 - `styles.scss`: giao diện các trang HTML.

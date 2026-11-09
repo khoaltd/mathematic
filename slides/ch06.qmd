@@ -5,78 +5,84 @@ author: "Dylan Lee"
 format: revealjs
 ---
 
-## 6.1 Phiếm hàm tuyến tính và dưới tuyến tính {#sec-ch06-01}
+## 6.1 Phiếm hàm tuyến tính và phiếm hàm dưới tuyến tính {#sec-ch06-01}
 
-Hahn–Banach mở rộng phiếm hàm trong một miền con mà không làm mất chặn. Dạng
-đại số dùng một hàm dưới tuyến tính để kiểm soát phần mở rộng.
+::: {.callout-note title="Lời dẫn"}
+
+Yêu một người là nhìn thấy họ từ một góc độ riêng. Nhưng liệu góc nhìn ấy có thể mở rộng ra cả thế giới mà không đánh mất bản chất ban đầu?
+
+:::
+
+Hàm $p:X\to\mathbb{R}$ là dưới tuyến tính nếu $p(x+y)\leq p(x)+p(y)$ và $p(\lambda x)=\lambda p(x)$ với $\lambda\geq0$. Định lý Hahn–Banach xây dựng phần mở rộng tuyến tính vẫn bị khống chế bởi một hàm dưới tuyến tính như vậy.
 
 ::: {#def-ch06-01 .def-}
 $p:X\to\mathbb R$ dưới tuyến tính nếu
 $p(x+y)\le p(x)+p(y)$ và $p(\lambda x)=\lambda p(x)$ với $\lambda\ge0$.
+
 :::
 
 ## 6.2 Mở rộng phiếm hàm tuyến tính {#sec-ch06-02}
+
+Giả sử một phiếm hàm tuyến tính trên không gian con bị chặn trên bởi hàm dưới tuyến tính $p$. Dạng trừu tượng của Hahn–Banach bảo đảm tồn tại phần mở rộng lên toàn không gian mà vẫn thỏa mãn cùng bất đẳng thức khống chế.
 
 ::: {#thm-ch06-01 .thm- name="Mở rộng Hahn–Banach"}
 Cho không gian vectơ thực $X$, không gian con
 $M$, phiếm hàm tuyến tính $f:M\to\mathbb R$ và hàm dưới tuyến tính $p:X\to
 \mathbb R$ sao cho $f(x)\le p(x)$ trên $M$. Khi đó tồn tại phần mở rộng tuyến
 tính $F:X\to\mathbb R$ sao cho $F|_M=f$ và $F(x)\le p(x)$ trên $X$.
+
 :::
 
-## 6.3 Dạng thực cho không gian định chuẩn {#sec-ch06-03}
+## 6.3 Định lý Hahn–Banach: trường hợp thực {#sec-ch06-03}
 
-Với chuẩn, chọn $p(x)=\|f\|\|x\|$. Khi đó phiếm hàm liên tục trên không gian
-con có thể mở rộng lên toàn không gian mà không tăng chuẩn.
+Trên không gian vectơ thực, phiếm hàm tuyến tính bị khống chế bởi một hàm dưới tuyến tính trên không gian con có thể được mở rộng lên toàn không gian mà không vượt quá hàm khống chế. Đây là dạng đại số nền tảng của định lý Hahn–Banach.
 
 ::: {#thm-ch06-02 .thm- name="Hệ quả (Hahn–Banach thực)"}
 Nếu $M\subset X$ và $f\in M^*$ thì có
 $F\in X^*$ sao cho $F|_M=f$ và $\|F\|=\|f\|$.
+
 :::
 
-## 6.4 Dạng phức {#sec-ch06-04}
+## 6.4 Định lý Hahn–Banach: trường hợp phức {#sec-ch06-04}
 
-Định lý đúng cho không gian phức. Chứng minh thường xét phần thực của phiếm
-hàm rồi khôi phục tính tuyến tính phức.
+Trong không gian phức, định lý Hahn–Banach cũng cho phép mở rộng phiếm hàm tuyến tính liên tục mà giữ nguyên chuẩn. Một cách chứng minh thường quy bài toán về trường hợp thực rồi khôi phục tính tuyến tính phức.
 
 ::: {#thm-ch06-03 .thm- name="Hahn–Banach phức"}
 Mọi phiếm hàm tuyến tính liên tục trên không
 gian con của không gian định chuẩn phức có phần mở rộng tuyến tính liên tục
 lên toàn không gian với cùng chuẩn.
+
 :::
 
-## 6.5 Dạng hình học {#sec-ch06-05}
+## 6.5 Dạng hình học của định lý Hahn–Banach {#sec-ch06-05}
 
-Phiếm hàm tuyến tính liên tục xác định các siêu phẳng. Dạng hình học của
-Hahn–Banach biến việc mở rộng phiếm hàm thành khả năng phân cách.
+Dạng hình học diễn giải khả năng mở rộng phiếm hàm thành sự tồn tại của siêu phẳng liên tục phân cách một điểm khỏi một tập lồi đóng. Cách nhìn này nối giải tích hàm với hình học lồi.
 
 ::: {#thm-ch06-04 .thm- name="Phân cách (dạng tiêu biểu)"}
 Nếu $C$ là tập lồi mở và $x_0\notin C$
 trong không gian vectơ tôpô thực thích hợp, tồn tại phiếm hàm tuyến tính liên
 tục tách $x_0$ khỏi $C$. Các dạng mạnh hơn cần giả thiết đóng, compact hoặc
 khoảng cách dương.
+
 :::
 
 ## 6.6 Tách các tập lồi {#sec-ch06-06}
 
-Định lý phân cách áp dụng cho hai tập lồi rời nhau dưới các giả thiết thích
-hợp. Cần nêu rõ điều kiện hình học: hai tập rời nhau nhưng có khoảng cách
-không dương không phải lúc nào cũng cho dạng tách mạnh.
+Các định lý tách cho phép tìm phiếm hàm tuyến tính liên tục phân biệt hai tập lồi rời nhau dưới những giả thiết thích hợp về tính đóng và tính compact. Chúng là công cụ quan trọng trong tối ưu hóa và nghiên cứu các tập lồi.
 
 ::: {.example-}
 Trong $\mathbb R^n$, siêu phẳng $a\cdot x=c$ có thể tách hai miền lồi nằm ở
 hai phía. Đây là hình học đứng sau các phiếm hàm đối ngẫu trong tối ưu hóa.
+
 :::
 
 ## 6.7 Ứng dụng vào không gian đối ngẫu {#sec-ch06-07}
 
-Hahn–Banach bảo đảm có phiếm hàm “nhìn thấy” độ lớn của từng vectơ.
+Định lý Hahn–Banach bảo đảm có đủ phiếm hàm liên tục để phân biệt các điểm và mô tả chuẩn bằng đối ngẫu. Chẳng hạn, với $x\ne0$ có thể tìm phiếm hàm $f$ sao cho $\|f\|=1$ và $f(x)=\|x\|$.
 
 ::: {#thm-ch06-05 .thm- name="Hệ quả"}
 Với $x\ne0$ trong không gian định chuẩn, tồn tại $f\in X^*$ sao
 cho $\|f\|=1$ và $f(x)=\|x\|$ (trường thực; trường phức có thể chọn pha thích
 hợp).
-:::
 
-Do đó chuẩn có thể được khôi phục từ các giá trị của phiếm hàm trong quả cầu
-đơn vị của đối ngẫu.
+:::

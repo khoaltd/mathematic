@@ -7,62 +7,71 @@ format: revealjs
 
 ## 8.1 Nguyên lý bị chặn đều {#sec-ch08-01}
 
+Cho họ toán tử tuyến tính liên tục $\mathcal{F}$ từ không gian Banach $X$ vào không gian định chuẩn $Y$. Nếu với mỗi $x\in X$, các giá trị $\{Tx:T\in\mathcal{F}\}$ bị chặn, thì các chuẩn toán tử $\{\|T\|:T\in\mathcal{F}\}$ cũng bị chặn.
+
 ::: {#thm-ch08-01 .thm- name="Nguyên lý bị chặn đều"}
 Cho họ $\mathcal F$ các toán tử tuyến tính liên
 tục từ Banach $X$ vào không gian định chuẩn $Y$. Nếu
 $\sup_{T\in\mathcal F}\|Tx\|<\infty$ với mỗi $x\in X$, thì
 $\sup_{T\in\mathcal F}\|T\|<\infty$.
-:::
 
-Kết quả chuyển từ chặn riêng tại từng điểm sang một chặn chung cho cả họ.
+:::
 
 ## 8.2 Định lý Banach–Steinhaus {#sec-ch08-02}
 
-Banach–Steinhaus là tên gọi khác của nguyên lý bị chặn đều. Nó hữu ích khi
-mỗi toán tử trong một dãy có vẻ được kiểm soát, nhưng ta cần một ước lượng
-đồng đều theo chỉ số.
+Định lý Banach–Steinhaus là tên gọi khác thường dùng cho nguyên lý bị chặn đều. Nó cho phép suy ra một chặn đồng đều từ các chặn riêng lẻ tại từng điểm.
 
 ::: {.example-}
 Nếu các tổng riêng của một khai triển bị chặn tại mọi điểm trong một không
 gian Banach, Banach–Steinhaus có thể cho chặn đồng đều của các toán tử tổng
 riêng.
+
 :::
 
 ## 8.3 Định lý đồ thị đóng {#sec-ch08-03}
 
+Toán tử tuyến tính giữa hai không gian Banach là liên tục khi và chỉ khi đồ thị của nó đóng trong tích hai không gian. Kết quả này đặc biệt hữu ích khi tính trực tiếp chuẩn toán tử khó khăn.
+
 ::: {#def-ch08-01 .def-}
 Đồ thị của $T:X\to Y$ là
 $G(T)=\{(x,Tx):x\in X\}\subset X\times Y$.
+
 :::
+
 
 ::: {#thm-ch08-02 .thm- name="Đồ thị đóng"}
 Toán tử tuyến tính xác định trên toàn Banach $X$ vào
 Banach $Y$ liên tục khi và chỉ khi đồ thị của nó đóng trong $X\times Y$.
+
 :::
 
 ## 8.4 Định lý ánh xạ ngược {#sec-ch08-04}
 
+Toán tử tuyến tính liên tục song ánh giữa hai không gian Banach có ánh xạ ngược liên tục và bị chặn. Vì vậy, nghiệm duy nhất của một phương trình tuyến tính không chỉ tồn tại mà còn phụ thuộc ổn định vào dữ liệu.
+
 ::: {#thm-ch08-03 .thm- name="Ánh xạ ngược"}
 Toán tử tuyến tính liên tục song ánh giữa hai không
 gian Banach có nghịch đảo liên tục và bị chặn.
-:::
 
-Điều này bảo đảm nghiệm duy nhất phụ thuộc ổn định vào dữ liệu, không chỉ tồn
-tại về mặt đại số.
+:::
 
 ## 8.5 Ứng dụng vào toán tử tuyến tính {#sec-ch08-05}
 
-Các nguyên lý trên thường được dùng sau khi chứng minh hai không gian là
-Banach. Chúng suy ra tính bị chặn hoặc tính ổn định mà không cần ước lượng
-trực tiếp công thức của toán tử.
+Các nguyên lý cơ bản giúp chứng minh tính ổn định của nghiệm, tính bị chặn của họ toán tử và sự tương đương giữa các cách đặt chuẩn. Chúng thường được dùng sau khi xác lập tính đầy đủ của các không gian liên quan.
 
 ## 8.6 Không gian con bù và phép chiếu {#sec-ch08-06}
+
+Không gian con $M$ của $X$ được bù nếu tồn tại không gian con đóng $N$ sao cho $X=M\oplus N$. Điều này tương đương với sự tồn tại của một phép chiếu tuyến tính bị chặn $P$ thỏa mãn $P^2=P$ và $P(X)=M$.
+
+# Lý thuyết phổ
+
+::: center
+Nghiên cứu phổ, trị riêng và cấu trúc của toán tử tuyến tính.
+
+:::
 
 ::: {#def-ch08-02 .def-}
 Không gian con đóng $M\subset X$ được bù nếu có không gian con
 đóng $N$ sao cho $X=M\oplus N$.
-:::
 
-Điều này tương đương với tồn tại phép chiếu tuyến tính bị chặn $P$ sao cho
-$P^2=P$ và $P(X)=M$. Không phải mọi không gian con đóng đều có bù trong mọi
-không gian Banach.
+:::

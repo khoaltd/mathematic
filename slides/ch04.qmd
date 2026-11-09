@@ -7,73 +7,71 @@ format: revealjs
 
 ## 4.1 Không gian tích vô hướng {#sec-ch04-01}
 
-Tích vô hướng khái quát tích vô hướng Euclid, mang thông tin về độ dài và góc.
-Trong trường phức, nó có đối xứng liên hợp.
+Tích vô hướng $\langle x,y\rangle$ mở rộng ý niệm tích vô hướng Euclid sang không gian vectơ thực hoặc phức. Nó thỏa mãn tính tuyến tính, đối xứng liên hợp và tính xác định dương; bất đẳng thức Cauchy–Schwarz là công cụ cơ bản để kiểm soát tích này.
 
 ::: {#def-ch04-01 .def-}
 Tích vô hướng $\langle x,y\rangle$ là tuyến tính theo một
 biến, liên hợp đối xứng và xác định dương:
 $\langle x,x\rangle>0$ khi $x\ne0$.
+
 :::
 
 ## 4.2 Chuẩn cảm sinh bởi tích vô hướng {#sec-ch04-02}
 
-Tích vô hướng sinh chuẩn $\|x\|=\sqrt{\langle x,x\rangle}$ và metric
-$d(x,y)=\|x-y\|$.
+Mỗi tích vô hướng sinh ra chuẩn $\|x\|=\sqrt{\langle x,x\rangle}$. Bất đẳng thức Cauchy–Schwarz bảo đảm chuẩn này thỏa mãn bất đẳng thức tam giác, còn tính đầy đủ đối với chuẩn đó tạo nên không gian Hilbert.
 
 ::: {#thm-ch04-01 .thm- name="Bất đẳng thức Cauchy–Schwarz"}
 $|\langle x,y\rangle|\le\|x\|\|y\|$. Đặc biệt, bất đẳng thức này bảo đảm chuẩn
 cảm sinh thỏa bất đẳng thức tam giác.
+
 :::
 
-Hilbert là không gian tích vô hướng đầy đủ theo chuẩn cảm sinh.
+## 4.3 Tính trực giao {#sec-ch04-03}
 
-## 4.3 Trực giao {#sec-ch04-03}
-
-Vectơ $x,y$ trực giao nếu $\langle x,y\rangle=0$. Khi đó
-$\|x+y\|^2=\|x\|^2+\|y\|^2$ — định lý Pythagoras trong Hilbert.
+Hai vectơ trực giao nếu tích vô hướng của chúng bằng không. Trong không gian Hilbert, phân tích một vectơ thành các thành phần trực giao giúp xác định phép chiếu, khoảng cách đến không gian con và các khai triển theo hệ trực chuẩn.
 
 ## 4.4 Hệ trực chuẩn {#sec-ch04-04}
 
-Hệ $(e_j)$ trực chuẩn nếu $\langle e_i,e_j\rangle=\delta_{ij}$. Hệ số
-$\langle x,e_j\rangle$ là thành phần của $x$ theo hướng $e_j$.
+Một họ vectơ là trực chuẩn nếu mỗi vectơ có chuẩn một và các vectơ khác nhau đôi một trực giao. Bất đẳng thức Bessel giới hạn tổng bình phương các hệ số Fourier của vectơ bởi bình phương chuẩn của vectơ đó.
 
 ::: {#thm-ch04-02 .thm- name="Bất đẳng thức Bessel"}
 Với mọi hệ trực chuẩn,
 $\sum_j|\langle x,e_j\rangle|^2\le\|x\|^2$.
+
 :::
 
 ## 4.5 Cơ sở trực chuẩn {#sec-ch04-05}
 
-Hệ trực chuẩn là đầy đủ nếu bao đóng của không gian sinh tuyến tính bằng $H$.
-Khi đó mỗi $x\in H$ có khai triển Fourier theo hệ.
+Hệ trực chuẩn là cơ sở trực chuẩn khi bao đóng của không gian sinh bởi nó bằng toàn bộ không gian Hilbert. Khi đó mỗi vectơ có khai triển theo hệ này và định lý Parseval biểu diễn bình phương chuẩn bằng tổng bình phương các hệ số.
 
 ::: {#thm-ch04-03 .thm- name="Đẳng thức Parseval"}
 Với cơ sở trực chuẩn $(e_j)$,
 $\|x\|^2=\sum_j|\langle x,e_j\rangle|^2$.
+
 :::
 
 ## 4.6 Định lý phép chiếu {#sec-ch04-06}
 
-Phép chiếu tìm điểm trong không gian con gần một vectơ cho trước nhất.
+Với mọi tập lồi đóng khác rỗng trong không gian Hilbert, mỗi điểm có một điểm gần nhất duy nhất trong tập đó. Nếu tập là không gian con đóng, sai số giữa vectơ và hình chiếu của nó trực giao với không gian con.
 
 ::: {#thm-ch04-04 .thm- name="Phép chiếu"}
 Với không gian con đóng $M$ của Hilbert $H$, mỗi
 $x\in H$ có duy nhất $m_0\in M$ sao cho
 $\|x-m_0\|=\inf_{m\in M}\|x-m\|$. Sai số $x-m_0$ vuông góc với $M$.
+
 :::
 
 ## 4.7 Định lý biểu diễn Riesz {#sec-ch04-07}
+
+Định lý biểu diễn Riesz cho biết mọi phiếm hàm tuyến tính liên tục trên không gian Hilbert có thể biểu diễn duy nhất dưới dạng tích vô hướng với một vectơ cố định. Kết quả này đồng nhất không gian Hilbert với đối ngẫu liên tục của nó.
 
 ::: {#thm-ch04-05 .thm- name="Biểu diễn Riesz"}
 Mọi phiếm hàm tuyến tính liên tục $f$ trên Hilbert
 được biểu diễn duy nhất bởi một vectơ $y_f$ qua tích vô hướng; chuẩn
 $\|f\|=\|y_f\|$.
+
 :::
 
-## 4.8 Toán tử liên hợp trên Hilbert {#sec-ch04-08}
+## 4.8 Toán tử liên hợp trên không gian Hilbert {#sec-ch04-08}
 
-Với toán tử bị chặn $T:H\to H$, toán tử liên hợp $T^*$ được đặc trưng bởi
-$\langle Tx,y\rangle=\langle x,T^*y\rangle$ (theo quy ước tích vô hướng tuyến
-tính ở biến thứ nhất). Liên hợp giúp định nghĩa toán tử tự liên hợp và nghiên
-cứu phổ.
+Với toán tử tuyến tính bị chặn $T:H\to H$, toán tử liên hợp $T^*$ được xác định bởi $\langle Tx,y\rangle=\langle x,T^*y\rangle$. Toán tử này giúp diễn đạt tính tự liên hợp, tính dương và nhiều tính chất phổ.

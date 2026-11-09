@@ -4,8 +4,6 @@ subtitle: "Hành trình của kẻ khờ · Giải tích hàm"
 format: html
 ---
 
-
-
 [← Danh sách chương](../index.qmd) · [▶ Trình chiếu chương này](../slides/ch03.qmd#/sec-ch03-01)
 
 ## Các section
@@ -16,5 +14,5 @@ format: html
 - [3.4 Chuẩn toán tử](../slides/ch03.qmd#/sec-ch03-04)
 - [3.5 Phiếm hàm tuyến tính](../slides/ch03.qmd#/sec-ch03-05)
 - [3.6 Không gian đối ngẫu](../slides/ch03.qmd#/sec-ch03-06)
-- [3.7 Đối ngẫu thứ hai và không gian song đối ngẫu](../slides/ch03.qmd#/sec-ch03-07)
-- [3.8 Ví dụ về toán tử trên không gian hàm](../slides/ch03.qmd#/sec-ch03-08)
+- [3.7 Không gian đối ngẫu thứ hai và không gian song đối ngẫu](../slides/ch03.qmd#/sec-ch03-07)
+- [3.8 Ví dụ về toán tử trên các không gian hàm](../slides/ch03.qmd#/sec-ch03-08)

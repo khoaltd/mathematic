@@ -1,5 +1,5 @@
 ---
-title: "Chương 9 · Phổ của toán tử bị chặn"
+title: "Chương 9 · Lý thuyết phổ của toán tử bị chặn"
 subtitle: "Hành trình của kẻ khờ · Giải tích hàm"
 author: "Dylan Lee"
 format: revealjs
@@ -7,68 +7,72 @@ format: revealjs
 
 ## 9.1 Phổ và tập giải thức {#sec-ch09-01}
 
+Với toán tử bị chặn $T$ trên không gian phức Banach, phổ $\sigma(T)$ gồm các số $\lambda$ sao cho $\lambda I-T$ không khả nghịch với nghịch đảo bị chặn; phần bù của phổ là tập giải thức. Phổ là tập compact khác rỗng.
+
 ::: {#def-ch09-01 .def-}
 Với toán tử bị chặn $T$ trên không gian Banach phức $X$,
 $\lambda$ thuộc tập giải thức $\rho(T)$ nếu $\lambda I-T$ có nghịch đảo bị
 chặn xác định trên toàn $X$. Phổ là $\sigma(T)=\mathbb C\setminus\rho(T)$.
-:::
 
-Phổ là compact và khác rỗng khi $X$ là không gian phức Banach khác không.
+:::
 
 ## 9.2 Phổ điểm, phổ liên tục và phổ dư {#sec-ch09-02}
 
-Phổ điểm gồm các trị riêng. Các phần còn lại phân loại trường hợp
-$\lambda I-T$ đơn ánh nhưng không toàn ánh, dựa trên độ trù mật của ảnh.
+Phổ điểm gồm các trị riêng, tức những $\lambda$ làm $\lambda I-T$ không đơn ánh. Các phần phổ liên tục và phổ dư phân biệt những trường hợp toán tử đơn ánh nhưng không khả nghịch, tùy theo tính trù mật của miền giá trị.
 
 ::: {#def-ch09-02 .def-}
 $\lambda$ thuộc phổ điểm nếu $\ker(\lambda I-T)\ne\{0\}$.
 Trong phổ liên tục, toán tử đơn ánh có ảnh trù mật nhưng không bằng $X$; phổ
 dư là trường hợp ảnh không trù mật.
+
 :::
 
 ## 9.3 Bán kính phổ {#sec-ch09-03}
 
+Bán kính phổ là $r(T)=\sup\{|\lambda|:\lambda\in\sigma(T)\}$. Công thức Gelfand liên hệ đại lượng phổ này với tốc độ tăng của lũy thừa toán tử: $r(T)=\lim_{n\to\infty}\|T^n\|^{1/n}$.
+
 ::: {#def-ch09-03 .def-}
 Bán kính phổ là
 $r(T)=\sup\{|\lambda|:\lambda\in\sigma(T)\}$.
+
 :::
+
 
 ::: {#thm-ch09-01 .thm- name="Công thức Gelfand"}
 Với toán tử bị chặn trên Banach phức,
 $$
 r(T)=\lim_{n\to\infty}\|T^n\|^{1/n}.
 $$
+
 :::
 
 ## 9.4 Toán tử giải thức {#sec-ch09-04}
 
+Với $\lambda$ thuộc tập giải thức, toán tử giải thức là $R(\lambda,T)=(\lambda I-T)^{-1}$. Sự phụ thuộc của $R(\lambda,T)$ vào $\lambda$ giải thích cách phổ chi phối nghiệm của các phương trình toán tử.
+
 ::: {#def-ch09-04 .def-}
 Với $\lambda\in\rho(T)$,
 $R(\lambda,T)=(\lambda I-T)^{-1}$ là toán tử giải thức.
+
 :::
 
-Toán tử giải thức phụ thuộc giải tích theo $\lambda$ trên tập giải thức và
-thỏa phương trình resolvent; các ước lượng của nó cho biết mức nhạy của
-nghiệm.
+## 9.5 Các tính chất phổ của toán tử bị chặn {#sec-ch09-05}
 
-## 9.5 Tính chất phổ của toán tử bị chặn {#sec-ch09-05}
-
-Phổ luôn nằm trong đĩa đóng bán kính $\|T\|$. Nếu $\|T\|<1$ thì
-$I-T$ khả nghịch với nghịch đảo Neumann:
-$(I-T)^{-1}=\sum_{n=0}^\infty T^n$.
+Phổ của toán tử bị chặn phức là compact và nằm trong đĩa $|\lambda|\leq\|T\|$. Các phép biến đổi đại số của toán tử kéo theo những quan hệ tương ứng giữa phổ và các tập giá trị.
 
 ::: {#thm-ch09-02 .thm- name="Chuỗi Neumann"}
 Nếu $\|S\|<1$ trong không gian Banach các toán tử
 bị chặn thì $\sum_{n=0}^\infty S^n$ hội tụ theo chuẩn và là nghịch đảo của
 $I-S$.
+
 :::
 
 ## 9.6 Định lý ánh xạ phổ {#sec-ch09-06}
 
+Với đa thức $p$, định lý ánh xạ phổ cho biết $\sigma(p(T))=p(\sigma(T))$. Kết quả này cho phép suy ra thông tin phổ của một toán tử đa thức từ phổ của toán tử ban đầu.
+
 ::: {#thm-ch09-03 .thm- name="Ánh xạ phổ (đa thức)"}
 Với đa thức $p$,
 $\sigma(p(T))=p(\sigma(T))$.
-:::
 
-Đây là trường hợp cơ bản của giải tích hàm toán tử: biến đổi phổ của toán tử
-theo hàm áp dụng lên toán tử.
+:::

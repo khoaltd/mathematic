@@ -7,47 +7,43 @@ format: revealjs
 
 ## 16.1 Toán tử đơn điệu {#sec-ch16-01}
 
+Toán tử $A$ trên không gian Hilbert là đơn điệu nếu $\langle Ax-Ay,x-y\rangle\geq0$ với mọi $x,y$ trong miền. Tính đơn điệu là khái quát của tính tăng trong giải tích thực và tạo ra các ước lượng ổn định.
+
 ::: {#def-ch16-01 .def-}
 Toán tử $A$ trên Hilbert thực đơn điệu nếu
 $\langle Ax-Ay,x-y\rangle\ge0$ với mọi $x,y\in D(A)$.
-:::
 
-Đây là khái quát của hàm tăng và tạo ra ước lượng ổn định cho nghiệm.
+:::
 
 ## 16.2 Toán tử đơn điệu cực đại {#sec-ch16-02}
 
-Toán tử đơn điệu cực đại nếu đồ thị của nó không nằm thực sự trong đồ thị của
-một toán tử đơn điệu khác. Trong không gian Hilbert, tính cực đại là điều
-kiện cấu trúc quan trọng cho tính giải được toàn cục của resolvent.
+Toán tử đơn điệu là cực đại nếu đồ thị của nó không nằm thực sự trong đồ thị của toán tử đơn điệu nào khác. Tính cực đại là điều kiện cấu trúc giúp các toán tử giải thức có miền xác định rộng.
 
-## 16.3 Toán tử giải thức {#sec-ch16-03}
+## 16.3 Toán tử giải thức của toán tử đơn điệu {#sec-ch16-03}
+
+Với $\lambda>0$, toán tử giải thức được viết $J_\lambda=(I+\lambda A)^{-1}$ khi nghịch đảo tồn tại. Đối với toán tử đơn điệu cực đại trong không gian Hilbert, $J_\lambda$ xác định trên toàn không gian và là ánh xạ không giãn.
 
 ::: {#def-ch16-02 .def-}
 Với $\lambda>0$, resolvent là
 $J_\lambda=(I+\lambda A)^{-1}$ khi ánh xạ ngược tồn tại.
+
 :::
 
-Nếu $A$ đơn điệu cực đại trên Hilbert thì $J_\lambda$ xác định trên toàn
-không gian và không giãn.
-
 ## 16.4 Định lý Minty {#sec-ch16-04}
+
+Định lý Minty cho một tiêu chuẩn đặc trưng tính đơn điệu cực đại thông qua tính toàn ánh của $I+\lambda A$ với mọi $\lambda>0$ trong không gian Hilbert. Tiêu chuẩn này liên hệ trực tiếp đồ thị của toán tử với tính giải được của phương trình.
 
 ::: {#thm-ch16-01 .thm- name="Minty"}
 Với toán tử đơn điệu $A$ trên Hilbert thực,
 $A$ cực đại đơn điệu khi và chỉ khi $I+\lambda A$ có ảnh bằng toàn không gian
 với mọi $\lambda>0$.
+
 :::
 
-Định lý chuyển tính cực đại thành một điều kiện giải được của phương trình.
+## 16.5 Phương trình tiến hóa chi phối bởi toán tử đơn điệu {#sec-ch16-05}
 
-## 16.5 Phương trình tiến hóa với toán tử đơn điệu {#sec-ch16-05}
-
-Phương trình $u'(t)+Au(t)\ni f(t)$ cho phép $A$ đa trị. Tính đơn điệu tạo
-ước lượng năng lượng; tính cực đại hỗ trợ xây dựng nghiệm tích phân qua
-resolvent.
+Phương trình dạng $u'(t)+Au(t)\ni f(t)$ bao gồm cả trường hợp $A$ đa trị. Tính đơn điệu cực đại cho các ước lượng năng lượng và là nền tảng để xây dựng nghiệm yếu hoặc nghiệm tích phân.
 
 ## 16.6 Ứng dụng vào phương trình đạo hàm riêng phi tuyến {#sec-ch16-06}
 
-Các phương trình khuếch tán phi tuyến và bất đẳng thức biến phân thường có
-thể biểu diễn bằng toán tử đơn điệu cực đại. Khi đó resolvent và xấp xỉ thời
-gian rời rạc cung cấp một cách dựng nghiệm và chứng minh ổn định.
+Nhiều bài toán phi tuyến, như phương trình khuếch tán phi tuyến và các bất đẳng thức biến phân, có thể viết bằng toán tử đơn điệu cực đại. Lý thuyết này cung cấp khuôn khổ để chứng minh tồn tại và tính ổn định của nghiệm.

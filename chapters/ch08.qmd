@@ -4,8 +4,6 @@ subtitle: "Hành trình của kẻ khờ · Giải tích hàm"
 format: html
 ---
 
-
-
 [← Danh sách chương](../index.qmd) · [▶ Trình chiếu chương này](../slides/ch08.qmd#/sec-ch08-01)
 
 ## Các section

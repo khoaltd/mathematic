@@ -7,61 +7,60 @@ format: revealjs
 
 ## 12.1 Động cơ và ví dụ {#sec-ch12-01}
 
-Trên $L^2(0,2\pi)$, xét $u_n(x)=\sin(nx)$. Ta có
-$\|u_n\|_2=\sqrt{\pi}$ nhưng $\|u_n'\|_2=n\sqrt{\pi}$. Vì vậy phép đạo hàm
-không bị chặn theo chuẩn $L^2$.
+Toán tử vi phân thường không bị chặn nếu xét trên không gian $L^2$ với chuẩn tự nhiên. Ví dụ như đạo hàm hoặc Laplace đòi hỏi điều kiện chính quy, nên phải xác định rõ miền mà toán tử hoạt động.
 
-## 12.2 Miền xác định của toán tử {#sec-ch12-02}
+## 12.2 Miền xác định của toán tử không bị chặn {#sec-ch12-02}
+
+Toán tử không bị chặn được xác định trên một miền $D(A)$ là không gian con của không gian nền, thường là miền trù mật. Miền này là một phần thiết yếu của định nghĩa toán tử và quyết định các tính chất đóng, liên hợp và phổ.
 
 ::: {#def-ch12-01 .def-}
 Toán tử tuyến tính không bị chặn thường được cho bởi
 $A:D(A)\subset X\to Y$, trong đó miền $D(A)$ là không gian con tuyến tính và
 có thể là miền thực sự của $X$.
-:::
 
-Miền không phải chi tiết phụ: cùng một quy tắc vi phân nhưng các điều kiện
-biên khác nhau tạo ra toán tử khác nhau.
+:::
 
 ## 12.3 Toán tử xác định trù mật {#sec-ch12-03}
 
+Toán tử $A$ xác định trù mật nếu $D(A)$ trù mật trong không gian nền. Điều kiện này cho phép định nghĩa toán tử liên hợp $A^*$ một cách hữu ích và là giả thiết thường gặp trong lý thuyết Hilbert.
+
 ::: {#def-ch12-02 .def-}
 $A$ xác định trù mật nếu $\overline{D(A)}=X$.
+
 :::
 
-Tính trù mật cho phép định nghĩa toán tử liên hợp hữu ích trên Hilbert. Nhiều
-định lý phổ cho toán tử không bị chặn yêu cầu giả thiết này.
-
 ## 12.4 Toán tử đóng và có thể đóng {#sec-ch12-04}
+
+Toán tử $A$ đóng nếu đồ thị của nó đóng trong $X\times Y$. Toán tử có thể đóng nếu đồ thị có bao đóng vẫn là đồ thị của một toán tử; toán tử đóng là đối tượng trung tâm trong giải tích toán tử không bị chặn.
 
 ::: {#def-ch12-03 .def-}
 $A$ đóng nếu $x_n\to x$ và $Ax_n\to y$ với $x_n\in D(A)$
 kéo theo $x\in D(A)$ và $Ax=y$. Toán tử có thể đóng nếu đồ thị của nó có bao
 đóng vẫn là đồ thị của một toán tử.
+
 :::
 
 ## 12.5 Đồ thị của toán tử tuyến tính {#sec-ch12-05}
 
+Đồ thị của $A:D(A)\to Y$ là tập $G(A)=\{(x,Ax):x\in D(A)\}$. Tính đóng của đồ thị cho phép dùng các định lý về đồ thị để kiểm soát sự hội tụ đồng thời của $x_n$ và $Ax_n$.
+
 ::: {#def-ch12-04 .def-}
 Đồ thị $G(A)=\{(x,Ax):x\in D(A)\}\subset X\times Y$.
 Toán tử đóng khi và chỉ khi đồ thị đóng.
-:::
 
-Định lý đồ thị đóng áp dụng cho toán tử xác định trên toàn không gian Banach;
-với toán tử không bị chặn, miền thực sự phải được xử lý riêng.
+:::
 
 ## 12.6 Toán tử liên hợp của toán tử không bị chặn {#sec-ch12-06}
 
-Với $A$ xác định trù mật trên Hilbert, $y\in D(A^*)$ nếu ánh xạ
-$x\mapsto\langle Ax,y\rangle$ bị chặn theo chuẩn của $x$ trên $D(A)$. Khi
-đó $A^*y$ là vectơ biểu diễn phiếm hàm này.
+Với toán tử xác định trù mật trên không gian Hilbert, miền $D(A^*)$ gồm các vectơ $y$ sao cho ánh xạ $x\mapsto\langle Ax,y\rangle$ bị chặn theo chuẩn trên $D(A)$. Khi đó $A^*y$ là vectơ biểu diễn phiếm hàm này.
 
 ## 12.7 Toán tử đối xứng và tự liên hợp {#sec-ch12-07}
+
+Toán tử đối xứng thỏa mãn $\langle Ax,y\rangle=\langle x,Ay\rangle$ trên miền xác định. Tự liên hợp đòi hỏi thêm $D(A)=D(A^*)$; hai khái niệm khác nhau đối với toán tử không bị chặn.
 
 ::: {#def-ch12-05 .def-}
 $A$ đối xứng nếu
 $\langle Ax,y\rangle=\langle x,Ay\rangle$ với $x,y\in D(A)$. $A$ tự liên
 hợp nếu $A=A^*$, bao gồm cả $D(A)=D(A^*)$.
-:::
 
-Tự liên hợp là điều kiện quan trọng để có định lý phổ và diễn giải ổn định
-cho toán tử vi phân.
+:::

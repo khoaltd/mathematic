@@ -4,15 +4,13 @@ subtitle: "Hành trình của kẻ khờ · Giải tích hàm"
 format: html
 ---
 
-
-
 [← Danh sách chương](../index.qmd) · [▶ Trình chiếu chương này](../slides/ch05.qmd#/sec-ch05-01)
 
 ## Các section
 
 - [5.1 Hội tụ yếu](../slides/ch05.qmd#/sec-ch05-01)
-- [5.2 Hội tụ yếu-*](../slides/ch05.qmd#/sec-ch05-02)
-- [5.3 Tôpô yếu và yếu-*](../slides/ch05.qmd#/sec-ch05-03)
+- [5.2 Hội tụ yếu-\*](../slides/ch05.qmd#/sec-ch05-02)
+- [5.3 Tôpô yếu và tôpô yếu-\*](../slides/ch05.qmd#/sec-ch05-03)
 - [5.4 Không gian Banach phản xạ](../slides/ch05.qmd#/sec-ch05-04)
 - [5.5 Tính khả ly](../slides/ch05.qmd#/sec-ch05-05)
 - [5.6 Tính lồi đều](../slides/ch05.qmd#/sec-ch05-06)

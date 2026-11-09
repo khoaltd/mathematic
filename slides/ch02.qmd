@@ -7,98 +7,127 @@ format: revealjs
 
 ## 2.1 Không gian vectơ và không gian con tuyến tính {#sec-ch02-01}
 
-Không gian vectơ cho phép cộng các đối tượng và nhân chúng với vô hướng. Vô
-hướng thường thuộc $\mathbb R$ hoặc $\mathbb C$; phần tử của không gian có thể
-là vectơ, dãy hoặc hàm.
+::: {.callout-note title="Lời dẫn"}
 
-::: {#def-ch02-01 .def-}
-Không gian vectơ $X$ trên trường $\mathbb K$ có phép cộng và
-nhân vô hướng thỏa các tiên đề kết hợp, giao hoán, phân phối, cùng phần tử
-không và phần tử đối.
+Ta có thể kết hợp hai người, hai trạng thái hay hai điều ta yêu quý, nhưng để hiểu sự khác biệt giữa chúng, ta còn cần một cách đo lường
+
 :::
 
-Tập con $M$ là không gian con nếu đóng với tổ hợp tuyến tính:
-$\alpha x+\beta y\in M$ khi $x,y\in M$ và $\alpha,\beta\in\mathbb K$.
+Trước hết chúng ta bắt đầu với không gian cơ bản nhất là không gian vectơ.
+
+::: {#def-ch02-src-01 .def- name="Không gian vectơ"}
+
+**Không gian vectơ** $V$ trên trường $\mathbb{K}$ (ở đây ta lấy $\mathbb{K}$ là $\mathbb{R}$ hoặc $\mathbb{C}$) là một tập hợp các vectơ được trang bị:
+
+- phép cộng $+: V \times V \to V$
+
+- phép nhân vô hướng $\cdot: \mathbb{K} \times V \to V$
+
+Các phép toán này thỏa mãn một số tiên đề: tính giao hoán, tính kết hợp, phần tử đơn vị và phần tử nghịch đảo của phép cộng, phần tử đơn vị của phép nhân, cùng tính phân phối.
+
+:::
+
+Từ đây, chúng ta có các phép cộng, trừ, thậm chí nhân vô hướng. Nhưng làm sao biết vectơ nào dài hơn? Ta cần thêm cấu trúc mới: **không gian định chuẩn**.
 
 ## 2.2 Chuẩn và bán chuẩn {#sec-ch02-02}
 
-Chuẩn đo độ lớn, trong khi bán chuẩn cho phép có vectơ khác không nhưng độ lớn
-bằng không.
+::: {#def-ch02-src-02 .def- name="Không gian định chuẩn, chuẩn"}
 
-::: {#def-ch02-02 .def-}
-Chuẩn $\|\cdot\|$ thỏa $\|x\|\ge0$, $\|x\|=0$ khi và chỉ khi
-$x=0$, $\|\lambda x\|=|\lambda|\|x\|$, và
-$\|x+y\|\le\|x\|+\|y\|$. Bán chuẩn bỏ điều kiện xác định dương.
+**Chuẩn** trên không gian vectơ $V$ là hàm $||\cdot||: V \to [0, \infty)$ thỏa mãn ba tính chất sau:
+
+1.  (Tính xác định dương) $||v|| = 0$ khi và chỉ khi $v = 0$,
+
+2.  (Tính thuần nhất) $||\lambda v|| = |\lambda| ||v||$ với mọi $v \in V$ và $\lambda \in \mathbb{K}$,
+
+3.  (Bất đẳng thức tam giác) $||v_1+v_2|| \le ||v_1|| + ||v_2||$ với mọi $v_1, v_2 \in V$.
+
+**Bán chuẩn** là hàm $||\cdot||: V \to [0, \infty)$ thỏa mãn (2) và (3), nhưng không nhất thiết thỏa mãn (1). Không gian vectơ được trang bị một chuẩn được gọi là **không gian định chuẩn**.
+
 :::
 
 ## 2.3 Không gian tuyến tính định chuẩn {#sec-ch02-03}
 
-Không gian vectơ trang bị chuẩn tự nhiên có metric cảm sinh
-$d(x,y)=\|x-y\|$. Nhờ vậy, các khái niệm mở, hội tụ và liên tục được chuyển
-sang đại số tuyến tính.
+Dễ thấy **bán chuẩn** có điều kiện yếu hơn chuẩn do đó chúng ta có thể dùng nó để xây dựng không gian Sobolev hoặc là không quan tâm \"sự khác nhau của các hàm\". Vậy khi biết độ dài nó thì ta còn muốn biết cách nhau bao xa thì sao? Chúng ta cần tới **không gian metric**.
+
+::: {.callout-note title="Ghi chú"}
+
+Thực chất không gian metric và không gian vectơ là hai cấu trúc độc lập với nhau.
+
+:::
 
 ::: {.example-}
 Trên $\mathbb R^n$, các chuẩn $\ell^1$, $\ell^2$ và $\ell^\infty$ lần lượt đo
 tổng trị tuyệt đối, độ dài Euclid và thành phần lớn nhất.
+
 :::
 
 ## 2.4 Các chuẩn tương đương {#sec-ch02-04}
 
-Hai chuẩn tương đương có thể đo khác nhau về trị số nhưng xác định cùng các
-tập mở và cùng khái niệm hội tụ.
+Hai chuẩn $\|\cdot\|_1$ và $\|\cdot\|_2$ tương đương nếu tồn tại $c,C>0$ sao cho $c\|x\|_1\leq\|x\|_2\leq C\|x\|_1$ với mọi $x$. Khi đó chúng xác định cùng tôpô; trên không gian vectơ hữu hạn chiều, mọi chuẩn đều tương đương.
 
 ::: {#def-ch02-03 .def-}
 $\|\cdot\|_1$ và $\|\cdot\|_2$ tương đương nếu tồn tại
 $c,C>0$ sao cho $c\|x\|_1\le\|x\|_2\le C\|x\|_1$ với mọi $x$.
+
 :::
+
 
 ::: {#thm-ch02-01 .thm-}
 Trên không gian vectơ hữu hạn chiều, mọi hai chuẩn đều tương
 đương.
+
 :::
 
 ## 2.5 Không gian Banach {#sec-ch02-05}
 
-Banach là không gian định chuẩn đầy đủ. Đầy đủ cho phép dùng giới hạn của dãy
-xấp xỉ mà không rời khỏi không gian nghiệm.
+Không gian định chuẩn đầy đủ đối với metric $d(x,y)=\|x-y\|$ được gọi là không gian Banach. Tính đầy đủ cho phép dùng các giới hạn của dãy để xây dựng nghiệm và chứng minh những định lý nền tảng như nguyên lý ánh xạ co.
 
 ::: {#def-ch02-04 .def-}
 Không gian định chuẩn $(X,\|\cdot\|)$ là Banach nếu metric
 $d(x,y)=\|x-y\|$ đầy đủ.
+
 :::
+
 
 ::: {#thm-ch02-02 .thm- name="Ánh xạ co"}
 Nếu $X$ là không gian metric đầy đủ và
 $T:X\to X$ là ánh xạ co, tức $d(Tx,Ty)\le qd(x,y)$ với $0\le q<1$, thì $T$
 có duy nhất một điểm bất động. Các phép lặp $x_{n+1}=Tx_n$ hội tụ đến điểm đó.
+
 :::
 
-## 2.6 Các ví dụ về không gian Banach {#sec-ch02-06}
+## 2.6 Ví dụ về các không gian Banach {#sec-ch02-06}
 
-$C([a,b])$ với chuẩn $\|f\|_\infty=\max|f(x)|$ là Banach. Với $1\le p<\infty$,
-$\ell^p$ và $L^p(\Omega)$ cũng là Banach; các hàm trong $L^p$ được đồng nhất
-nếu bằng nhau hầu khắp nơi. $L^\infty$ dùng chuẩn essential supremum.
+Một số ví dụ quan trọng gồm $C([a,b])$ với chuẩn supremum, các không gian dãy $\ell^p$ và các không gian hàm $L^p(\Omega)$ với $1\leq p\leq\infty$. Các ví dụ này cho thấy tính đầy đủ xuất hiện tự nhiên trong không gian hàm và không gian dãy.
+
+## 2.6.1 Không gian $L^p$ {#subsec-ch02-06-01}
+
+Không gian $L^p$ gồm các hàm có lũy thừa bậc $p$ khả tích trên một không gian đo; chuẩn của chúng đo độ lớn trung bình theo bậc $p$. Với $1\leq p\leq\infty$, các không gian $L^p$ là những ví dụ trung tâm trong giải tích hàm.
+
+::: {.callout-note title="Gợi mở"}
+
+Để đi đến đây thật là khó!?!
+
+:::
 
 ## 2.7 Không gian con của không gian định chuẩn {#sec-ch02-07}
 
-Không gian con kế thừa chuẩn bằng phép hạn chế. Tính đóng quyết định liệu giới
-hạn của dãy trong không gian con có còn thuộc không gian đó hay không.
+Một không gian con kế thừa chuẩn từ không gian mẹ bằng cách hạn chế chuẩn lên tập con. Nếu không gian mẹ là Banach thì mọi không gian con đóng cũng là Banach; tính đóng bảo đảm giới hạn của các dãy trong không gian con vẫn thuộc không gian đó.
 
 ::: {#thm-ch02-03 .thm-}
 Không gian con đóng của một không gian Banach là Banach với chuẩn
 kế thừa.
+
 :::
 
 ## 2.8 Không gian thương {#sec-ch02-08}
 
-Không gian thương $X/M$ gộp các vectơ sai khác nhau bởi một phần tử của $M$
-thành cùng một lớp tương đương.
+Với không gian con đóng $M\subset X$, không gian thương $X/M$ gồm các lớp tương đương $x+M$. Chuẩn thương được định nghĩa bởi $\|x+M\|=\inf_{m\in M}\|x+m\|$; nếu $X$ là Banach thì $X/M$ cũng là Banach.
 
 ::: {#def-ch02-05 .def-}
 Với không gian con đóng $M\subset X$, chuẩn thương là
 $$
 \|x+M\|_{X/M}=\inf_{m\in M}\|x+m\|.
 $$
-:::
 
-Nếu $X$ là Banach và $M$ đóng thì $X/M$ là Banach.
+:::

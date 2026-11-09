@@ -4,16 +4,14 @@ subtitle: "Hành trình của kẻ khờ · Giải tích hàm"
 format: html
 ---
 
-
-
 [← Danh sách chương](../index.qmd) · [▶ Trình chiếu chương này](../slides/ch06.qmd#/sec-ch06-01)
 
 ## Các section
 
-- [6.1 Phiếm hàm tuyến tính và dưới tuyến tính](../slides/ch06.qmd#/sec-ch06-01)
+- [6.1 Phiếm hàm tuyến tính và phiếm hàm dưới tuyến tính](../slides/ch06.qmd#/sec-ch06-01)
 - [6.2 Mở rộng phiếm hàm tuyến tính](../slides/ch06.qmd#/sec-ch06-02)
-- [6.3 Dạng thực cho không gian định chuẩn](../slides/ch06.qmd#/sec-ch06-03)
-- [6.4 Dạng phức](../slides/ch06.qmd#/sec-ch06-04)
-- [6.5 Dạng hình học](../slides/ch06.qmd#/sec-ch06-05)
+- [6.3 Định lý Hahn–Banach: trường hợp thực](../slides/ch06.qmd#/sec-ch06-03)
+- [6.4 Định lý Hahn–Banach: trường hợp phức](../slides/ch06.qmd#/sec-ch06-04)
+- [6.5 Dạng hình học của định lý Hahn–Banach](../slides/ch06.qmd#/sec-ch06-05)
 - [6.6 Tách các tập lồi](../slides/ch06.qmd#/sec-ch06-06)
 - [6.7 Ứng dụng vào không gian đối ngẫu](../slides/ch06.qmd#/sec-ch06-07)

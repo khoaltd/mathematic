@@ -4,14 +4,12 @@ subtitle: "Hành trình của kẻ khờ · Giải tích hàm"
 format: html
 ---
 
-
-
 [← Danh sách chương](../index.qmd) · [▶ Trình chiếu chương này](../slides/ch15.qmd#/sec-ch15-01)
 
 ## Các section
 
 - [15.1 Bài toán Cauchy trừu tượng](../slides/ch15.qmd#/sec-ch15-01)
-- [15.2 Tồn tại và duy nhất nghiệm](../slides/ch15.qmd#/sec-ch15-02)
+- [15.2 Sự tồn tại và tính duy nhất của nghiệm](../slides/ch15.qmd#/sec-ch15-02)
 - [15.3 Nghiệm tích phân và nghiệm cổ điển](../slides/ch15.qmd#/sec-ch15-03)
 - [15.4 Tính chính quy của nghiệm](../slides/ch15.qmd#/sec-ch15-04)
 - [15.5 Phương trình nhiệt](../slides/ch15.qmd#/sec-ch15-05)

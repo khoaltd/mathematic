@@ -7,46 +7,34 @@ format: revealjs
 
 ## 15.1 Bài toán Cauchy trừu tượng {#sec-ch15-01}
 
+Bài toán Cauchy trừu tượng có dạng $u'(t)=Au(t)$ cùng điều kiện đầu $u(0)=u_0$, hoặc có thêm lực ngoài $f(t)$. Lý thuyết bán nhóm biến bài toán này thành việc tìm toán tử sinh thích hợp.
+
 ::: {#def-ch15-01 .def- name="Bài toán Cauchy"}
 Tìm $u:[0,\infty)\to X$ sao cho
 $u'(t)=Au(t)$ và $u(0)=u_0$. Dạng không thuần nhất thêm lực ngoài $f(t)$.
+
 :::
 
-## 15.2 Tồn tại và duy nhất nghiệm {#sec-ch15-02}
+## 15.2 Sự tồn tại và tính duy nhất của nghiệm {#sec-ch15-02}
 
-Nếu $A$ sinh bán nhóm $C_0$, nghiệm thuần nhất được cho bởi
-$u(t)=T(t)u_0$ và duy nhất trong lớp nghiệm thích hợp. Với lực ngoài liên
-tục, công thức Duhamel là
-$$
-u(t)=T(t)u_0+\int_0^t T(t-s)f(s)\,ds.
-$$
+Nếu $A$ sinh ra một bán nhóm $C_0$, bài toán thuần nhất có nghiệm $u(t)=T(t)u_0$ và nghiệm này duy nhất trong lớp nghiệm thích hợp. Với lực ngoài, công thức biến thiên hằng số cho nghiệm qua tích phân Duhamel.
 
 ## 15.3 Nghiệm tích phân và nghiệm cổ điển {#sec-ch15-03}
 
-Nghiệm cổ điển khả vi và thỏa phương trình theo nghĩa điểm; thường cần
-$u_0\in D(A)$. Nghiệm tích phân (mild) thỏa công thức bán nhóm và có thể tồn
-tại với dữ liệu ban đầu ít trơn hơn.
+Nghiệm cổ điển thỏa mãn phương trình vi phân theo nghĩa điểm và có độ trơn cần thiết. Nghiệm tích phân (mild) được xác định qua công thức bán nhóm, nên vẫn có thể tồn tại khi dữ liệu ban đầu chưa đủ trơn để tạo nghiệm cổ điển.
 
 ## 15.4 Tính chính quy của nghiệm {#sec-ch15-04}
 
-Tính chính quy hỏi khi nào $u(t)$ khả vi, thuộc $D(A)$ hoặc các miền
-$D(A^k)$. Ước lượng của bán nhóm và tính giải tích của nó giúp chứng minh
-nghiệm được làm trơn theo thời gian.
+Tính chính quy mô tả khi nào nghiệm khả vi theo thời gian hoặc thuộc miền của các lũy thừa toán tử sinh. Các ước lượng bán nhóm và tính giải tích của bán nhóm thường cho những kết quả chính quy mạnh hơn.
 
 ## 15.5 Phương trình nhiệt {#sec-ch15-05}
 
-Phương trình nhiệt $u_t=\Delta u$ mô tả khuếch tán. Với điều kiện biên thích
-hợp, toán tử Laplace là bộ sinh của một bán nhóm co; các dao động cao tần bị
-suy giảm nhanh.
+Phương trình nhiệt là mô hình khuếch tán điển hình và thường được viết thành phương trình tiến hóa với toán tử Laplace. Bán nhóm sinh bởi Laplace mô tả sự lan truyền và làm trơn của nhiệt độ theo thời gian.
 
 ## 15.6 Phương trình sóng {#sec-ch15-06}
 
-Phương trình sóng $u_{tt}=c^2\Delta u$ có thể viết thành hệ bậc nhất cho cặp
-$(u,u_t)$. Biểu diễn trên không gian tích đưa bài toán về một bán nhóm, thường
-liên quan bảo toàn năng lượng thay vì làm trơn.
+Phương trình sóng mô tả sự lan truyền dao động và có thể viết thành hệ bậc nhất trên không gian tích. Cách viết này cho phép nghiên cứu nghiệm bằng toán tử sinh và bán nhóm liên quan.
 
 ## 15.7 Ứng dụng vào phương trình đạo hàm riêng tiến hóa {#sec-ch15-07}
 
-Để áp dụng lý thuyết, chọn không gian trạng thái, xác định toán tử và miền,
-rồi kiểm tra điều kiện sinh bán nhóm. Khung này cho kết quả về tồn tại, duy
-nhất và phụ thuộc liên tục của nghiệm.
+Nhiều phương trình đạo hàm riêng tiến hóa có thể được đặt trong dạng trừu tượng trên không gian Banach hoặc Hilbert. Việc chọn không gian trạng thái và toán tử sinh thích hợp giúp xử lý tồn tại, duy nhất và ổn định của nghiệm.

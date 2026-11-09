@@ -5,131 +5,192 @@ author: "Dylan Lee"
 format: revealjs
 ---
 
-## 1.1 Không gian metric và các định nghĩa cơ bản {#sec-ch01-01}
+## 1.1 Không gian metric và các khái niệm cơ bản {#sec-ch01-01}
 
-Một metric là cách đo khoảng cách trừu tượng. Nó không cần được định nghĩa bằng
-độ dài hình học, miễn thỏa các tiên đề về không âm, phân biệt điểm, đối xứng
-và bất đẳng thức tam giác.
+::: {.callout-note title="Lời dẫn"}
 
-::: {#def-ch01-01 .def- name="Không gian metric"}
-Một cặp $(X,d)$ là không gian metric nếu
-$d:X\times X\to[0,\infty)$ thỏa, với mọi $x,y,z\in X$:
-$$
-d(x,y)=0\iff x=y,\qquad d(x,y)=d(y,x),\qquad
-d(x,z)\le d(x,y)+d(y,z).
-$$
+Điều anh nhận ra là khoảng cách hai chúng mình
+
 :::
 
-Ví dụ gồm $\mathbb R$ với $d(x,y)=|x-y|$, $\mathbb R^n$ với khoảng cách
-Euclid, và khoảng cách rời rạc $d(x,y)=1$ khi $x\ne y$. Trên $\mathbb R^n$,
-khoảng cách taxi là $\sum_i|x_i-y_i|$, khác với khoảng cách Euclid.
+::: {#def-ch01-src-01 .def- name="Không gian metric, metric"}
+
+*Không gian metric* là một cặp $(X,d)$, trong đó $X$ là một tập hợp và $d$ là một metric trên $X$ (hay hàm khoảng cách trên $X$), tức là một hàm xác định trên $X \times X$ thỏa mãn với mọi $x,y,z \in X$:
+
+1.  $d$ nhận giá trị thực, hữu hạn và không âm;
+
+2.  $d(x,y)=0$ khi và chỉ khi $x=y$;
+
+3.  $d(x,y)=d(y,x)$;
+
+4.  $d(x,z)\leq d(x,y)+d(y,z)$. **Bất đẳng thức tam giác**
+
+:::
+
+Ở đây có một vài khoảng cách thú vị mọi người có thể sẽ gặp như
+
+::: {#example-ch01-src-01 .example-}
+
+**Đường thẳng thực $\mathbb{R}$:** $d(x,y)=|x-y|$\
+**Mặt phẳng Euclid $\mathbb{R}^2$:** $d(x,y)=\sqrt{(x_1-y_1)^2+(x_2-y_2)^2}$[^1]\
+
+[^1]: Đôi khi d(x,y) này còn được gọi là *khoảng cách taxi*
+
+:::
+
+Một **không gian con** $(Y,\tilde{d})$ của $(X,d)$ được tạo thành bằng cách lấy tập con $Y\subseteq X$ và hạn chế $d$ trên $Y\times Y$; khi đó metric trên $Y$ là phép hạn chế: $$\tilde{d}=d|_{Y \times Y}$$ $d$ được gọi là metric **cảm sinh** trên $Y$ bởi $d$.
 
 ## 1.2 Hình cầu mở và lân cận {#sec-ch01-02}
 
-Hình cầu mô tả các điểm cách tâm ít hơn một bán kính. Các hình cầu là viên
-gạch cơ bản để định nghĩa tập mở, hội tụ và tính liên tục.
+::: {#def-ch01-src-02 .def- name="Hình cầu và mặt cầu"}
 
-::: {#def-ch01-02 .def- name="Hình cầu"}
-Với $x_0\in X$ và $r>0$,
-$$
-B(x_0,r)=\{x:d(x,x_0)<r\},\quad
-\overline B(x_0,r)=\{x:d(x,x_0)\le r\},\quad
-S(x_0,r)=\{x:d(x,x_0)=r\}.
-$$
-Một tập $N$ là lân cận của $x_0$ nếu chứa một hình cầu mở tâm $x_0$.
+Cho điểm $x_0 \in X$ và số thực $r > 0$, ta định nghĩa ba tập hợp:
+
+1.  $B(x_0, r) = \{x \in X \mid d(x, x_0) < r\}$ **(Hình cầu mở)**
+
+2.  $\tilde{B}(x_0, r) = \{x \in X \mid d(x, x_0) \leq r\}$ **(Hình cầu đóng)**
+
+3.  $S(x_0, r) = \{x \in X \mid d(x, x_0) = r\}$ **(Mặt cầu)**
+
+Trong cả ba trường hợp, $x_0$ được gọi là tâm và $r$ là bán kính.
+
 :::
 
-Trong metric rời rạc, hình cầu bán kính nhỏ hơn hoặc bằng $1$ chỉ chứa tâm.
-Điều này cho thấy “hình dạng” của lân cận phụ thuộc vào metric.
+Dễ nhìn thấy $S(x_0, r)=\tilde{B}(x_0, r)-B(x_0, r)$
+
+Cho không gian metric $(X, d)$, một điểm $x_0 \in X$ và số thực $\varepsilon > 0$. Hình cầu mở tâm $x_0$ bán kính $\varepsilon$: $$B(x_0, \varepsilon) := \{x \in X : d(x, x_0) < \varepsilon\}$$ được gọi là một **$\varepsilon$-lân cận** của $x_0$. Một tập con $N \subset X$ được gọi là một **lân cận** của $x_0$ nếu tồn tại $\varepsilon > 0$ sao cho $B(x_0, \varepsilon) \subset N$.
 
 ## 1.3 Tập mở và tập đóng {#sec-ch01-03}
 
-Tập mở không có “biên” nằm bên trong theo nghĩa mỗi điểm của nó có một vùng
-lân cận vẫn thuộc tập. Tập đóng chứa mọi giới hạn của các dãy trong tập.
+::: {#def-ch01-src-03 .def- name="Tập mở, tập đóng"}
 
-::: {#def-ch01-03 .def- name="Tập mở và tập đóng"}
-$U\subseteq X$ mở nếu với mỗi $x\in U$
-tồn tại $r>0$ sao cho $B(x,r)\subseteq U$. Tập $F$ đóng nếu $X\setminus F$
-mở.
+Một tập con $M$ của không gian metric $X$ được gọi là *mở* nếu nó chứa một hình cầu quanh mỗi điểm của mình. Tập con $K$ của $X$ được gọi là *đóng* nếu phần bù của nó trong $X$ là tập mở, nghĩa là $K^C = X-K$ mở.
+
+:::
+
+Chúng ta có thể phân chia bằng công thức như sau:
+
+Tập mở:
+
+$$\boxed{
+\forall x\in M,\ \exists r>0,\ \forall y\in X:
+d(x,y)<r\implies y\in M.}$$
+
+Tập đóng:
+
+$$\boxed{
+\forall x\in X\setminus K,\ \exists r>0,\ \forall y\in X:
+d(x,y)<r\implies y\notin K.}$$ Chúng ta có thể thu được các tính chất như sau:
+
+::: {.center}
+      **Phép toán**             **Tập mở**                **Tập đóng**
+  ---------------------- ------------------------- ---------------------------
+   $\varnothing$ và $X$             Mở                        Đóng
+       Hợp hữu hạn                  Mở                        Đóng
+        Hợp tùy ý                   Mở              **Không nhất thiết đóng**
+       Giao hữu hạn                 Mở                        Đóng
+        Giao tùy ý        **Không nhất thiết mở**             Đóng
+
+:::
+
+Điểm $x_0\in X$ được gọi là **điểm tụ** của M nếu các lân cận của $x_0$ chứa ít nhất 1 điểm $y \in M$ **Bao đóng** của một tập M là tập hợp gồm tất cả các điểm thuộc tập ban đầu và tất cả các điểm tụ của nó và được kí hiệu là $\overline{M}$. Đây cũng là *tập đóng nhỏ nhất* chứa M.
+
+::: {#def-ch01-src-04 .def- name="Tập trù mật, không gian khả ly"}
+
+Tập con $M$ của không gian metric $X$ được gọi là *trù mật* trong $X$ nếu $\overline{M}=X$. Không gian $X$ được gọi là khả ly nếu nó có một tập con đếm được trù mật.
+
+:::
+
+::: {#def-ch01-open-closed .def- name="Tập mở và tập đóng"}
+
+Tập $U\subseteq X$ mở nếu với mỗi $x\in U$ tồn tại $r>0$ sao cho $B(x,r)\subseteq U$. Tập $F$ đóng nếu phần bù $X\setminus F$ mở.
+
 :::
 
 ::: {#thm-ch01-01 .thm-}
 Hợp tùy ý các tập mở là mở; giao hữu hạn các tập mở là mở. Giao
 tùy ý các tập đóng là đóng; hợp hữu hạn các tập đóng là đóng.
-:::
 
-Bao đóng $\overline A$ là tập đóng nhỏ nhất chứa $A$. Tập $A$ trù mật nếu
-$\overline A=X$; chẳng hạn $\mathbb Q$ trù mật trong $\mathbb R$.
+:::
 
 ## 1.4 Sự hội tụ của dãy {#sec-ch01-04}
 
-Hội tụ trong metric nghĩa là khoảng cách đến một điểm cố định tiến về không.
-Giới hạn, nếu tồn tại, là duy nhất.
+::: {#def-ch01-src-05 .def- name="Sự hội tụ của dãy, giới hạn"}
 
-::: {#def-ch01-04 .def- name="Hội tụ"}
-Dãy $(x_n)$ hội tụ đến $x\in X$ nếu với mọi
-$\varepsilon>0$ tồn tại $N$ sao cho $n\ge N$ kéo theo
-$d(x_n,x)<\varepsilon$. Ký hiệu $x_n\to x$.
+Dãy $(x_n)$ trong không gian metric $X=(X,d)$ được gọi là *hội tụ* nếu tồn tại $x \in X$ sao cho $$\lim_{n\to \infty}d(x_n,x)=0$$ $x$ được gọi là *giới hạn* của $(x_n)$ và ta viết $$\lim_{n\to \infty}x_n=x \qquad \text{hoặc} \qquad x_n \longrightarrow x.$$ Nếu $(x_n)$ không hội tụ thì được gọi là *phân kỳ*.
+
 :::
 
 ::: {#thm-ch01-02 .thm- name="Tính duy nhất của giới hạn"}
 Trong không gian metric, một dãy
 không thể hội tụ đến hai điểm khác nhau.
+
 :::
 
 ## 1.5 Dãy Cauchy và không gian metric đầy đủ {#sec-ch01-05}
 
-Dãy Cauchy tự tiến lại gần nhau mà không cần biết trước giới hạn. Tính đầy đủ
-bảo đảm giới hạn đó nằm trong không gian.
+Một dãy $(x_n)$ được gọi là Cauchy nếu với mọi $\varepsilon>0$ tồn tại $N$ sao cho $d(x_m,x_n)<\varepsilon$ với mọi $m,n\ge N$. Không gian metric đầy đủ là không gian trong đó mọi dãy Cauchy đều hội tụ; vì vậy tính đầy đủ bảo đảm các giới hạn cần thiết vẫn nằm trong chính không gian.
 
 ::: {#def-ch01-05 .def-}
 $(x_n)$ là Cauchy nếu với mọi $\varepsilon>0$ tồn tại $N$ sao
 cho $m,n\ge N$ thì $d(x_m,x_n)<\varepsilon$. Không gian metric đầy đủ nếu mọi
 dãy Cauchy đều hội tụ trong không gian.
+
 :::
+
 
 ::: {.example-}
 Các số hữu tỉ với metric thông thường không đầy đủ: có dãy hữu tỉ Cauchy tiến
 đến $\sqrt 2$, nhưng $\sqrt2\notin\mathbb Q$. Không gian thực là phần hoàn
 thiện của không gian hữu tỉ.
+
 :::
 
 ## 1.6 Tính liên tục của ánh xạ {#sec-ch01-06}
 
-Tính liên tục địa phương được diễn tả bằng $\varepsilon$–$\delta$: đầu vào đủ
-gần nhau thì đầu ra cũng đủ gần nhau.
+::: {#def-ch01-src-06 .def- name="Ánh xạ liên tục"}
 
-::: {#def-ch01-06 .def-}
-$T:X\to Y$ liên tục tại $x_0$ nếu với mọi $\varepsilon>0$
-tồn tại $\delta>0$ sao cho $d_X(x,x_0)<\delta$ kéo theo
-$d_Y(Tx,Tx_0)<\varepsilon$.
+Cho $X=(X,d)$ và $Y=(Y,\tilde{d})$ là các không gian metric. Ánh xạ $T: X \to Y$ được gọi là *liên tục tại điểm* $x_0 \in X$ nếu với mọi $\varepsilon > 0$, tồn tại $\delta > 0$ sao cho $$\tilde{d}(Tx,Tx_0)<\varepsilon \quad \text{với mọi } x \text{ thỏa mãn} \quad d(x,x_0)<\delta$$ T được gọi là *liên tục* nếu liên tục tại mọi điểm của $X$.
+
 :::
 
-::: {#thm-ch01-03 .thm-}
-Ánh xạ giữa hai không gian metric liên tục khi và chỉ khi ảnh
-ngược của mọi tập mở là tập mở.
+Nhìn chung,
+
+::: {#thm-ch01-src-01 .thm- name="Ánh xạ liên tục"}
+
+Ánh xạ $T$ từ không gian metric $X$ vào không gian metric $Y$ liên tục khi và chỉ khi ảnh ngược của mọi tập mở trong $Y$ là tập mở trong $X$.
+
 :::
 
-## 1.7 Đồng phôi và đẳng cự {#sec-ch01-07}
+### Chứng minh
 
-Hai khái niệm này phân biệt bảo toàn hình dạng tôpô với bảo toàn chính xác
-khoảng cách.
+**Chiều thuận ($\Rightarrow$):** Giả sử $T: X \to Y$ là ánh xạ liên tục và $V \subset Y$ là một tập mở bất kỳ trong $Y$. Ta cần chứng minh tạo ảnh $T^{-1}(V) = \{x \in X : T(x) \in V\}$ là tập mở trong $X$.
+
+Nếu $T^{-1}(V) = \emptyset$ thì hiển nhiên $T^{-1}(V)$ mở trong $X$. Giả sử $T^{-1}(V) \neq \emptyset$ và lấy tùy ý $x_0 \in T^{-1}(V)$, suy ra $T(x_0) \in V$. Vì $V$ là tập mở trong $Y$, tồn tại $\varepsilon > 0$ sao cho hình cầu mở $$B_Y\big(T(x_0), \varepsilon\big) = \big\{ y \in Y : d_Y(y, T(x_0)) < \varepsilon \big\} \subset V.$$ Do $T$ liên tục tại $x_0$, ứng với $\varepsilon > 0$ nói trên, tồn tại $\delta > 0$ sao cho với mọi $x \in X$: $$d_X(x, x_0) < \delta \implies d_Y\big(T(x), T(x_0)\big) < \varepsilon.$$ Điều này có nghĩa là nếu $x \in B_X(x_0, \delta)$ thì $T(x) \in B_Y(T(x_0), \varepsilon) \subset V$, hay $x \in T^{-1}(V)$. Do đó: $$B_X(x_0, \delta) \subset T^{-1}(V).$$ Vì $x_0 \in T^{-1}(V)$ lấy tùy ý nên $T^{-1}(V)$ là tập mở trong $X$.
+
+**Chiều đảo ($\Leftarrow$):** Giả sử tạo ảnh của mọi tập mở trong $Y$ đều là tập mở trong $X$. Lấy tùy ý $x_0 \in X$ và $\varepsilon > 0$.
+
+Xét hình cầu mở $V := B_Y(T(x_0), \varepsilon)$ trong $Y$. Vì mọi hình cầu mở đều là tập mở trong $Y$, theo giả thiết, tạo ảnh $T^{-1}(V)$ là một tập mở trong $X$. Hơn nữa, vì $T(x_0) \in V$ nên $x_0 \in T^{-1}(V)$.
+
+Do $T^{-1}(V)$ mở trong $X$ và chứa $x_0$, tồn tại $\delta > 0$ sao cho $$B_X(x_0, \delta) \subset T^{-1}(V) = T^{-1}\big(B_Y(T(x_0), \varepsilon)\big).$$ Suy ra với mọi $x \in X$ thỏa mãn $d_X(x, x_0) < \delta$, ta có $x \in T^{-1}(V)$, tức là $T(x) \in B_Y(T(x_0), \varepsilon)$ hay $d_Y(T(x), T(x_0)) < \varepsilon$. Vậy $T$ liên tục tại $x_0$. Do $x_0 \in X$ bất kỳ nên $T$ liên tục trên toàn không gian $X$.
+
+## 1.7 Phép đồng phôi và đẳng cự {#sec-ch01-07}
+
+Một song ánh liên tục có ánh xạ ngược liên tục được gọi là phép đồng phôi; nó bảo toàn cấu trúc tôpô nhưng không nhất thiết bảo toàn khoảng cách. Đẳng cự là ánh xạ $T$ thỏa mãn $d_Y(Tx,Ty)=d_X(x,y)$ với mọi $x,y$, nên bảo toàn chính xác khoảng cách.
 
 ::: {#def-ch01-07 .def-}
 Đồng phôi là song ánh liên tục có ánh xạ ngược liên tục.
 Đẳng cự $T$ thỏa $d_Y(Tx,Ty)=d_X(x,y)$ với mọi $x,y$.
-:::
 
-Đẳng cự là đồng phôi, nhưng đồng phôi không nhất thiết bảo toàn độ dài hay
-khoảng cách.
+:::
 
 ## 1.8 Phép hoàn thiện không gian metric {#sec-ch01-08}
 
-Ta có thể bổ sung các giới hạn còn thiếu mà không đổi khoảng cách giữa những
-điểm cũ.
+Mọi không gian metric đều có thể được nhúng đẳng cự như một tập con trù mật vào một không gian metric đầy đủ, gọi là phần hoàn thiện. Phần hoàn thiện là duy nhất sai khác một đẳng cự bảo toàn các điểm của không gian ban đầu.
 
 ::: {#thm-ch01-04 .thm- name="Hoàn thiện"}
 Mọi không gian metric có một phần hoàn thiện đầy đủ
 mà không gian ban đầu nhúng đẳng cự như một tập con trù mật. Phần hoàn thiện
 là duy nhất sai khác một đẳng cự bảo toàn các điểm ban đầu.
+
 :::

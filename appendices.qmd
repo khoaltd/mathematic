@@ -1,0 +1,79 @@
+---
+title: "Phụ lục · Tra cứu"
+format: html
+---
+
+[← Danh sách chương](index.qmd) · [Chương 16](chapters/ch16.qmd)
+
+## Bảng tổng kết các định lý
+
+| **Định lý / kết quả** | **Nội dung tóm tắt** | **Tra cứu** |
+| --- | --- | --- |
+| Tiêu chuẩn liên tục | Ánh xạ giữa các không gian metric liên tục khi và chỉ khi ảnh ngược của mọi tập mở là tập mở. | [Định lý trong sách](slides/ch01.qmd#/sec-ch01-06) |
+| Định lý hoàn thiện | Mọi không gian metric có một phần hoàn thiện đầy đủ chứa nó như tập con trù mật; phần hoàn thiện là duy nhất sai khác một đẳng cự thích hợp. | [Phần hoàn thiện](slides/ch01.qmd#/sec-ch01-08) |
+| Hahn–Banach, trường thực | Phiếm hàm tuyến tính trên không gian con có thể mở rộng lên toàn không gian mà vẫn bị khống chế bởi phiếm hàm dưới tuyến tính cho trước. | [Trường hợp thực](slides/ch06.qmd#/sec-ch06-03) |
+| Hahn–Banach, trường phức | Dạng phức cho phép mở rộng phiếm hàm tuyến tính phức với cùng chuẩn dưới các giả thiết thích hợp. | [Trường hợp phức](slides/ch06.qmd#/sec-ch06-04) |
+| Định lý tách | Các dạng hình học của Hahn–Banach cho phép tách những tập lồi rời nhau bằng phiếm hàm tuyến tính liên tục khi thỏa các điều kiện thích hợp. | [Tách tập lồi](slides/ch06.qmd#/sec-ch06-06) |
+| Định lý phạm trù Baire | Trong không gian metric đầy đủ, giao đếm được của các tập mở trù mật vẫn trù mật. | [Định lý Baire](slides/ch07.qmd#/sec-ch07-03) |
+| Định lý ánh xạ mở | Toán tử tuyến tính liên tục toàn ánh giữa hai không gian Banach là ánh xạ mở. | [Ánh xạ mở](slides/ch07.qmd#/sec-ch07-05) |
+| Nguyên lý bị chặn đều | Một họ toán tử tuyến tính bị chặn trên không gian Banach, nếu bị chặn điểm một, thì có chuẩn toán tử bị chặn đều. | [Nguyên lý bị chặn đều](slides/ch08.qmd#/sec-ch08-01) |
+| Banach–Steinhaus | Đây là tên thường dùng cho nguyên lý bị chặn đều; kết quả chuyển bị chặn tại từng vectơ thành một ước lượng chung cho cả họ toán tử. | [Banach–Steinhaus](slides/ch08.qmd#/sec-ch08-02) |
+| Định lý đồ thị đóng | Toán tử tuyến tính xác định khắp không gian Banach có đồ thị đóng trong tích hai không gian Banach thì bị chặn và liên tục. | [Đồ thị đóng](slides/ch08.qmd#/sec-ch08-03) |
+| Định lý ánh xạ ngược | Toán tử tuyến tính liên tục song ánh giữa hai không gian Banach có ánh xạ ngược liên tục. | [Ánh xạ ngược](slides/ch08.qmd#/sec-ch08-04) |
+| Định lý phép chiếu | Với mọi không gian con đóng của không gian Hilbert, mỗi vectơ có một hình chiếu trực giao duy nhất gần nó nhất trong không gian con đó. | [Phép chiếu](slides/ch04.qmd#/sec-ch04-06) |
+| Định lý biểu diễn Riesz | Mỗi phiếm hàm tuyến tính liên tục trên không gian Hilbert được biểu diễn duy nhất bằng tích vô hướng với một vectơ. | [Biểu diễn Riesz](slides/ch04.qmd#/sec-ch04-07) |
+| Định lý ánh xạ phổ | Với toán tử bị chặn và đa thức $p$, phổ của $p(T)$ bằng ảnh của phổ $T$ qua $p$. | [Ánh xạ phổ](slides/ch09.qmd#/sec-ch09-06) |
+| Phương án Fredholm | Với toán tử compact $K$ trên không gian Banach, $I-K$ toàn ánh khi và chỉ khi hạt nhân của $I-K$ tầm thường. | [Phương án Fredholm](slides/ch10.qmd#/sec-ch10-06) |
+| Hille–Yosida | Định lý đặc trưng các toán tử sinh của bán nhóm liên tục mạnh thông qua điều kiện đóng, xác định trù mật và các ước lượng giải thức. | [Hille–Yosida](slides/ch14.qmd#/sec-ch14-05) |
+| Định lý Minty | Trong không gian Hilbert, tính đơn điệu cực đại được đặc trưng bởi tính toàn ánh của $I+\lambda A$ với mọi $\lambda>0$. | [Định lý Minty](slides/ch16.qmd#/sec-ch16-04) |
+
+## Chỉ mục thuật ngữ
+
+| **Thuật ngữ** | **Gợi nhớ** | **Vị trí** |
+| --- | --- | --- |
+| Ánh xạ liên tục | Bảo toàn cấu trúc tôpô theo nghĩa ảnh ngược của tập mở. | [Liên tục](slides/ch01.qmd#/sec-ch01-06) |
+| Ánh xạ đẳng cự | Ánh xạ bảo toàn chính xác khoảng cách giữa mọi cặp điểm. | [Đồng phôi, đẳng cự](slides/ch01.qmd#/sec-ch01-07) |
+| Ánh xạ tuyến tính bị chặn | Ánh xạ tuyến tính có thể khống chế chuẩn đầu ra bởi một hằng số nhân với chuẩn đầu vào. | [Toán tử bị chặn](slides/ch03.qmd#/sec-ch03-02) |
+| Bao đóng | Tập nhỏ nhất vừa đóng vừa chứa tập đã cho. | [Tập mở và đóng](slides/ch01.qmd#/sec-ch01-03) |
+| Bán chuẩn | Hàm thuần nhất và thỏa bất đẳng thức tam giác nhưng có thể bằng không tại vectơ khác không. | [Chuẩn, bán chuẩn](slides/ch02.qmd#/sec-ch02-02) |
+| Bán nhóm $C_0$ | Họ toán tử thỏa luật bán nhóm và liên tục mạnh theo thời gian. | [Bán nhóm liên tục mạnh](slides/ch14.qmd#/sec-ch14-02) |
+| Bán kính phổ | Đại lượng mô tả khoảng cách lớn nhất của phổ tới gốc trong mặt phẳng phức. | [Bán kính phổ](slides/ch09.qmd#/sec-ch09-03) |
+| Bộ sinh vô cùng bé | Toán tử xác định bởi đạo hàm tại thời điểm không của bán nhóm. | [Bộ sinh](slides/ch14.qmd#/sec-ch14-03) |
+| Cơ sở trực chuẩn | Hệ trực chuẩn đầy đủ để biểu diễn các vectơ trong không gian Hilbert. | [Cơ sở trực chuẩn](slides/ch04.qmd#/sec-ch04-05) |
+| Chuẩn | Hàm đo độ lớn thỏa xác định dương, thuần nhất và bất đẳng thức tam giác. | [Chuẩn, bán chuẩn](slides/ch02.qmd#/sec-ch02-02) |
+| Chuẩn toán tử | Chuẩn đo độ lớn của toán tử tuyến tính bị chặn. | [Chuẩn toán tử](slides/ch03.qmd#/sec-ch03-04) |
+| Chuẩn tương đương | Hai chuẩn bị chặn trên và dưới bởi bội hằng số của nhau. | [Các chuẩn tương đương](slides/ch02.qmd#/sec-ch02-04) |
+| Dãy Cauchy | Dãy mà các số hạng trở nên gần nhau tùy ý khi chỉ số đủ lớn. | [Dãy Cauchy](slides/ch01.qmd#/sec-ch01-05) |
+| Đẳng cự | Phép biến đổi bảo toàn khoảng cách; không nhất thiết phải bảo toàn toàn bộ không gian đích. | [Đồng phôi, đẳng cự](slides/ch01.qmd#/sec-ch01-07) |
+| Đồ thị toán tử | Tập các cặp $(x,Ax)$ ứng với các điểm trong miền xác định của toán tử. | [Đồ thị toán tử](slides/ch12.qmd#/sec-ch12-05) |
+| Hệ trực chuẩn | Họ vectơ đôi một trực giao và mỗi vectơ có chuẩn bằng một. | [Hệ trực chuẩn](slides/ch04.qmd#/sec-ch04-04) |
+| Hình cầu mở | Tập các điểm cách tâm một khoảng nhỏ hơn bán kính. | [Hình cầu và lân cận](slides/ch01.qmd#/sec-ch01-02) |
+| Hội tụ yếu | Hội tụ được kiểm tra qua mọi phiếm hàm tuyến tính liên tục. | [Hội tụ yếu](slides/ch05.qmd#/sec-ch05-01) |
+| Hội tụ yếu-\* | Hội tụ các phiếm hàm trên từng vectơ của không gian ban đầu. | [Hội tụ yếu-\*](slides/ch05.qmd#/sec-ch05-02) |
+| Không gian Banach | Không gian định chuẩn đầy đủ theo metric do chuẩn sinh ra. | [Không gian Banach](slides/ch02.qmd#/sec-ch02-05) |
+| Không gian Hilbert | Không gian tích vô hướng đầy đủ theo chuẩn cảm sinh. | [Không gian tích vô hướng](slides/ch04.qmd#/sec-ch04-01) |
+| Không gian metric | Tập hợp được trang bị hàm khoảng cách thỏa các tiên đề metric. | [Không gian metric](slides/ch01.qmd#/sec-ch01-01) |
+| Không gian $L^p$ | Không gian các lớp hàm có lũy thừa bậc $p$ khả tích. | [Không gian $L^p$](slides/ch02.qmd#/subsec-ch02-06-01) |
+| Không gian đầy đủ | Không gian metric trong đó mọi dãy Cauchy đều hội tụ. | [Tính đầy đủ](slides/ch01.qmd#/sec-ch01-05) |
+| Không gian định chuẩn | Không gian vectơ được trang bị một chuẩn. | [Không gian định chuẩn](slides/ch02.qmd#/sec-ch02-03) |
+| Không gian thương | Không gian các lớp tương đương theo một không gian con. | [Không gian thương](slides/ch02.qmd#/sec-ch02-08) |
+| Không gian đối ngẫu | Không gian các phiếm hàm tuyến tính liên tục trên một không gian định chuẩn. | [Không gian đối ngẫu](slides/ch03.qmd#/sec-ch03-06) |
+| Không gian phản xạ | Không gian Banach mà ánh xạ chính tắc vào song đối ngẫu là toàn ánh. | [Tính phản xạ](slides/ch05.qmd#/sec-ch05-04) |
+| Không gian tích vô hướng | Không gian vectơ có cấu trúc tích vô hướng để đo độ dài và góc. | [Tích vô hướng](slides/ch04.qmd#/sec-ch04-01) |
+| Không gian vectơ | Tập hợp có phép cộng vectơ và phép nhân với vô hướng thỏa các tiên đề tuyến tính. | [Không gian vectơ](slides/ch02.qmd#/sec-ch02-01) |
+| Phép đồng phôi | Song ánh liên tục có ánh xạ ngược liên tục. | [Đồng phôi, đẳng cự](slides/ch01.qmd#/sec-ch01-07) |
+| Phiếm hàm tuyến tính | Ánh xạ tuyến tính nhận giá trị trong trường vô hướng. | [Phiếm hàm tuyến tính](slides/ch03.qmd#/sec-ch03-05) |
+| Phổ | Tập các giá trị mà toán tử dịch chuyển tương ứng không khả nghịch với nghịch đảo bị chặn. | [Phổ và tập giải thức](slides/ch09.qmd#/sec-ch09-01) |
+| Tập đóng | Tập có phần bù mở, tương đương chứa mọi điểm tụ của nó. | [Tập mở và đóng](slides/ch01.qmd#/sec-ch01-03) |
+| Tập mở | Mỗi điểm của tập là tâm của một hình cầu mở nằm trọn trong tập. | [Tập mở và đóng](slides/ch01.qmd#/sec-ch01-03) |
+| Tập trù mật | Tập có bao đóng bằng toàn bộ không gian nền. | [Tập mở và đóng](slides/ch01.qmd#/sec-ch01-03) |
+| Tích vô hướng | Phép toán cho phép khái niệm độ dài, góc và trực giao. | [Không gian tích vô hướng](slides/ch04.qmd#/sec-ch04-01) |
+| Toán tử compact | Toán tử tuyến tính biến tập bị chặn thành tập có bao đóng compact. | [Toán tử compact](slides/ch10.qmd#/sec-ch10-01) |
+| Toán tử đơn điệu | Toán tử thỏa bất đẳng thức đơn điệu giữa ảnh sai khác và điểm sai khác. | [Toán tử đơn điệu](slides/ch16.qmd#/sec-ch16-01) |
+| Toán tử đơn điệu cực đại | Toán tử đơn điệu không thể mở rộng thực sự mà vẫn giữ tính đơn điệu. | [Đơn điệu cực đại](slides/ch16.qmd#/sec-ch16-02) |
+| Toán tử giải thức | Nghịch đảo $(\lambda I-A)^{-1}$ tại các giá trị thuộc tập giải thức. | [Toán tử giải thức](slides/ch09.qmd#/sec-ch09-04) |
+| Toán tử không bị chặn | Toán tử không nhất thiết bị khống chế trên toàn miền bởi một hằng số chuẩn. | [Miền xác định](slides/ch12.qmd#/sec-ch12-02) |
+| Toán tử liên hợp | Toán tử được xác định từ quan hệ đối ngẫu hoặc tích vô hướng với toán tử ban đầu. | [Toán tử liên hợp](slides/ch04.qmd#/sec-ch04-08) |
+| Tôpô yếu | Tôpô được xác định bởi các phiếm hàm tuyến tính liên tục. | [Tôpô yếu](slides/ch05.qmd#/sec-ch05-03) |
+| Tôpô yếu-\* | Tôpô trên đối ngẫu xác định bởi phép đánh giá tại từng vectơ của không gian gốc. | [Tôpô yếu-\*](slides/ch05.qmd#/sec-ch05-03) |
+| Trực giao | Hai vectơ có tích vô hướng bằng không. | [Tính trực giao](slides/ch04.qmd#/sec-ch04-03) |

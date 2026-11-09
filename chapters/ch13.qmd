@@ -1,10 +1,8 @@
 ---
-title: "Chương 13 · Phổ của toán tử không bị chặn"
+title: "Chương 13 · Lý thuyết phổ của toán tử không bị chặn"
 subtitle: "Hành trình của kẻ khờ · Giải tích hàm"
 format: html
 ---
-
-
 
 [← Danh sách chương](../index.qmd) · [▶ Trình chiếu chương này](../slides/ch13.qmd#/sec-ch13-01)
 

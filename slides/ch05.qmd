@@ -7,72 +7,72 @@ format: revealjs
 
 ## 5.1 Hội tụ yếu {#sec-ch05-01}
 
-Hội tụ yếu kiểm tra một dãy qua mọi phiếm hàm liên tục thay vì đo khoảng cách
-chuẩn trực tiếp.
+Dãy $(x_n)$ hội tụ yếu đến $x$ nếu $f(x_n)\to f(x)$ với mọi $f\in X^*$. Hội tụ yếu thường yếu hơn hội tụ theo chuẩn, nhưng vẫn giữ được nhiều thông tin tuyến tính quan trọng.
 
 ::: {#def-ch05-01 .def-}
 $x_n\rightharpoonup x$ trong $X$ nếu
 $f(x_n)\to f(x)$ với mọi $f\in X^*$.
+
 :::
 
-Hội tụ theo chuẩn kéo theo hội tụ yếu; chiều ngược lại nói chung không đúng.
+## 5.2 Hội tụ yếu-\* {#sec-ch05-02}
 
-## 5.2 Hội tụ yếu-* {#sec-ch05-02}
-
-Yếu-* là hội tụ trên đối ngẫu $X^*$ khi các phiếm hàm được xem như phần tử của
-$X^{**}$.
+Dãy $(f_n)$ trong $X^*$ hội tụ yếu-\* đến $f$ nếu $f_n(x)\to f(x)$ với mọi $x\in X$. Tôpô này theo dõi từng giá trị của phiếm hàm trên $X$ và đặc biệt hữu ích khi nghiên cứu tính compact của quả cầu đơn vị đối ngẫu.
 
 ::: {#def-ch05-02 .def-}
 $f_\alpha\overset{*}{\rightharpoonup}f$ trong $X^*$ nếu
 $f_\alpha(x)\to f(x)$ với mọi $x\in X$.
+
 :::
 
-## 5.3 Tôpô yếu và yếu-* {#sec-ch05-03}
+## 5.3 Tôpô yếu và tôpô yếu-\* {#sec-ch05-03}
 
-Tôpô yếu là tôpô yếu nhất khiến mọi $f\in X^*$ liên tục. Tôpô yếu-* là tôpô
-yếu nhất khiến mọi phép đánh giá $f\mapsto f(x)$ liên tục.
+Tôpô yếu là tôpô yếu nhất làm cho mọi phiếm hàm thuộc $X^*$ liên tục; tôpô yếu-\* trên $X^*$ là tôpô hội tụ điểm trên $X$. Định lý Banach–Alaoglu khẳng định quả cầu đơn vị của $X^*$ compact yếu-\*.
 
 ::: {#thm-ch05-01 .thm- name="Banach–Alaoglu"}
 Quả cầu đơn vị đóng của $X^*$ compact theo tôpô
 yếu-*.
+
 :::
 
 ## 5.4 Không gian Banach phản xạ {#sec-ch05-04}
 
-Phản xạ nghĩa là mọi phiếm hàm trên $X^*$ đều đến từ một điểm của $X$. Phản
-xạ biến compact yếu và compact yếu-* thành công cụ tìm nghiệm.
+Không gian Banach $X$ phản xạ nếu ánh xạ chính tắc $J:X\to X^{**}$ là toàn ánh. Trong không gian phản xạ, các tập bị chặn đóng có tính compact yếu, tạo điều kiện để trích xuất dãy con hội tụ yếu.
 
 ::: {#thm-ch05-02 .thm-}
 Trong không gian Banach phản xạ, mọi dãy bị chặn có một dãy con
 hội tụ yếu.
+
 :::
 
 ## 5.5 Tính khả ly {#sec-ch05-05}
 
-Không gian khả ly có một tập con đếm được trù mật. Tính khả ly giúp thay các
-điều kiện trên mọi phần tử bằng một tập kiểm tra đếm được trong nhiều lập
-luận.
+Không gian metric khả ly nếu có một tập con đếm được trù mật. Trong giải tích hàm, tính khả ly liên hệ với khả năng mô tả không gian bằng một tập cơ sở đếm được và thường giúp đơn giản hóa các lập luận về hội tụ.
 
 ## 5.6 Tính lồi đều {#sec-ch05-06}
 
-Không gian định chuẩn lồi đều nếu các vectơ đơn vị cách nhau một lượng cố định
-thì trung điểm của chúng nằm sâu bên trong quả cầu đơn vị.
+Không gian định chuẩn lồi đều nếu với mọi $\varepsilon>0$ tồn tại $\delta>0$ sao cho $\|x\|,\|y\|\leq1$ và $\|x-y\|\geq\varepsilon$ kéo theo $\|(x+y)/2\|\leq1-\delta$. Tính chất hình học mạnh này kéo theo tính phản xạ đối với không gian Banach.
 
 ::: {#def-ch05-03 .def-}
 Với mỗi $\varepsilon>0$ tồn tại $\delta>0$ sao cho
 $\|x\|,\|y\|\le1$ và $\|x-y\|\ge\varepsilon$ kéo theo
 $\|(x+y)/2\|\le1-\delta$.
-:::
 
-$L^p$ và $\ell^p$ lồi đều khi $1<p<\infty$; tính chất này kéo theo phản xạ
-đối với không gian Banach.
+:::
 
 ## 5.7 Tính compact yếu {#sec-ch05-07}
 
-Compact yếu cho phép trích dãy con hội tụ yếu từ các tập thích hợp, dù quả cầu
-đơn vị thường không compact theo chuẩn trong không gian vô hạn chiều.
+Một tập compact yếu nếu compact đối với tôpô yếu. Định lý Eberlein--Šmulian cho biết trong không gian Banach, tính compact yếu tương đương với tính compact dãy yếu.
+
+# Các định lý cơ bản của giải tích hàm
+
+::: center
+Những định lý làm nên sức mạnh của giải tích hàm.
+
+:::
 
 ::: {#thm-ch05-03 .thm-}
 Một không gian Banach phản xạ khi và chỉ khi quả cầu đơn vị đóng
 của nó compact theo tôpô yếu.
+
 :::

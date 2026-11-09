@@ -1,6 +1,6 @@
 ---
 title: "Hành trình của kẻ khờ"
-subtitle: "Bài thuyết trình về giải tích hàm"
+subtitle: "Dành cho những người ghét toán học · Giải tích hàm"
 format: html
 ---
 
@@ -24,14 +24,19 @@ Chọn một chương để xem các mục trong chương và mở bài trình c
 
 ### Phần III · Lý thuyết phổ
 
-- [Chương 9 · Phổ của toán tử bị chặn](chapters/ch09.qmd)
-- [Chương 10 · Toán tử compact](chapters/ch10.qmd)
+- [Chương 9 · Lý thuyết phổ của toán tử bị chặn](chapters/ch09.qmd)
+- [Chương 10 · Toán tử tuyến tính compact](chapters/ch10.qmd)
 - [Chương 11 · Toán tử tự liên hợp](chapters/ch11.qmd)
 
 ### Phần IV · Toán tử không bị chặn và lý thuyết bán nhóm
 
 - [Chương 12 · Toán tử tuyến tính không bị chặn](chapters/ch12.qmd)
-- [Chương 13 · Phổ của toán tử không bị chặn](chapters/ch13.qmd)
+- [Chương 13 · Lý thuyết phổ của toán tử không bị chặn](chapters/ch13.qmd)
 - [Chương 14 · Lý thuyết bán nhóm](chapters/ch14.qmd)
 - [Chương 15 · Phương trình tiến hóa](chapters/ch15.qmd)
 - [Chương 16 · Lý thuyết toán tử đơn điệu](chapters/ch16.qmd)
+
+
+---
+
+[Lời nói đầu](foreword.qmd) · [Phụ lục · Bảng định lý và chỉ mục thuật ngữ](appendices.qmd)
