@@ -1,5 +1,5 @@
 /*-- scss:defaults --*/
-$body-bg: #f7f5f0;
+$body-bg: #ffffff;
 $body-color: #202b3c;
 $link-color: #087e83;
 $presentation-heading-color: #153b50;
@@ -28,6 +28,87 @@ $presentation-font-size-root: 32px;
 .reveal .slides section ul,
 .reveal .slides section ol {
   margin-top: 0.25em;
+}
+
+.reveal::before {
+  content: "HÀNH TRÌNH CỦA KẺ KHỜ  ·  GIẢI TÍCH HÀM";
+  position: fixed;
+  z-index: 20;
+  top: 14px;
+  left: 5%;
+  right: 5%;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  color: #526579;
+  border-bottom: 1px solid #dce7e9;
+  background-image:
+    radial-gradient(circle, rgb(8 126 131 / 48%) 1.5px, transparent 2px),
+    linear-gradient(90deg, #087e83 0 42px, transparent 42px);
+  background-position: right 4px center, left bottom;
+  background-repeat: no-repeat;
+  background-size: 32px 8px, 100% 2px;
+  font-family: "Aptos", "Segoe UI", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  pointer-events: none;
+}
+
+.reveal::after {
+  content: "";
+  position: fixed;
+  z-index: 20;
+  right: 5%;
+  bottom: 12px;
+  width: 42px;
+  height: 2px;
+  background: linear-gradient(90deg, #c17a31 0 12px, #087e83 12px);
+  pointer-events: none;
+}
+
+.reveal .footer {
+  left: 5%;
+  right: 15%;
+  bottom: 12px;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 9px;
+  border-top: 1px solid #dce7e9;
+  color: #526579;
+  font-size: 13px;
+  text-align: left;
+}
+
+.reveal .footer > p {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.reveal .footer .deck-home-link {
+  color: #087e83;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.reveal .footer .deck-home-link:hover {
+  color: #075e62;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.reveal .footer-caption {
+  color: #718096;
+  letter-spacing: 0.04em;
+}
+
+.reveal .slide-chalkboard-buttons {
+  bottom: 52px !important;
 }
 
 .def-,
@@ -63,4 +144,26 @@ $presentation-font-size-root: 32px;
 
 .reveal .slide-number {
   color: #526579;
+}
+
+@media screen and (max-width: 800px) {
+  .reveal::before {
+    font-size: 9px;
+  }
+
+  .reveal .footer {
+    font-size: 10px;
+  }
+
+  .reveal .footer > p {
+    gap: 0.5rem;
+  }
+
+  .reveal .footer-caption {
+    display: none;
+  }
+
+  .reveal .slide-chalkboard-buttons {
+    bottom: 42px !important;
+  }
 }

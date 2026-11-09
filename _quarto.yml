@@ -16,7 +16,7 @@ format:
     html-math-method: mathjax
     smooth-scroll: true
   revealjs:
-    theme: [default, reveal.scss]
+    theme: [white, reveal.scss]
     slide-level: 2
     slide-number: c/t
     controls: true
@@ -33,6 +33,10 @@ format:
     margin: 0.06
     number-sections: false
     code-copy: true
+    footer: '<a class="deck-home-link" href="../index.html">← Mục lục các chương</a><span class="footer-caption">Hành trình của kẻ khờ · Giải tích hàm</span>'
+    chalkboard:
+      buttons: true
+      theme: chalkboard
 
 lang: vi
 language:

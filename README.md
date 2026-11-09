@@ -12,7 +12,12 @@ trên GitHub Pages.
 
 Mỗi chương là một deck Reveal.js độc lập. Trong khi trình chiếu, nhấn `F` để
 bật toàn màn hình, dùng phím mũi tên để chuyển slide, hoặc nhấn `M` để mở menu
-điều hướng.
+điều hướng. Dùng nút bảng viết ở góc dưới hoặc phím `B` để mở Chalkboard;
+phím `C` bật lớp ghi chú trực tiếp trên slide. Mỗi slide có liên kết ở footer
+để quay về mục lục chương.
+
+Deck dùng theme trắng; có thể đổi theme nền trong mục `format.revealjs.theme`
+của `_quarto.yml`. Chỉnh header, footer và họa tiết trong `reveal.scss`.
 
 ## Xem trực tuyến và chạy trên máy
 
