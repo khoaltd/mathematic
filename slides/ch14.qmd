@@ -5,6 +5,22 @@ author: "Dylan Lee"
 format: revealjs
 ---
 
+## Lời mở đầu {#chapter-opening .chapter-opening-slide}
+
+::: {.chapter-quote-card}
+
+<img class="chapter-opening-logo" src="../assets/logo-dep.svg" alt="Logo">
+
+<p class="chapter-quote-kicker">CHƯƠNG 14 · LÝ THUYẾT BÁN NHÓM</p>
+
+### Lý thuyết bán nhóm
+
+> Một trạng thái ban đầu không đứng yên; thời gian đưa nó tiến về phía trước qua dòng chảy của các toán tử.
+
+<p class="chapter-quote-signature">— Hành trình của kẻ khờ</p>
+
+:::
+
 ## 14.1 Bán nhóm một tham số {#sec-ch14-01}
 
 Một bán nhóm toán tử $(T(t))_{t\geq0}$ thỏa mãn $T(0)=I$ và $T(t+s)=T(t)T(s)$. Bán nhóm mã hóa sự tiến hóa theo thời gian và cung cấp cách viết nghiệm cho nhiều phương trình vi phân trừu tượng.

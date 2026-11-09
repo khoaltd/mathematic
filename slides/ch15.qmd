@@ -5,6 +5,22 @@ author: "Dylan Lee"
 format: revealjs
 ---
 
+## Lời mở đầu {#chapter-opening .chapter-opening-slide}
+
+::: {.chapter-quote-card}
+
+<img class="chapter-opening-logo" src="../assets/logo-dep.svg" alt="Logo">
+
+<p class="chapter-quote-kicker">CHƯƠNG 15 · PHƯƠNG TRÌNH TIẾN HÓA</p>
+
+### Phương trình tiến hóa
+
+> Từ một quy tắc trừu tượng, ta đi tìm sự tồn tại, tính duy nhất và hình dáng của nghiệm theo thời gian.
+
+<p class="chapter-quote-signature">— Hành trình của kẻ khờ</p>
+
+:::
+
 ## 15.1 Bài toán Cauchy trừu tượng {#sec-ch15-01}
 
 Bài toán Cauchy trừu tượng có dạng $u'(t)=Au(t)$ cùng điều kiện đầu $u(0)=u_0$, hoặc có thêm lực ngoài $f(t)$. Lý thuyết bán nhóm biến bài toán này thành việc tìm toán tử sinh thích hợp.

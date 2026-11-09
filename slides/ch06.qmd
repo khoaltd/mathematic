@@ -5,13 +5,23 @@ author: "Dylan Lee"
 format: revealjs
 ---
 
-## 6.1 Phiếm hàm tuyến tính và phiếm hàm dưới tuyến tính {#sec-ch06-01}
+## Lời mở đầu {#chapter-opening .chapter-opening-slide}
 
-::: {.callout-note title="Lời dẫn"}
+::: {.chapter-quote-card}
 
-Yêu một người là nhìn thấy họ từ một góc độ riêng. Nhưng liệu góc nhìn ấy có thể mở rộng ra cả thế giới mà không đánh mất bản chất ban đầu?
+<img class="chapter-opening-logo" src="../assets/logo-dep.svg" alt="Logo">
+
+<p class="chapter-quote-kicker">CHƯƠNG 6 · CÁC ĐỊNH LÝ HAHN–BANACH</p>
+
+### Các định lý Hahn–Banach
+
+> Yêu một người là nhìn thấy họ từ một góc độ riêng. Nhưng liệu góc nhìn ấy có thể mở rộng ra cả thế giới mà không đánh mất bản chất ban đầu?
+
+<p class="chapter-quote-signature">— Hành trình của kẻ khờ</p>
 
 :::
+
+## 6.1 Phiếm hàm tuyến tính và phiếm hàm dưới tuyến tính {#sec-ch06-01}
 
 Hàm $p:X\to\mathbb{R}$ là dưới tuyến tính nếu $p(x+y)\leq p(x)+p(y)$ và $p(\lambda x)=\lambda p(x)$ với $\lambda\geq0$. Định lý Hahn–Banach xây dựng phần mở rộng tuyến tính vẫn bị khống chế bởi một hàm dưới tuyến tính như vậy.
 

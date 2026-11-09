@@ -1,0 +1,42 @@
+<script>
+(() => {
+  const reveal = window.Reveal;
+  const root = document.querySelector(".reveal");
+  if (!reveal || !root) return;
+
+  const header = document.createElement("div");
+  header.className = "slide-section-header";
+  header.setAttribute("aria-live", "polite");
+  header.setAttribute("aria-atomic", "true");
+  root.append(header);
+
+  const footnoteLayer = document.createElement("div");
+  footnoteLayer.className = "slide-footnote-layer";
+  root.append(footnoteLayer);
+
+  let activeFootnote = null;
+  let activeSlide = null;
+
+  const updateHeader = (event) => {
+    const slide = event?.currentSlide || reveal.getCurrentSlide();
+    const heading = slide?.querySelector(":scope > h2");
+    header.textContent = heading?.textContent.trim() || document.title;
+
+    if (activeFootnote && activeSlide) {
+      activeSlide.append(activeFootnote);
+      activeFootnote = null;
+    }
+
+    const footnote = slide?.querySelector(":scope > aside");
+    if (footnote) {
+      footnoteLayer.append(footnote);
+      activeFootnote = footnote;
+    }
+    activeSlide = slide;
+  };
+
+  reveal.on("ready", updateHeader);
+  reveal.on("slidechanged", updateHeader);
+  updateHeader();
+})();
+</script>

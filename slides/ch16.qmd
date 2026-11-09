@@ -5,6 +5,22 @@ author: "Dylan Lee"
 format: revealjs
 ---
 
+## Lời mở đầu {#chapter-opening .chapter-opening-slide}
+
+::: {.chapter-quote-card}
+
+<img class="chapter-opening-logo" src="../assets/logo-dep.svg" alt="Logo">
+
+<p class="chapter-quote-kicker">CHƯƠNG 16 · LÝ THUYẾT TOÁN TỬ ĐƠN ĐIỆU</p>
+
+### Lý thuyết toán tử đơn điệu
+
+> Khi tính tuyến tính không đủ, tính đơn điệu giúp giữ lại hướng đi để kiểm soát nghiệm.
+
+<p class="chapter-quote-signature">— Hành trình của kẻ khờ</p>
+
+:::
+
 ## 16.1 Toán tử đơn điệu {#sec-ch16-01}
 
 Toán tử $A$ trên không gian Hilbert là đơn điệu nếu $\langle Ax-Ay,x-y\rangle\geq0$ với mọi $x,y$ trong miền. Tính đơn điệu là khái quát của tính tăng trong giải tích thực và tạo ra các ước lượng ổn định.

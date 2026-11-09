@@ -5,6 +5,7 @@ project:
 website:
   title: "Hành trình của kẻ khờ"
   description: "Bài thuyết trình Reveal.js về giải tích hàm."
+  favicon: assets/logo-dep.svg
   navbar:
     left:
       - text: "Các chương"
@@ -17,6 +18,7 @@ format:
     smooth-scroll: true
   revealjs:
     theme: [white, reveal.scss]
+    include-after-body: _includes/reveal-section-header.html
     slide-level: 2
     slide-number: c/t
     controls: true
@@ -33,7 +35,7 @@ format:
     margin: 0.06
     number-sections: false
     code-copy: true
-    footer: '<a class="deck-home-link" href="../index.html">← Mục lục các chương</a><span class="footer-caption">Hành trình của kẻ khờ · Giải tích hàm</span>'
+    footer: '<a class="deck-home-link" href="../index.html">← Mục lục các chương</a><span class="footer-caption">Hành trình của kẻ khờ · Giải tích hàm</span><img class="footer-brand-logo" src="../assets/logo-dep.svg" alt="Logo">'
     chalkboard:
       buttons: true
       theme: chalkboard

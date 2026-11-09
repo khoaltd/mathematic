@@ -5,6 +5,22 @@ author: "Dylan Lee"
 format: revealjs
 ---
 
+## Lời mở đầu {#chapter-opening .chapter-opening-slide}
+
+::: {.chapter-quote-card}
+
+<img class="chapter-opening-logo" src="../assets/logo-dep.svg" alt="Logo">
+
+<p class="chapter-quote-kicker">CHƯƠNG 3 · TOÁN TỬ TUYẾN TÍNH VÀ PHIẾM HÀM</p>
+
+### Toán tử tuyến tính và phiếm hàm
+
+> Khi đã biết cách đo, ta có thể hỏi những phép biến đổi nào giữ được cấu trúc và giới hạn được ảnh hưởng của mình.
+
+<p class="chapter-quote-signature">— Hành trình của kẻ khờ</p>
+
+:::
+
 ## 3.1 Toán tử tuyến tính {#sec-ch03-01}
 
 Cho hai không gian vectơ $X,Y$. Ánh xạ $T:X\to Y$ là tuyến tính nếu $T(x+y)=Tx+Ty$ và $T(\lambda x)=\lambda Tx$; hai tính chất này gộp thành $T(\alpha x+\beta y)=\alpha Tx+\beta Ty$. Toán tử tuyến tính là cấu trúc cơ bản để mô tả phép biến đổi giữa các không gian.

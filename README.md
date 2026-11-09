@@ -8,7 +8,8 @@ trên GitHub Pages.
 
 1. Trang chủ liệt kê 16 chương và liên kết tới phần tra cứu.
 2. Chọn một chương để xem danh sách các section.
-3. Chọn một section để mở bài trình chiếu riêng của chương tại đúng slide đó.
+3. Mở trình chiếu chương để xem slide lời dẫn dạng trích dẫn, rồi chọn section
+   trong mục lục chương để đi thẳng tới nội dung tương ứng.
 4. Phụ lục cung cấp bảng tổng kết định lý và chỉ mục thuật ngữ có liên kết
    quay về nội dung.
 
@@ -16,7 +17,9 @@ Mỗi chương là một deck Reveal.js độc lập. Trong khi trình chiếu, 
 bật toàn màn hình, dùng phím mũi tên để chuyển slide, hoặc nhấn `M` để mở menu
 điều hướng. Dùng nút bảng viết ở góc dưới hoặc phím `B` để mở Chalkboard;
 phím `C` bật lớp ghi chú trực tiếp trên slide. Mỗi slide có liên kết ở footer
-để quay về mục lục chương.
+để quay về mục lục chương. Header hiển thị tên section hiện tại; footnote nằm
+bên dưới footer. Slide mở đầu mỗi chương trình bày lời dẫn trong khung trích
+dẫn trang trí, căn giữa trên nền trắng.
 
 Deck dùng theme trắng; có thể đổi theme nền trong mục `format.revealjs.theme`
 của `_quarto.yml`. Chỉnh header, footer và họa tiết trong `reveal.scss`.
@@ -47,6 +50,7 @@ quarto render
 - `slides/ch01.qmd` … `slides/ch16.qmd`: bài trình chiếu Reveal.js riêng cho
   từng chương.
 - `appendices.qmd`: bảng tổng kết định lý và chỉ mục thuật ngữ.
+- `assets/logo-dep.svg`: logo trên slide mở đầu, footer và favicon của website; favicon dùng khung nhìn cắt sát biểu tượng để rõ hơn ở kích thước nhỏ.
 - `_quarto.yml`: cấu hình website và Reveal.js.
 - `reveal.scss`: giao diện slide và các khối định nghĩa/định lý.
 - `styles.scss`: giao diện các trang HTML.

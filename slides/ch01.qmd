@@ -5,13 +5,23 @@ author: "Dylan Lee"
 format: revealjs
 ---
 
-## 1.1 Không gian metric và các khái niệm cơ bản {#sec-ch01-01}
+## Lời mở đầu {#chapter-opening .chapter-opening-slide}
 
-::: {.callout-note title="Lời dẫn"}
+::: {.chapter-quote-card}
 
-Điều anh nhận ra là khoảng cách hai chúng mình
+<img class="chapter-opening-logo" src="../assets/logo-dep.svg" alt="Logo">
+
+<p class="chapter-quote-kicker">CHƯƠNG 1 · KHÔNG GIAN METRIC</p>
+
+### Không gian metric
+
+> Điều anh nhận ra là khoảng cách hai chúng mình.
+
+<p class="chapter-quote-signature">— Hành trình của kẻ khờ</p>
 
 :::
+
+## 1.1 Không gian metric và các khái niệm cơ bản {#sec-ch01-01}
 
 ::: {#def-ch01-src-01 .def- name="Không gian metric, metric"}
 

@@ -4,7 +4,7 @@ subtitle: "Hành trình của kẻ khờ · Giải tích hàm"
 format: html
 ---
 
-[← Danh sách chương](../index.qmd) · [▶ Trình chiếu chương này](../slides/ch06.qmd#/sec-ch06-01)
+[← Danh sách chương](../index.qmd) · [▶ Mở đầu chương](../slides/ch06.qmd#/chapter-opening)
 
 ## Các section
 

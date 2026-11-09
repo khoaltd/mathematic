@@ -5,6 +5,22 @@ author: "Dylan Lee"
 format: revealjs
 ---
 
+## Lời mở đầu {#chapter-opening .chapter-opening-slide}
+
+::: {.chapter-quote-card}
+
+<img class="chapter-opening-logo" src="../assets/logo-dep.svg" alt="Logo">
+
+<p class="chapter-quote-kicker">CHƯƠNG 12 · TOÁN TỬ TUYẾN TÍNH KHÔNG BỊ CHẶN</p>
+
+### Toán tử tuyến tính không bị chặn
+
+> Có những phép biến đổi chỉ xác định trên một miền nhỏ, nhưng lại chi phối cả những hiện tượng rộng lớn.
+
+<p class="chapter-quote-signature">— Hành trình của kẻ khờ</p>
+
+:::
+
 ## 12.1 Động cơ và ví dụ {#sec-ch12-01}
 
 Toán tử vi phân thường không bị chặn nếu xét trên không gian $L^2$ với chuẩn tự nhiên. Ví dụ như đạo hàm hoặc Laplace đòi hỏi điều kiện chính quy, nên phải xác định rõ miền mà toán tử hoạt động.

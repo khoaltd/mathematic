@@ -5,6 +5,22 @@ author: "Dylan Lee"
 format: revealjs
 ---
 
+## Lời mở đầu {#chapter-opening .chapter-opening-slide}
+
+::: {.chapter-quote-card}
+
+<img class="chapter-opening-logo" src="../assets/logo-dep.svg" alt="Logo">
+
+<p class="chapter-quote-kicker">CHƯƠNG 8 · CÁC NGUYÊN LÝ CƠ BẢN</p>
+
+### Các nguyên lý cơ bản
+
+> Nếu từng điểm đều được kiểm soát, liệu có thể tìm được một giới hạn chung cho cả họ toán tử?
+
+<p class="chapter-quote-signature">— Hành trình của kẻ khờ</p>
+
+:::
+
 ## 8.1 Nguyên lý bị chặn đều {#sec-ch08-01}
 
 Cho họ toán tử tuyến tính liên tục $\mathcal{F}$ từ không gian Banach $X$ vào không gian định chuẩn $Y$. Nếu với mỗi $x\in X$, các giá trị $\{Tx:T\in\mathcal{F}\}$ bị chặn, thì các chuẩn toán tử $\{\|T\|:T\in\mathcal{F}\}$ cũng bị chặn.
