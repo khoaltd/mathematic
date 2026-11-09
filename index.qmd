@@ -1,167 +1,534 @@
 ---
-title: "Toán học quanh ta"
-subtitle: "Từ những quy luật nhỏ đến các quyết định lớn"
-author: "Một hành trình khám phá"
-date: today
+title: "Hành trình của kẻ khờ"
+subtitle: "Giải tích hàm — từ khoảng cách đến phương trình tiến hóa"
+author: "Dylan Lee"
+lang: vi
 ---
 
-## Toán học không chỉ ở trong lớp học
+## Mở đầu · Bắt đầu từ điều chưa biết
+
+> “Anh bắt đầu hành trình này với một điều rất đơn giản: **ANH KHÔNG BIẾT**.”
+>
+> Không biết đủ nhiều, không hiểu đủ sâu — nhưng tò mò là một điểm khởi đầu
+> tốt.
+
+::: {.notes}
+Mở đầu bằng tinh thần của bản thảo: đây không phải hành trình thuộc lòng định
+nghĩa, mà là lần theo những câu hỏi dẫn từ trực giác đến lý thuyết.
+:::
+
+## Câu hỏi dẫn đường
+
+Làm thế nào nghiên cứu một phương trình khi “ẩn số” không còn là một con số,
+mà là **cả một hàm số**?
 
 ::: {.columns}
 
-::: {.column width="58%"}
-
-Ta dùng toán khi:
-
-- Ước lượng thời gian đến trường
-- Chia một món ăn cho cả nhóm
-- So sánh giá khi mua sắm
-- Nhận ra một xu hướng từ dữ liệu
-
-**Toán học là công cụ để nhìn thấy cấu trúc của thế giới.**
-
+::: {.column width="33%"}
+**Không gian**<br>
+Hàm số sống ở đâu?
 :::
 
-::: {.column width="42%"}
+::: {.column width="33%"}
+**Toán tử**<br>
+Phép biến đổi tác động lên hàm ra sao?
+:::
 
-> Đằng sau một lựa chọn tốt thường là một phép tính vừa đủ.
-
+::: {.column width="33%"}
+**Tiến hóa**<br>
+Trạng thái thay đổi theo thời gian thế nào?
 :::
 
 :::
 
-## Một ngày có bao nhiêu quyết định toán học?
+## Bản đồ hành trình
 
 ::: {.incremental}
 
-- Chọn đường đi: so sánh khoảng cách và thời gian.
-- Chọn món hàng: so sánh giá trên mỗi đơn vị.
-- Lập kế hoạch: phân bổ thời gian và nguồn lực.
-- Đọc tin tức: kiểm tra con số có ý nghĩa gì.
+1. Đo khoảng cách và hiểu hội tụ.
+2. Xây dựng không gian Banach, Hilbert và đối ngẫu.
+3. Dùng các định lý nền tảng để kiểm soát toán tử.
+4. Đọc phổ để khám phá cấu trúc của phép biến đổi.
+5. Dùng bán nhóm và tính đơn điệu để nghiên cứu phương trình tiến hóa.
 
 :::
 
-## Ví dụ 1 · Chọn đường đi
+## 1 · Không gian metric: có thể đo “gần nhau” không?
 
-Một tuyến đường dài hơn chưa chắc mất nhiều thời gian hơn.
-
-$$
-\text{thời gian} = \frac{\text{quãng đường}}{\text{tốc độ trung bình}}
-$$
-
-| Tuyến | Quãng đường | Tốc độ trung bình | Thời gian ước tính |
-|---|---:|---:|---:|
-| A | 6 km | 20 km/h | 18 phút |
-| B | 8 km | 32 km/h | 15 phút |
-
-**Tuyến B xa hơn nhưng nhanh hơn** — nếu điều kiện giao thông đúng như giả
-định.
-
-## Đọc con số một cách cẩn thận
-
-Tốc độ trung bình chỉ là một mô hình đơn giản. Đèn đỏ, thời tiết và giờ cao
-điểm đều có thể làm kết quả thay đổi.
-
-::: {.callout-note}
-Mô hình giúp ta suy nghĩ có hệ thống; nó không thay thế việc kiểm tra thực tế.
-:::
-
-## Ví dụ 2 · Mua sắm thông minh
-
-Hai gói ngũ cốc có giá khác nhau:
-
-- Gói A: 450 g với giá 54.000 đồng
-- Gói B: 700 g với giá 77.000 đồng
-
-So sánh **đơn giá**, thay vì chỉ nhìn giá niêm yết:
-
-$$
-\text{đơn giá} = \frac{\text{giá tiền}}{\text{khối lượng}}
-$$
-
-Gói A: **120 đồng/g** · Gói B: **110 đồng/g**
-
-Với cùng ngân sách, đơn giá giúp ta so sánh công bằng hơn.
-
-## Ví dụ 3 · Lãi kép theo thời gian
-
-Nếu khoản tiền ban đầu là $P$, lãi suất mỗi kỳ là $r$, và lãi được nhập vào
-vốn sau mỗi kỳ:
-
-$$
-A = P(1+r)^n
-$$
-
-- $P$: số tiền ban đầu
-- $r$: lãi suất mỗi kỳ (dạng thập phân)
-- $n$: số kỳ
-
-::: {.callout-warning}
-Đây là mô hình minh họa, chưa tính phí, thuế hay biến động lãi suất.
-:::
-
-## Dữ liệu kể chuyện như thế nào?
-
-Giả sử số lượt mượn sách của một thư viện tăng qua từng tháng.
+Một không gian metric $(X,d)$ là tập hợp $X$ cùng một hàm khoảng cách thỏa mãn:
 
 ::: {.incremental}
 
-1. **Quan sát:** lượt mượn tăng.
-2. **Đặt câu hỏi:** tăng so với tháng trước hay cùng kỳ năm ngoái?
-3. **Kiểm tra:** thư viện có đổi giờ mở cửa hoặc cách ghi nhận không?
-4. **Kết luận:** mô tả điều dữ liệu cho thấy, không khẳng định quá mức.
+- $d(x,y)\geq 0$, và $d(x,y)=0$ khi $x=y$.
+- Đối xứng: $d(x,y)=d(y,x)$.
+- Bất đẳng thức tam giác: $d(x,z)\leq d(x,y)+d(y,z)$.
 
 :::
+
+Trên các hàm liên tục, một lựa chọn quen thuộc là
+
+$$
+d_\infty(f,g)=\sup_{x\in[a,b]}|f(x)-g(x)|.
+$$
+
+## Lân cận, liên tục và hoàn thiện
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+**Lân cận** xác định những điểm đủ gần. Từ đó ta định nghĩa:
+
+- Tập mở: quanh mỗi điểm còn “một vùng nhỏ” nằm trong tập.
+- Tập đóng: chứa các giới hạn của những dãy hội tụ trong nó.
+- Tập trù mật: có thể xấp xỉ mọi điểm của không gian.
+
+:::
+
+::: {.column width="50%"}
+
+Ánh xạ $T:X\to Y$ liên tục khi những điểm gần nhau vẫn được gửi đến những điểm
+gần nhau. Tương đương, ảnh ngược của tập mở là tập mở.
+
+Nếu một không gian còn thiếu giới hạn, ta có thể **hoàn thiện** nó bằng cách
+bổ sung các giới hạn cần thiết.
+
+:::
+
+:::
+
+## Hội tụ và tính đầy đủ
+
+Một dãy $(x_n)$ là Cauchy nếu các phần tử của nó ngày càng gần nhau:
+
+$$
+\forall\varepsilon>0,\quad
+\exists N:\ m,n\ge N \Longrightarrow d(x_m,x_n)<\varepsilon.
+$$
+
+Không gian **đầy đủ** nếu mọi dãy Cauchy đều hội tụ về một điểm ngay trong
+không gian đó.
 
 ::: {.callout-tip}
-Biểu đồ đẹp chưa chắc là biểu đồ trung thực: hãy để ý đơn vị và điểm bắt đầu
-của trục.
+Đầy đủ là điều kiện bảo đảm các phép lấy giới hạn không “rơi ra ngoài” không
+gian đang làm việc.
 :::
 
-## Xác suất: dự đoán không phải lời hứa
+## 2 · Không gian định chuẩn: đo độ lớn của vectơ
 
-Một dự báo mưa **70%** không có nghĩa là trời sẽ mưa đúng 70% thời gian trong
-ngày.
+Chuẩn $\|\cdot\|$ đo độ lớn và thỏa mãn:
 
-Nó diễn tả mức độ tin cậy của dự báo theo một cách định nghĩa cụ thể. Xác suất
-hữu ích để cân nhắc rủi ro — nhưng không thể nói chắc một sự kiện riêng lẻ sẽ
-xảy ra.
+$$
+\|x\|\geq0,\qquad
+\|x\|=0\Longleftrightarrow x=0,\qquad
+\|\lambda x\|=|\lambda|\,\|x\|,\qquad
+\|x+y\|\leq\|x\|+\|y\|.
+$$
 
-## Thử sức trong 30 giây
+Chuẩn tạo ra khoảng cách:
 
-Một cửa hàng giảm giá **20%**, sau đó giảm tiếp **10%** trên giá đã giảm.
+$$
+d(x,y)=\|x-y\|.
+$$
 
-::: {.fragment}
+**Banach** = không gian định chuẩn đầy đủ. Ví dụ: $C([a,b])$ với chuẩn
+supremum, $\ell^p$ và $L^p(\Omega)$ với $1\leq p\leq\infty$.
 
-Giá cuối cùng bằng bao nhiêu phần trăm giá ban đầu?
+Không gian con đóng và không gian thương bởi không gian con đóng của Banach vẫn
+là Banach. Trong không gian hữu hạn chiều, mọi chuẩn đều tương đương.
+
+## Banach hay Hilbert?
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+### Banach
+
+- Có phép cộng, nhân vô hướng và chuẩn.
+- Cần đầy đủ để làm giải tích trên không gian.
+- Không nhất thiết có khái niệm góc vuông.
 
 :::
 
-::: {.fragment}
+::: {.column width="50%"}
 
-**Còn 72% giá ban đầu.** Vì $0{,}8 \times 0{,}9 = 0{,}72$ — tổng mức giảm là
-28%, không phải 30%.
+### Hilbert
+
+- Là Banach với chuẩn sinh từ tích vô hướng.
+- Có góc, trực giao và phép chiếu.
+- Mở rộng hình học Euclid sang không gian hàm.
 
 :::
 
-## Ba câu hỏi mang theo
+:::
+
+Trong Hilbert, hệ trực chuẩn cho phép phân tích vectơ thành các thành phần;
+định lý Parseval liên hệ tổng bình phương hệ số với bình phương chuẩn. Phép
+chiếu lên một không gian con đóng cho điểm gần nhất; sai số vuông góc với
+không gian con.
+
+## 3 · Toán tử: phép biến đổi giữa các không gian
+
+Toán tử tuyến tính $T:X\to Y$ bảo toàn phép cộng và nhân vô hướng:
+
+$$
+T(\alpha x+\beta y)=\alpha T(x)+\beta T(y).
+$$
+
+Toán tử bị chặn nếu
+
+$$
+\|Tx\|_Y\leq C\|x\|_X.
+$$
+
+Với toán tử tuyến tính giữa các không gian định chuẩn, **liên tục tương đương
+với bị chặn**. Hằng số tốt nhất là chuẩn toán tử $\|T\|$.
+
+## Phiếm hàm và đối ngẫu
+
+::: {.columns}
+
+::: {.column width="52%"}
+
+Phiếm hàm tuyến tính $f:X\to\mathbb K$ biến một vectơ thành một số — như một
+cách “đo” hoặc quan sát trạng thái.
+
+Không gian $X^*$ gồm các phiếm hàm tuyến tính liên tục trên $X$.
+
+:::
+
+::: {.column width="48%"}
+
+Mỗi $x\in X$ xác định một phần tử của đối ngẫu kép:
+
+$$
+J(x)(f)=f(x),\qquad J:X\to X^{**}.
+$$
+
+Đối ngẫu $X^*$ luôn là Banach. Nếu $J$ phủ lên toàn bộ $X^{**}$, không gian
+$X$ là **phản xạ**.
+
+Định lý biểu diễn Riesz cho biết mỗi phiếm hàm liên tục trên Hilbert được viết
+duy nhất thành tích vô hướng với một vectơ.
+
+:::
+
+:::
+
+Đối ngẫu cho phép nhìn một bài toán từ các phép đo vô hướng thay vì trực tiếp
+trên toàn bộ không gian.
+
+## Hội tụ yếu · Một cách nhìn khác
+
+Hội tụ theo chuẩn đòi hỏi $\|x_n-x\|\to0$. Hội tụ yếu chỉ yêu cầu mọi phiếm
+hàm liên tục đều nhìn thấy sự hội tụ:
+
+$$
+x_n\rightharpoonup x
+\quad\Longleftrightarrow\quad
+f(x_n)\to f(x)\quad\forall f\in X^*.
+$$
+
+Hội tụ yếu thường “dễ đạt” hơn trong không gian vô hạn chiều và là công cụ
+quan trọng khi tìm nghiệm bằng phương pháp xấp xỉ.
+
+Trong không gian Banach phản xạ, mọi dãy bị chặn đều có một dãy con hội tụ
+yếu.
+
+## 4 · Ba định lý lớn, một nguồn gốc
+
+**Định lý Baire:** trong một không gian metric đầy đủ, giao đếm được của các
+tập mở trù mật vẫn trù mật.
+
+Nghe có vẻ thuần tôpô, nhưng đây là động cơ cho nhiều kết quả mạnh:
 
 ::: {.incremental}
 
-- Con số này đang đo điều gì?
-- Những giả định nào đứng sau phép tính?
-- Có thông tin nào còn thiếu trước khi kết luận?
+- Nguyên lý bị chặn đều.
+- Định lý ánh xạ mở và định lý ánh xạ ngược.
+- Định lý đồ thị đóng.
 
 :::
 
-## Toán học là cách đặt câu hỏi
+**Tính đầy đủ** không chỉ giúp tồn tại giới hạn — nó tạo ra cấu trúc cho toàn
+bộ lý thuyết.
 
-Từ đường đi, mua sắm đến dữ liệu, toán học giúp ta **định lượng, so sánh và
-kiểm tra giả định**.
+## Hahn–Banach · Mở rộng một góc nhìn
 
-Không cần công thức phức tạp để bắt đầu — chỉ cần tò mò về những con số quanh
-mình.
+Nếu một phiếm hàm tuyến tính được xác định trên một không gian con và bị khống
+chế phù hợp, định lý Hahn–Banach cho phép mở rộng nó lên toàn không gian mà
+vẫn giữ được chặn.
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+**Ý nghĩa giải tích**<br>
+Có đủ phiếm hàm liên tục để phân biệt các điểm và mô tả chuẩn.
+
+:::
+
+::: {.column width="50%"}
+
+**Ý nghĩa hình học**<br>
+Có thể dùng siêu phẳng để tách các tập lồi rời nhau khi thỏa giả thiết thích
+hợp.
+
+:::
+
+:::
+
+## Những nguyên lý bảo đảm tính ổn định
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+**Bị chặn đều**<br>
+Nếu một họ toán tử bị chặn tại từng điểm của Banach, chuẩn toán tử của cả họ
+bị chặn đồng đều.
+
+**Đồ thị đóng**<br>
+Với toán tử tuyến tính giữa hai Banach, đồ thị đóng kéo theo toán tử liên tục.
+
+:::
+
+::: {.column width="50%"}
+
+**Ánh xạ mở**<br>
+Toán tử tuyến tính liên tục, toàn ánh giữa hai Banach gửi tập mở thành tập
+mở.
+
+**Ánh xạ ngược**<br>
+Nếu toán tử đó còn song ánh, ánh xạ ngược cũng liên tục và bị chặn.
+
+:::
+
+:::
+
+Các định lý này biến “nghiệm tồn tại” thành “nghiệm phụ thuộc ổn định vào dữ
+liệu”.
+
+## 5 · Phổ: dấu vân tay của toán tử
+
+Với toán tử $T$, ta hỏi khi nào phương trình
+
+$$
+(\lambda I-T)x=y
+$$
+
+có nghiệm duy nhất và phụ thuộc liên tục vào $y$.
+
+- Nếu $(\lambda I-T)^{-1}$ tồn tại và bị chặn: $\lambda$ thuộc **tập giải
+  thức**.
+- Những $\lambda$ còn lại tạo thành **phổ** $\sigma(T)$.
+- Trị riêng là một phần của phổ: có $x\ne0$ sao cho $Tx=\lambda x$.
+
+Phổ cho biết toán tử có thể khuếch đại hoặc làm mất những hướng nào.
+
+## Toán tử compact và phương án Fredholm
+
+Toán tử compact biến tập bị chặn thành tập mà bao đóng của nó compact — trực
+giác là một phép biến đổi “làm trơn” hoặc giảm bớt dao động.
+
+Với toán tử compact $K$, phương án Fredholm liên hệ khả giải của
+
+$$
+(I-K)x=y
+$$
+
+với bài toán thuần nhất và bài toán đối ngẫu. Đây là cầu nối từ cấu trúc phổ
+đến sự tồn tại nghiệm của phương trình tích phân.
+
+## Toán tử tự liên hợp · Phổ có hình học
+
+Trên không gian Hilbert, toán tử tự liên hợp có tính chất then chốt:
+
+::: {.incremental}
+
+- Phổ nằm trên trục thực.
+- Nếu toán tử dương, phổ nằm trong nửa trục không âm.
+- Với toán tử compact tự liên hợp, vectơ riêng trực chuẩn mô tả các hướng
+  chính.
+
+:::
+
+Định lý phổ cho phép phân rã toán tử thành các thành phần phổ — khái quát hóa
+ý tưởng chéo hóa ma trận đối xứng.
+
+## 6 · Toán tử không bị chặn: miền xác định là một phần của bài toán
+
+Đạo hàm là ví dụ điển hình. Trên $L^2(0,2\pi)$, xét
+$u_n(x)=\sin(nx)$:
+
+$$
+\|u_n\|_2=\sqrt{\pi},
+\qquad
+\|u_n'\|_2=n\sqrt{\pi}.
+$$
+
+Độ lớn của đạo hàm tăng không giới hạn trong khi độ lớn của $u_n$ giữ nguyên.
+Vì vậy đạo hàm **không bị chặn** trên $L^2$.
+
+Muốn định nghĩa toán tử này, ta phải nêu rõ miền $D(A)$ gồm những hàm đủ
+trơn. Tính đối xứng cũng chưa đủ: tự liên hợp còn yêu cầu miền của $A$ và
+$A^*$ trùng nhau.
+
+## Đồ thị đóng và phổ của toán tử không bị chặn
+
+Toán tử không bị chặn được mô tả bởi cả quy tắc $Ax$ lẫn miền $D(A)$.
+
+Đồ thị của nó là
+
+$$
+G(A)=\{(x,Ax):x\in D(A)\}.
+$$
+
+Đồ thị đóng giúp kiểm soát giới hạn đồng thời của đầu vào và đầu ra. Với toán
+tử tự liên hợp, phổ vẫn nằm trên trục thực; toán tử giải thức giúp chuyển
+phương trình về một ánh xạ bị chặn để ước lượng.
+
+## 7 · Bán nhóm: đưa thời gian vào toán tử
+
+Họ toán tử $(T(t))_{t\geq0}$ là một bán nhóm nếu
+
+$$
+T(0)=I,\qquad T(t+s)=T(t)T(s).
+$$
+
+Nếu $T(t)x$ biến thiên liên tục theo thời gian, ta có một bán nhóm liên tục
+mạnh. Bộ sinh của nó là
+
+$$
+Ax=\lim_{t\downarrow0}\frac{T(t)x-x}{t},
+$$
+
+trên những $x$ mà giới hạn tồn tại. Bộ sinh thường không bị chặn nhưng quyết
+định sự tiến hóa. Định lý Hille–Yosida mô tả các điều kiện trên bộ sinh và
+toán tử giải thức để bán nhóm tồn tại; bán nhóm giải tích còn đem lại tính
+trơn tức thời cho nghiệm.
+
+## Từ bộ sinh đến nghiệm
+
+Xét bài toán Cauchy:
+
+$$
+u'(t)=Au(t),\qquad u(0)=u_0.
+$$
+
+Nếu $A$ sinh ra bán nhóm $T(t)$, nghiệm có dạng
+
+$$
+u(t)=T(t)u_0.
+$$
+
+Với lực ngoài $f(t)$, công thức Duhamel cộng thêm ảnh hưởng tích lũy của lực
+theo thời gian. Nghiệm tích phân vẫn có thể tồn tại khi dữ liệu chưa đủ trơn
+để có nghiệm cổ điển.
+
+## Ví dụ · Nhiệt khuếch tán và sóng lan truyền
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+### Phương trình nhiệt
+
+$$
+u_t=\Delta u
+$$
+
+Toán tử Laplace sinh ra một tiến hóa có tác dụng khuếch tán và làm trơn nhiệt
+độ.
+
+:::
+
+::: {.column width="50%"}
+
+### Phương trình sóng
+
+$$
+u_{tt}=c^2\Delta u
+$$
+
+Viết lại thành hệ bậc nhất cho phép dùng ngôn ngữ toán tử và bán nhóm để theo
+dõi sự lan truyền dao động.
+
+:::
+
+:::
+
+Tồn tại, duy nhất và ổn định phụ thuộc vào không gian trạng thái, toán tử và
+điều kiện ban đầu/biên.
+
+## Khi toán tử là phi tuyến · Tính đơn điệu
+
+Trên không gian Hilbert thực, toán tử $A$ đơn điệu nếu
+
+$$
+\langle Ax-Ay,x-y\rangle\geq0.
+$$
+
+Đây là khái quát của một hàm tăng: đầu ra không chống lại hướng biến thiên
+của đầu vào.
+
+::: {.incremental}
+
+- Toán tử đơn điệu cực đại cho tính chất giải được mạnh hơn.
+- Toán tử giải thức $J_\lambda=(I+\lambda A)^{-1}$ là không giãn khi thích
+  hợp.
+- Khung này xử lý các phương trình tiến hóa phi tuyến và bài toán biến phân.
+
+:::
+
+## Ghép các mảnh lại với nhau
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+**Không gian**<br>
+Chọn nơi nghiệm và dữ liệu sinh sống.
+
+**Tôpô và chuẩn**<br>
+Định nghĩa gần nhau, hội tụ và ổn định.
+
+**Toán tử**<br>
+Mã hóa phép biến đổi hoặc phương trình.
+
+:::
+
+::: {.column width="50%"}
+
+**Định lý nền tảng**<br>
+Bảo đảm mở rộng, bị chặn và khả nghịch.
+
+**Phổ và bán nhóm**<br>
+Đọc cấu trúc và diễn tả tiến hóa theo thời gian.
+
+**Đơn điệu**<br>
+Mở rộng cách tiếp cận sang bài toán phi tuyến.
+
+:::
+
+:::
+
+## Kết luận · Từ khoảng cách đến tiến hóa
+
+Giải tích hàm không phải một bộ sưu tập ký hiệu rời rạc. Đó là một ngôn ngữ
+để:
+
+::: {.incremental}
+
+- Đo độ gần nhau giữa các trạng thái.
+- Bảo đảm giới hạn và nghiệm tồn tại trong một không gian thích hợp.
+- Hiểu phép biến đổi qua toán tử, đối ngẫu và phổ.
+- Mô tả sự thay đổi theo thời gian bằng bán nhóm.
+
+:::
 
 ### Cảm ơn!
 
-**Hãy thử tìm một quyết định hôm nay mà bạn có thể nhìn rõ hơn nhờ toán học.**
+**Ta không cần hiểu mọi thứ ngay từ đầu — chỉ cần biết câu hỏi tiếp theo là
+gì.**
