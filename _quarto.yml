@@ -29,9 +29,9 @@ format:
     navigation-mode: linear
     transition: slide
     background-transition: fade
-    center: false
+    center: true
     width: 1280
-    height: 720
+    height: 600
     margin: 0.06
     number-sections: false
     code-copy: true

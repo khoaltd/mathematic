@@ -13,13 +13,18 @@ trên GitHub Pages.
 4. Phụ lục cung cấp bảng tổng kết định lý và chỉ mục thuật ngữ có liên kết
    quay về nội dung.
 
+Các section dài được chia thành những slide nối tiếp để tránh tràn nội dung;
+liên kết trong mục lục vẫn mở đúng slide đầu của section.
+
 Mỗi chương là một deck Reveal.js độc lập. Trong khi trình chiếu, nhấn `F` để
 bật toàn màn hình, dùng phím mũi tên để chuyển slide, hoặc nhấn `M` để mở menu
 điều hướng. Dùng nút bảng viết ở góc dưới hoặc phím `B` để mở Chalkboard;
 phím `C` bật lớp ghi chú trực tiếp trên slide. Mỗi slide có liên kết ở footer
-để quay về mục lục chương. Header hiển thị tên section hiện tại; footnote nằm
-bên dưới footer. Slide mở đầu mỗi chương trình bày lời dẫn trong khung trích
-dẫn trang trí, căn giữa trên nền trắng.
+để quay về mục lục chương. Thanh điều hướng xanh phía trên cho biết section
+hiện tại và có thể bấm để chuyển section; dải tiêu đề và footer xanh lấy cảm
+hứng từ giao diện Beamer. Footnote nằm trong dải footer. Slide mở đầu mỗi
+chương trình bày lời dẫn trong khung trích dẫn trang trí, căn giữa trên nền
+trắng.
 
 Deck dùng theme trắng; có thể đổi theme nền trong mục `format.revealjs.theme`
 của `_quarto.yml`. Chỉnh header, footer và họa tiết trong `reveal.scss`.

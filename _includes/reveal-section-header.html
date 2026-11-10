@@ -4,11 +4,62 @@
   const root = document.querySelector(".reveal");
   if (!reveal || !root) return;
 
+  const nav = document.createElement("nav");
+  nav.className = "slide-section-nav";
+  nav.setAttribute("aria-label", "Các section trong chương");
+  const navItems = document.createElement("div");
+  navItems.className = "slide-section-nav-items";
+  nav.append(navItems);
+  root.append(nav);
+
   const header = document.createElement("div");
   header.className = "slide-section-header";
-  header.setAttribute("aria-live", "polite");
-  header.setAttribute("aria-atomic", "true");
+  header.textContent =
+    document.querySelector(".quarto-title-block h1")?.textContent.trim() || document.title;
   root.append(header);
+
+  const slides = [...root.querySelectorAll(".slides > section")];
+  const sections = new Map();
+  const sectionPattern = /^sec-(ch\d+-\d+)(?:-|$)/;
+
+  slides.forEach((slide, index) => {
+    const match = slide.id.match(sectionPattern);
+    if (!match) return;
+
+    const sectionKey = match[1];
+    if (!sections.has(sectionKey)) {
+      const heading = slide.querySelector(":scope > h2");
+      const label = heading?.textContent.trim().replace(/^\d+(?:\.\d+)+\s*/, "") || sectionKey;
+      const button = document.createElement("button");
+      button.className = "slide-section-nav-item";
+      button.type = "button";
+      button.title = heading?.textContent.trim() || label;
+      button.setAttribute("aria-label", button.title);
+
+      const labelElement = document.createElement("span");
+      labelElement.className = "slide-section-nav-label";
+      labelElement.textContent = label;
+
+      const progress = document.createElement("span");
+      progress.className = "slide-section-nav-progress";
+      progress.setAttribute("aria-hidden", "true");
+
+      button.append(labelElement, progress);
+      button.addEventListener("click", () => reveal.slide(index));
+      navItems.append(button);
+      sections.set(sectionKey, { button, progress, slideIndexes: [] });
+    }
+
+    sections.get(sectionKey).slideIndexes.push(index);
+  });
+
+  sections.forEach(({ progress, slideIndexes }) => {
+    slideIndexes.forEach(() => {
+      const dot = document.createElement("span");
+      dot.className = "slide-section-nav-dot";
+      progress.append(dot);
+    });
+  });
 
   const footnoteLayer = document.createElement("div");
   footnoteLayer.className = "slide-footnote-layer";
@@ -21,6 +72,23 @@
     const slide = event?.currentSlide || reveal.getCurrentSlide();
     const heading = slide?.querySelector(":scope > h2");
     header.textContent = heading?.textContent.trim() || document.title;
+
+    const activeMatch = slide?.id.match(sectionPattern);
+    sections.forEach(({ button, progress, slideIndexes }, sectionKey) => {
+      const active = activeMatch?.[1] === sectionKey;
+      button.classList.toggle("is-active", active);
+      if (active) {
+        button.setAttribute("aria-current", "page");
+      } else {
+        button.removeAttribute("aria-current");
+      }
+
+      const currentIndex = slideIndexes.indexOf(slides.indexOf(slide));
+      [...progress.children].forEach((dot, index) => {
+        dot.classList.toggle("is-past", active && index < currentIndex);
+        dot.classList.toggle("is-current", active && index === currentIndex);
+      });
+    });
 
     if (activeFootnote && activeSlide) {
       activeSlide.append(activeFootnote);
