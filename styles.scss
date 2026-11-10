@@ -28,3 +28,39 @@ main.content {
 a {
   text-underline-offset: 0.18em;
 }
+
+body.proof-page .navbar {
+  display: none;
+}
+
+body.proof-page main.content {
+  max-width: 860px;
+  padding-top: min(12vh, 6rem);
+  padding-bottom: 4rem;
+}
+
+body.proof-page h1 {
+  margin-bottom: 1.4rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.proof-theorem {
+  margin: 1.5rem 0 2.5rem;
+  padding: 1.25rem 1.5rem;
+  border-left: 5px solid #c17a31;
+  border-radius: 0.35rem;
+  background: #f4ede2;
+  font-size: 1.08rem;
+}
+
+.proof-page h2 {
+  margin-top: 2.5rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid #dce5df;
+}
+
+.proof-page h3 {
+  margin-top: 2rem;
+  color: #087e83;
+  font-size: 1.25rem;
+}

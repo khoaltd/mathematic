@@ -21,6 +21,10 @@ $presentation-font-size-root: 32px;
   font-size: 1.15em;
 }
 
+.reveal .slides section:not(.chapter-opening-slide) > h2 {
+  display: none;
+}
+
 .reveal .slides section h3 {
   font-size: 0.9em;
 }
@@ -140,6 +144,59 @@ $presentation-font-size-root: 32px;
 .reveal .slides section li {
   font-size: 0.78em;
   line-height: 1.35;
+}
+
+.reveal .slides section img.concept-illustration {
+  display: block;
+  width: min(90%, 960px);
+  max-height: 370px;
+  margin: 0.2em auto 0.4em;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  object-fit: contain;
+}
+
+.reveal .slides section .cell-output-display img {
+  display: block;
+  width: min(90%, 960px);
+  max-height: 370px;
+  margin: 0.2em auto 0.4em;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.reveal .slides section .concept-caption {
+  max-width: 900px;
+  margin: 0.3em auto 0;
+  color: #536273;
+  font-size: 0.65em;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.reveal .slides section .proof-page-link {
+  margin: 0.65em 0 0;
+  text-align: center;
+}
+
+.reveal .slides section .proof-page-link a {
+  display: inline-block;
+  padding: 0.45em 0.8em;
+  border: 1px solid #087e83;
+  border-radius: 6px;
+  color: #064b2a;
+  font-size: 0.72em;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.reveal .slides section .proof-page-link a:hover,
+.reveal .slides section .proof-page-link a:focus-visible {
+  background: #e8f3ec;
+  outline: 2px solid rgb(8 126 131 / 25%);
+  outline-offset: 2px;
 }
 
 .reveal .slides section ul,

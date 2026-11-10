@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" role="img" aria-labelledby="title desc">
+  <title id="title">Dãy Cauchy</title>
+  <desc id="desc">Tất cả số hạng từ chỉ số N trở đi nằm trong cùng một khoảng ngắn, nên từng cặp cách nhau dưới epsilon.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto-start-reverse">
+      <path d="M0 0 8 4 0 8z" fill="#c17a31"/>
+    </marker>
+  </defs>
+  <rect width="960" height="400" rx="20" fill="#f6faf8"/>
+  <path d="M120 226H840" stroke="#7b8794" stroke-width="3"/>
+  <rect x="485" y="190" width="260" height="72" rx="36" fill="#087e83" fill-opacity=".13"/>
+  <path d="M485 158v142M745 158v142" stroke="#087e83" stroke-width="2"/>
+  <path d="M495 150H735" stroke="#c17a31" stroke-width="3" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <g fill="#a9b5b0">
+    <circle cx="175" cy="226" r="8"/><circle cx="285" cy="226" r="8"/><circle cx="380" cy="226" r="8"/>
+  </g>
+  <g fill="#087e83">
+    <circle cx="495" cy="226" r="8"/><circle cx="540" cy="226" r="8"/>
+    <circle cx="580" cy="226" r="8"/><circle cx="618" cy="226" r="8"/>
+    <circle cx="655" cy="226" r="8"/><circle cx="690" cy="226" r="8"/>
+    <circle cx="735" cy="226" r="8"/>
+  </g>
+  <g fill="#a45b18" font-family="Aptos, Segoe UI, sans-serif" font-size="18" text-anchor="middle">
+    <text x="615" y="123">khoảng cách nhỏ hơn ε</text>
+  </g>
+  <g fill="#536273" font-family="Georgia, serif" font-size="18" text-anchor="middle">
+    <text x="175" y="272">x₁</text><text x="285" y="272">x₂</text><text x="380" y="272">…</text>
+    <text x="495" y="272" fill="#064b2a">xₙ</text><text x="735" y="272" fill="#064b2a">xₘ</text>
+  </g>
+  <text x="480" y="348" fill="#536273" font-family="Georgia, serif" font-size="20" text-anchor="middle">m,n ≥ N  ⟹  d(xₘ,xₙ) &lt; ε</text>
+</svg>

@@ -1,0 +1,55 @@
+---
+title: "Định lý: Tính liên tục qua ảnh ngược tập mở"
+body-classes: proof-page
+format: html
+---
+
+::: {.proof-theorem}
+**Định lý.** Ánh xạ $T$ từ không gian metric $X$ vào không gian metric $Y$ liên tục khi và chỉ khi ảnh ngược của mọi tập mở trong $Y$ là tập mở trong $X$.
+:::
+
+## Chứng minh
+
+### ($\Rightarrow$)
+
+Giả sử $T: X \to Y$ là ánh xạ liên tục và $V \subset Y$ là một tập mở bất kỳ trong $Y$. Ta cần chứng minh tạo ảnh $T^{-1}(V) = \{x \in X : T(x) \in V\}$ là tập mở trong $X$.
+
+Nếu $T^{-1}(V) = \emptyset$ thì hiển nhiên $T^{-1}(V)$ mở trong $X$. Giả sử $T^{-1}(V) \neq \emptyset$ và lấy tùy ý $x_0 \in T^{-1}(V)$, suy ra $T(x_0) \in V$. Vì $V$ là tập mở trong $Y$, tồn tại $\varepsilon > 0$ sao cho hình cầu mở
+
+$$
+B_Y\big(T(x_0), \varepsilon\big)
+= \big\{ y \in Y : d_Y(y, T(x_0)) < \varepsilon \big\}
+\subset V.
+$$
+
+Do $T$ liên tục tại $x_0$, ứng với $\varepsilon > 0$ nói trên, tồn tại $\delta > 0$ sao cho với mọi $x \in X$:
+
+$$
+d_X(x, x_0) < \delta
+\implies
+d_Y\big(T(x), T(x_0)\big) < \varepsilon.
+$$
+
+Vì vậy, nếu $x \in B_X(x_0, \delta)$ thì $T(x) \in B_Y(T(x_0), \varepsilon) \subset V$, hay $x \in T^{-1}(V)$. Do đó
+
+$$
+B_X(x_0, \delta) \subset T^{-1}(V).
+$$
+
+Vì $x_0 \in T^{-1}(V)$ được chọn tùy ý nên $T^{-1}(V)$ là tập mở trong $X$.
+
+### Chiều đảo ($\Leftarrow$)
+
+Giả sử ảnh ngược của mọi tập mở trong $Y$ đều là tập mở trong $X$. Lấy tùy ý $x_0 \in X$ và $\varepsilon > 0$.
+
+Xét hình cầu mở $V := B_Y(T(x_0), \varepsilon)$ trong $Y$. Vì mọi hình cầu mở đều là tập mở trong $Y$, theo giả thiết, ảnh ngược $T^{-1}(V)$ là một tập mở trong $X$. Hơn nữa, vì $T(x_0) \in V$ nên $x_0 \in T^{-1}(V)$.
+
+Do $T^{-1}(V)$ mở trong $X$ và chứa $x_0$, tồn tại $\delta > 0$ sao cho
+
+$$
+B_X(x_0, \delta)
+\subset T^{-1}(V)
+= T^{-1}\big(B_Y(T(x_0), \varepsilon)\big).
+$$
+
+Với mọi $x \in X$ thỏa mãn $d_X(x, x_0) < \delta$, ta có $x \in T^{-1}(V)$, tức là $T(x) \in B_Y(T(x_0), \varepsilon)$ hay $d_Y(T(x), T(x_0)) < \varepsilon$. Vậy $T$ liên tục tại $x_0$. Do $x_0 \in X$ bất kỳ nên $T$ liên tục trên toàn không gian $X$.

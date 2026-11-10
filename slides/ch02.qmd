@@ -11,7 +11,7 @@ format: revealjs
 
 <img class="chapter-opening-logo" src="../assets/logo-dep.svg" alt="Logo">
 
-<p class="chapter-quote-kicker">CHƯƠNG 2 · KHÔNG GIAN TUYẾN TÍNH ĐỊNH CHUẨN</p>
+<p class="chapter-quote-kicker">CHƯƠNG 2 </p>
 
 ### Không gian tuyến tính định chuẩn
 

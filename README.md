@@ -15,6 +15,9 @@ trên GitHub Pages.
 
 Các section dài được chia thành những slide nối tiếp để tránh tràn nội dung;
 liên kết trong mục lục vẫn mở đúng slide đầu của section.
+Một số định nghĩa trọng tâm ở Chương 1 có hình minh họa SVG viết trực tiếp,
+không cần chạy mã khi render. Sơ đồ tính liên tục minh họa hai lân cận metric
+và ánh xạ giữa chúng.
 
 Mỗi chương là một deck Reveal.js độc lập. Trong khi trình chiếu, nhấn `F` để
 bật toàn màn hình, dùng phím mũi tên để chuyển slide, hoặc nhấn `M` để mở menu
@@ -24,7 +27,8 @@ phím `C` bật lớp ghi chú trực tiếp trên slide. Mỗi slide có liên 
 hiện tại và có thể bấm để chuyển section; dải tiêu đề và footer xanh lấy cảm
 hứng từ giao diện Beamer. Footnote nằm trong dải footer. Slide mở đầu mỗi
 chương trình bày lời dẫn trong khung trích dẫn trang trí, căn giữa trên nền
-trắng.
+trắng. Định lý có liên kết mở trang chứng minh riêng trong tab mới; phần chứng
+minh được lưu ngoài deck trình chiếu.
 
 Deck dùng theme trắng; có thể đổi theme nền trong mục `format.revealjs.theme`
 của `_quarto.yml`. Chỉnh header, footer và họa tiết trong `reveal.scss`.
@@ -33,8 +37,7 @@ của `_quarto.yml`. Chỉnh header, footer và họa tiết trong `reveal.scss`
 
 <https://khoaltd.github.io/mathematic/>
 
-Cài [Quarto](https://quarto.org/docs/get-started/), rồi tại thư mục dự án
-chạy:
+Cài [Quarto](https://quarto.org/docs/get-started/), rồi tại thư mục dự án chạy:
 
 ```sh
 quarto preview
@@ -54,8 +57,11 @@ quarto render
   chương.
 - `slides/ch01.qmd` … `slides/ch16.qmd`: bài trình chiếu Reveal.js riêng cho
   từng chương.
+- `proof/proof-ch01-continuity.qmd`: trang riêng chứa định lý và chứng minh,
+  được mở từ slide bằng tab mới.
 - `appendices.qmd`: bảng tổng kết định lý và chỉ mục thuật ngữ.
 - `assets/logo-dep.svg`: logo trên slide mở đầu, footer và favicon của website; favicon dùng khung nhìn cắt sát biểu tượng để rõ hơn ở kích thước nhỏ.
+- `assets/illustrations/`: các sơ đồ vector SVG được nhúng trực tiếp vào slide.
 - `_quarto.yml`: cấu hình website và Reveal.js.
 - `reveal.scss`: giao diện slide và các khối định nghĩa/định lý.
 - `styles.scss`: giao diện các trang HTML.
