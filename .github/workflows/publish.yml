@@ -2,11 +2,10 @@ name: Publish Quarto slides
 
 on:
   push:
-    branches: [main]
-  workflow_dispatch:
+    branches: [source]
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -29,6 +28,24 @@ jobs:
 
       - name: Render slides
         run: quarto render
+
+      - name: Check out site-only main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: site
+
+      - name: Publish rendered files to main
+        run: |
+          git -C site rm -r --ignore-unmatch .
+          cp -R _site/. site/
+          git -C site add --all
+          if ! git -C site diff --cached --quiet; then
+            git -C site -c user.name="github-actions[bot]" \
+              -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+              commit -m "Publish rendered site"
+            git -C site push origin HEAD:main
+          fi
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5

@@ -81,17 +81,18 @@ Một định lý có số thứ tự tự động.
 
 ## Cập nhật website
 
-Sau khi chỉnh sửa nội dung hoặc giao diện, chạy:
+Mã nguồn được lưu trên nhánh `source`; nhánh `main` chỉ chứa website đã render.
+Sau khi chỉnh sửa nội dung hoặc giao diện trên nhánh `source`, chạy:
 
 ```sh
-git add -A && git commit -m "Update presentation" && git push origin main
+git add -A && git commit -m "Update presentation" && git push origin source
 ```
 
-Lệnh này thêm mọi thay đổi trong repository vào commit và đẩy lên GitHub. Khi
-push thành công, GitHub Actions sẽ tự render và cập nhật website. Trước khi
-chạy, kiểm tra `git status` để chắc các thay đổi cần đưa lên đều có thể được
-chia sẻ.
+GitHub Actions sẽ render toàn bộ dự án, cập nhật các file website trên `main`,
+rồi triển khai lên GitHub Pages. Không chỉnh sửa trực tiếp `main`, vì lần render
+kế tiếp sẽ thay nội dung nhánh này bằng website mới. Trước khi chạy, kiểm tra
+`git status` để chắc các thay đổi cần đưa lên đều có thể được chia sẻ.
 
 Lần đầu xuất bản, vào **Settings → Pages** của repository và chọn **GitHub
-Actions** làm nguồn triển khai. Theo dõi quá trình cập nhật trong tab
-**Actions**.
+Actions** làm nguồn triển khai. Chỉnh sửa dự án trên máy cần bắt đầu từ nhánh
+`source` (`git switch source`). Theo dõi quá trình cập nhật trong tab **Actions**.
