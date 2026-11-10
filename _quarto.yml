@@ -18,6 +18,7 @@ format:
     smooth-scroll: true
   revealjs:
     theme: [white, reveal.scss]
+    html-math-method: katex
     include-after-body: _includes/reveal-section-header.html
     slide-level: 2
     slide-number: c/t

@@ -21,7 +21,7 @@ format: revealjs
 
 :::
 
-## 1.1 Không gian metric {#sec-ch01-01}
+## Không gian metric {#sec-ch01-01}
 
 ::: {#def-ch01-src-01 .def- name="Không gian metric, metric"}
 
@@ -35,7 +35,9 @@ format: revealjs
 
 **(M4)** *(Triangle inequality)* $d(x,z)\leq d(x,y)+d(y,z)$.
 
+Gọi là *giả metric (pseudo-metric, semimetric)* nếu chỉ thỏa mãn (M1), (M3) và (M4).
 :::
+
 $X$ thường được gọi là tập nền, tập cơ sở (underlying set). 
 
 ## Ví dụ {#sec-ch01-01-02}
@@ -55,7 +57,7 @@ Một không gian metric là một cặp gồm tập hợp và hàm khoảng cá
 $\widetilde{d}$ được gọi là metric **cảm sinh (induced)** trên $Y$ bởi $d$
 
 
-## Hình cầu, lân cận, tập mở và tập đóng {#sec-ch01-02}
+## Hình cầu, lân cận{#sec-ch01-02}
 
 ::: {#def-ch01-src-02 .def- name="Hình cầu và mặt cầu"}
 
@@ -75,7 +77,7 @@ Dễ nhìn thấy $S(x_0, r)=\widetilde{B}(x_0, r)-B(x_0, r)$
 
 Cho không gian metric $(X, d)$, một điểm $x_0 \in X$ và số thực $\varepsilon > 0$. Hình cầu mở tâm $x_0$ bán kính $\varepsilon$: $$B(x_0, \varepsilon) := \{x \in X : d(x, x_0) < \varepsilon\}$$ được gọi là một **$\varepsilon$-lân cận** của $x_0$. Một tập con $N \subset X$ được gọi là một **lân cận** của $x_0$ nếu tồn tại $\varepsilon > 0$ sao cho $B(x_0, \varepsilon) \subset N$.
 
-## Tập mở và tập đóng (định nghĩa) {#sec-ch01-02-open-closed}
+## Tập mở và tập đóng {#sec-ch01-02-open-closed}
 
 ::: {#def-ch01-src-03 .def- name="Tập mở, tập đóng"}
 
@@ -99,18 +101,24 @@ d(x,y)<r\implies y\notin K.}$$
 
 ## Tính chất {#sec-ch01-02-operations}
 
-Chúng ta có thể thu được các tính chất như sau:
+Một điểm $x_0 \in M$ được gọi là một **điểm trong (interior point)** của $M$ nếu tồn tại lân cận của $x_0$ nằm hoàn toàn trong $M$. Tập hợp tất cả các điểm trong của $M$ được gọi là **phần trong (interior)** của $M$ và được kí hiệu là $\text{int}(M)$. Một điểm $x_0 \in X$ được gọi là một điểm biên của $M$ nếu mọi lân cận của nó đều chứa ít nhất một điểm thuộc $M$ và ít nhất một điểm thuộc phần bù của $M$. Tập hợp tất cả các điểm biên của $M$ được gọi là *biên (boundary)* của $M$ và được kí hiệu là $\partial M$. Một điểm $x_0 \in X$ được gọi là một điểm ngoài của $M$ nếu tồn tại lân cận của nó nằm hoàn toàn trong phần bù của $M$. Tập hợp tất cả các điểm ngoài của $M$ được gọi là *ngoại (exterior)* của $M$ và được kí hiệu là $\text{ext}(M)$.
 
-::: {.center}
-      **Phép toán**             **Tập mở**                **Tập đóng**
-  ---------------------- ------------------------- ---------------------------
-   $\varnothing$ và $X$             Mở                        Đóng
-       Hợp hữu hạn                  Mở                        Đóng
-        Hợp tùy ý                   Mở              **Không nhất thiết đóng**
-       Giao hữu hạn                 Mở                        Đóng
-        Giao tùy ý        **Không nhất thiết mở**             Đóng
+## Không  gian topological {#sec-ch01-02-topological}
 
+:::{#def-ch01-src-05 .def- name="Không gian topological"}
+Một không gian topological là một cặp $(X, \mathcal{T})$, trong đó $X$ là một tập hợp và $\mathcal{T}$ là một tập hợp các tập con của $X$ thỏa mãn:
+
+(T1) $X$ và $\varnothing$ thuộc $\mathcal{T}$;
+
+(T2) Giao của hữu hạn các tập trong $\mathcal{T}$ thuộc $\mathcal{T}$;
+
+(T3) Hợp của bất kỳ tập hợp nào các tập trong $\mathcal{T}$ thuộc $\mathcal{T}$.
 :::
+
+:::{.callout-note}
+Không gian metric $(X,d)$ có thể được xem là một không gian topological $(X,\mathcal{T})$ với $\mathcal{T}$ là tập hợp tất cả các tập mở trong $X$.
+:::
+
 ## Tính liên tục của ánh xạ {#sec-ch01-02-continuity}
 
 ::: {#def-ch01-src-06 .def- name="Ánh xạ liên tục"}
@@ -124,7 +132,7 @@ Cho $X=(X,d)$ và $Y=(Y,\widetilde{d})$ là các không gian metric. Ánh xạ $
 <p class="concept-caption">Lân cận bán kính $\delta$ quanh $x_0$ được ánh xạ vào lân cận bán kính $\varepsilon$ quanh $T(x_0)$.</p>
 
 
-## Định lý tính liên tục {#sec-ch01-02-thm}
+## Định lý tính liên tục {#sec-ch01-02-04}
 
 ::: {#thm-ch01-src-01 .thm- name="Ánh xạ liên tục"}
 
@@ -134,13 +142,13 @@ Cho $X=(X,d)$ và $Y=(Y,\widetilde{d})$ là các không gian metric. Ánh xạ $
 
 <p class="proof-page-link"><a href="../proof/proof-ch01-continuity.html" target="_blank" rel="noopener">Chứng minh</a></p>
 
-## Khả ly và tính trù mật {#sec-ch01-02-density}
+## Khả ly và tính trù mật {#sec-ch01-02-05}
 
 Điểm $x_0\in X$ được gọi là **điểm tụ (accumulation point)** của M nếu mỗi lân cận của $x_0$ chứa ít nhất 1 điểm $y \in M$ cách $x_0$.
 
 **Bao đóng (closure)** của một tập M là tập hợp gồm tất cả các điểm thuộc tập ban đầu và tất cả các điểm tụ của nó và được kí hiệu là $\overline{M}$. 
 
-:::{callout-note}
+:::{.callout-note}
 Bao đóng $\overline{M}$ cũng là *tập đóng nhỏ nhất* chứa M.
 :::
 
@@ -152,77 +160,88 @@ Không gian $X$ được gọi là *khả ly (separable)* nếu nó có một t�
 
 :::
 
-## Định lý {#sec-ch01-02-theorem}
-
-::: {#def-ch01-open-closed .def- name="Tập mở và tập đóng"}
-
-Tập $U\subseteq X$ mở nếu với mỗi $x\in U$ tồn tại $r>0$ sao cho $B(x,r)\subseteq U$. Tập $F$ đóng nếu phần bù $X\setminus F$ mở.
-
-:::
-
-::: {#thm-ch01-01 .thm-}
-Hợp tùy ý các tập mở là mở; giao hữu hạn các tập mở là mở. Giao
-tùy ý các tập đóng là đóng; hợp hữu hạn các tập đóng là đóng.
-
-:::
-
-## Sự hội tụ của dãy {#sec-ch01-03}
+## Sự hội tụ của dãy {#sec-ch01-03-01}
 
 ::: {#def-ch01-src-05 .def- name="Sự hội tụ của dãy, giới hạn"}
 
-Dãy $(x_n)$ trong không gian metric $X=(X,d)$ được gọi là *hội tụ* nếu tồn tại $x \in X$ sao cho $$\lim_{n\to \infty}d(x_n,x)=0$$ $x$ được gọi là *giới hạn* của $(x_n)$ và ta viết $$\lim_{n\to \infty}x_n=x \qquad \text{hoặc} \qquad x_n \longrightarrow x.$$ Nếu $(x_n)$ không hội tụ thì được gọi là *phân kỳ*.
+Dãy $(x_n)$ trong không gian metric $X=(X,d)$ được gọi là *hội tụ (convergent)* nếu tồn tại $x \in X$ sao cho $$\lim_{n\to \infty}d(x_n,x)=0$$ $x$ được gọi là *giới hạn (limit)* của $(x_n)$ và ta viết $$\lim_{n\to \infty}x_n=x \qquad \text{hoặc} \qquad x_n \longrightarrow x.$$ Nếu $(x_n)$ không hội tụ thì được gọi là *phân kỳ (divergent)*.
+:::
 
+:::{#lemma-ch01-01 .lemma- name="Tính bị chặn, giới hạn"}
+Cho $X=(X,d)$ là không gian metric. Thì:
+(a) Dãy hội tụ $(x_n)$ trong $X$ bị chặn, nghĩa là tồn tại $M>0$ sao cho $d(x_n,x_1)<M$ với mọi $n \in \mathbb{N}$.
+(b) Nếu $x_n \to x$ và $y_n \to y$ trên $X$, thì $$d(x_n,y_n) \to d(x,y).$$
 :::
 
 ::: {#thm-ch01-02 .thm- name="Tính duy nhất của giới hạn"}
-Trong không gian metric, một dãy
-không thể hội tụ đến hai điểm khác nhau.
-
+Trong không gian metric, một dãy không thể hội tụ đến hai điểm khác nhau.
 :::
 
-## Minh họa hội tụ của dãy {#sec-ch01-03-visual}
+## Minh họa hội tụ của dãy {#sec-ch01-03-02}
 
 <img class="concept-illustration" src="../assets/illustrations/sequence-convergence.svg" alt="Các số hạng x_n trên trục số tiến gần đến giới hạn x, nằm trong một epsilon-lân cận.">
 
 <p class="concept-caption">Các số hạng tiến gần tùy ý đến $x$: với mỗi $\varepsilon>0$, từ một chỉ số đủ lớn trở đi, mọi $x_n$ đều nằm trong $\varepsilon$-lân cận của $x$. Minh họa trên trục số thực.</p>
 
-## Dãy Cauchy và không gian metric đầy đủ {#sec-ch01-04}
+## Dãy Cauchy và không gian metric đầy đủ {#sec-ch01-03-03}
 
-Một dãy $(x_n)$ được gọi là Cauchy nếu với mọi $\varepsilon>0$ tồn tại $N$ sao cho $d(x_m,x_n)<\varepsilon$ với mọi $m,n\ge N$. Không gian metric đầy đủ là không gian trong đó mọi dãy Cauchy đều hội tụ; vì vậy tính đầy đủ bảo đảm các giới hạn cần thiết vẫn nằm trong chính không gian.
-
-::: {#def-ch01-05 .def-}
-$(x_n)$ là Cauchy nếu với mọi $\varepsilon>0$ tồn tại $N$ sao
-cho $m,n\ge N$ thì $d(x_m,x_n)<\varepsilon$. Không gian metric đầy đủ nếu mọi
-dãy Cauchy đều hội tụ trong không gian.
-
+::: {#def-ch01-05 .def-name="Dãy Cauchy, không gian đầy đủ"}
+Trong không gian metric $X=(X,d)$, dãy $(x_n)$ được gọi là *Cauchy (Cauchy or fundamental)* nếu với mọi $\varepsilon>0$ tồn tại $N = N(\epsilon)$ sao cho 
+$$
+d(x_m,x_n)<\varepsilon \quad \text{với mọi } m,n \geq N.
+$$
+Không gian X được gọi là đầy đủ nếu mọi dãy Cauchy đều hội tụ trong không gian. (Cái này có thể gọi là giới hạn của một phần tử trong $X$)
 :::
 
-
-::: {.example-}
-Các số hữu tỉ với metric thông thường không đầy đủ: có dãy hữu tỉ Cauchy tiến
-đến $\sqrt 2$, nhưng $\sqrt2\notin\mathbb Q$. Không gian thực là phần hoàn
-thiện của không gian hữu tỉ.
-
-:::
-
-## Minh họa dãy Cauchy {#sec-ch01-04-visual}
+## Minh họa dãy Cauchy {#sec-ch01-03-04}
 
 <img class="concept-illustration" src="../assets/illustrations/cauchy-sequence.svg" alt="Các số hạng từ chỉ số N trở đi nằm trong cùng một khoảng có độ dài nhỏ hơn epsilon.">
 
 <p class="concept-caption">Điều kiện Cauchy yêu cầu các số hạng ở đủ xa trong dãy gần nhau từng đôi một; không cần biết trước giới hạn là điểm nào. Minh họa trên $\mathbb{R}$.</p>
+:::{.callout-note}
 
+- Đường thẳng thực *(real line)* $\mathbb{R}$ và mặt phẳng phức *(complex plane)* $\mathbb{C}$ là đầy đủ. Không gian Euclid $\mathbb{R}^n$ cũng đầy đủ.
 
-## Phép đồng phôi và đẳng cự {#sec-ch01-06}
+- Mọi dãy hội tụ đều là dãy Cauchy, nhưng không phải dãy Cauchy nào cũng hội tụ. Không gian metric đầy đủ là không gian mà mọi dãy Cauchy đều hội tụ.
 
-Một song ánh liên tục có ánh xạ ngược liên tục được gọi là phép đồng phôi; nó bảo toàn cấu trúc tôpô nhưng không nhất thiết bảo toàn khoảng cách. Đẳng cự là ánh xạ $T$ thỏa mãn $d_Y(Tx,Ty)=d_X(x,y)$ với mọi $x,y$, nên bảo toàn chính xác khoảng cách.
-
-::: {#def-ch01-07 .def-}
-Đồng phôi là song ánh liên tục có ánh xạ ngược liên tục.
-Đẳng cự $T$ thỏa $d_Y(Tx,Ty)=d_X(x,y)$ với mọi $x,y$.
-
+- Các số hữu tỉ với metric thông thường không đầy đủ: có dãy hữu tỉ Cauchy tiến đến $\sqrt 2$, nhưng $\sqrt2\notin\mathbb Q$. Không gian thực là phần hoàn thiện của không gian hữu tỉ.
 :::
 
-## Phép hoàn thiện không gian metric {#sec-ch01-07}
+## Một số đinh lý cơ bản về dãy Cauchy {#sec-ch01-03-05}
+
+::: {#thm-ch01-closure .thm- name="Bao đóng và tập đóng"}
+Cho $M$ là một tập con khác rỗng của không gian metric $(X, d)$ và $\overline{M}$ là bao đóng của nó. Khi đó:
+
+(a) $x \in \overline{M}$ khi và chỉ khi tồn tại một dãy $(x_n) \subset M$ sao cho $x_n \to x$.
+
+(b) $M$ đóng khi và chỉ khi mọi dãy $(x_n) \subset M$ thỏa mãn $x_n \to x$ đều suy ra $x \in M$.
+:::
+
+::: {#thm-ch01-complete-subspace .thm- name="Không gian con đầy đủ"}
+Một không gian con $M$ của không gian metric đầy đủ $X$ tự nó là đầy đủ khi và chỉ khi tập $M$ đóng trong $X$.
+:::
+
+::: {#thm-ch01-seq-continuity .thm- name="Tính liên tục theo dãy"}
+Cho ánh xạ $T: (X, d) \to (Y, \tilde{d})$ giữa hai không gian metric. Ánh xạ $T$ liên tục tại điểm $x_0 \in X$ khi và chỉ khi với mọi dãy $(x_n) \subset X$:
+
+$$x_n \longrightarrow x_0 \implies T(x_n) \longrightarrow T(x_0).$$
+:::
+
+## Phép đồng phôi và đẳng cự {#sec-ch01-04-01}
+
+::: {#def-ch01-isometry .def- name="Ánh xạ đẳng cự, không gian đẳng cự"}
+Cho $X = (X, d)$ và $\tilde{X} = (\tilde{X}, \tilde{d})$ là các không gian metric. Khi đó:
+
+(a) Ánh xạ $T: X \to \tilde{X}$ được gọi là **đẳng cự (isometry)** (hay một *phép đẳng cự*) nếu $T$ bảo toàn khoảng cách, tức là với mọi $x, y \in X$:
+
+$$\tilde{d}(Tx, Ty) = d(x, y)$$
+
+trong đó $Tx$ và $Ty$ lần lượt là ảnh của $x$ và $y$.
+
+(b) Không gian $X$ được gọi là **đẳng cự** với không gian $\tilde{X}$ nếu tồn tại một song ánh đẳng cự từ $X$ lên $\tilde{X}$. Hai không gian $X$ và $\tilde{X}$ khi đó được gọi là **hai không gian đẳng cự**.
+:::
+
+## Phép hoàn thiện không gian metric {#sec-ch01-04-02}  
 
 Mọi không gian metric đều có thể được nhúng đẳng cự như một tập con trù mật vào một không gian metric đầy đủ, gọi là phần hoàn thiện. Phần hoàn thiện là duy nhất sai khác một đẳng cự bảo toàn các điểm của không gian ban đầu.
 
@@ -230,5 +249,14 @@ Mọi không gian metric đều có thể được nhúng đẳng cự như mộ
 Mọi không gian metric có một phần hoàn thiện đầy đủ
 mà không gian ban đầu nhúng đẳng cự như một tập con trù mật. Phần hoàn thiện
 là duy nhất sai khác một đẳng cự bảo toàn các điểm ban đầu.
+:::
 
+## Đồng phôi {#sec-ch01-04-03}
+
+::: {#thm-ch01-homeomorphism .thm- name="Phép đồng phôi"}
+Một **phép đồng phôi** (*homeomorphism*) là một song ánh liên tục $T: X \to Y$ có ánh xạ ngược $T^{-1}: Y \to X$ cũng liên tục; hai không gian metric $X$ và $Y$ khi đó được gọi là **đồng phôi** với nhau.
+
+(a)Nếu $X$ và $Y$ đẳng cự thì chúng đồng phôi.
+
+(b) Một không gian metric đầy đủ và một không gian metric không đầy đủ vẫn có thể đồng phôi với nhau.
 :::
